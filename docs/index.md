@@ -8,7 +8,7 @@ redirect_from:
 
 これらのドキュメントは、Monoのコンフィグレーションや、ランタイムやガベージ コレクターその他さまざまなMono固有のツールといったMonoの内部情報など、Mono固有の話題をカバーしています。
 
-.NET Frameworkやクラスライブラリの一般的な情報については、Microsoft[MSDNのページ](http://msdn.microsoft.com/en-us/library/ff361664.aspx)が参照できます。
+.NET Frameworkやクラスライブラリの一般的な情報については、Microsoft [MSDNのページ](http://msdn.microsoft.com/en-us/library/ff361664.aspx)が参照できます。
 
 {% capture docNote %}
 私達のドキュメンテーションは、[GitHub](https://github.com/mono/website/docs)上でオープンソースとなっています。もし間違いを見つけたり、ページが改善できると思ったら、ページ タイトルの下にある"Edit page on GitHub"のリンクをクリックしましょう。詳しくは[webサイトに協力する](https://github.com/mono/website#contributing-to-the-website)のセクションを見て下さい。
@@ -42,7 +42,7 @@ Monoをコンパイルする
 ------------------
 
  - [概要](/docs/compiling-mono/), ここにはOS X、Linux、Windowsでのコンパイル方法があります
- - [Gitからのコンパイル](/docs/compiling-mono/compiling-from-git/) and [Tarballからのコンパイル](/docs/compiling-mono/compiling-from-tarball/)
+ - [Gitからのコンパイル](/docs/compiling-mono/compiling-from-git/)と [Tarballからのコンパイル](/docs/compiling-mono/compiling-from-tarball/)
  - [高度なコンパイル オプション](/docs/compiling-mono/advanced-mono-compile-options/)
  - [サポートされていない高度なコンパイル オプション](/docs/compiling-mono/unsupported-advanced-compile-options/)
  - [Mono環境の並列セットアップ](/docs/compiling-mono/parallel-mono-environments/)
