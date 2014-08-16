@@ -6,82 +6,82 @@ redirect_from:
   - /Docs/
 ---
 
-These docs cover Mono specific topics, like setting up and configuring Mono or information about Mono internals such as the runtime, garbage collector or various Mono-specific tools.
+これらのドキュメントは、Monoのコンフィグレーションや、ランタイムやガベージ コレクターその他さまざまなMono固有のツールといったMonoの内部情報など、Mono固有の話題をカバーしています。
 
-For general information about the .NET framework and the class libraries you can refer to Microsoft's [MSDN pages](http://msdn.microsoft.com/en-us/library/ff361664.aspx).
+.NET Frameworkやクラスライブラリの一般的な情報については、Microsoft[MSDNのページ](http://msdn.microsoft.com/en-us/library/ff361664.aspx)が参照できます。
 
 {% capture docNote %}
-Our documentation is open source on [GitHub](https://github.com/mono/website/docs). If you find errors or think a page could be improved, just click the "Edit page on GitHub" link beneath the page title. See [contributing to the website](https://github.com/mono/website#contributing-to-the-website) for more details.
+私達のドキュメンテーションは、[GitHub](https://github.com/mono/website/docs)上でオープンソースとなっています。もし間違いを見つけたり、ページが改善できると思ったら、ページ タイトルの下にある"Edit page on GitHub"のリンクをクリックしましょう。詳しくは[webサイトに協力する](https://github.com/mono/website#contributing-to-the-website)のセクションを見て下さい。
 {% endcapture %}
 {% include note.html type='info' message=docNote %}
 
-Getting Started
----------------
+はじめの一歩
+-----------
 
- - [Overview](/docs/getting-started/)
- - Install Mono on [Mac OS X](/docs/getting-started/install/mac/), [Linux](/docs/getting-started/install/linux/) or [Windows](/docs/getting-started/install/windows/)
- - [Mono Basics](/docs/getting-started/mono-basics/)
- - [Development Environments](/docs/getting-started/development-environments/)
- - [Application Portability](/docs/getting-started/application-portability/) and [Application Deployment](/docs/getting-started/application-deployment/)
+ - [概要](/docs/getting-started/)
+ - Monoをインストールする: [Mac OS X](/docs/getting-started/install/mac/), [Linux](/docs/getting-started/install/linux/), [Windows](/docs/getting-started/install/windows/)
+ - [Monoの基本](/docs/getting-started/mono-basics/)
+ - [開発環境](/docs/getting-started/development-environments/)
+ - [アプリケーションの移植性](/docs/getting-started/application-portability/)と[アプリケーションのデプロイメント](/docs/getting-started/application-deployment/)
 
-About Mono
-----------
+Monoについて
+-----------
 
- - [Overview](/docs/about-mono/)
- - [Supported Platforms](/docs/about-mono/supported-platforms/)
- - [Languages](/docs/about-mono/languages/)
- - [Compatibility](/docs/about-mono/compatibility/) and [Class Status](/docs/about-mono/class-status/) 
- - [Releases](/docs/about-mono/releases/) and [Versioning](/docs/about-mono/versioning/) 
- - [Maintainers](/docs/about-mono/maintainers/)
- - [History](/docs/about-mono/history/), [Concerns about Mono](/docs/about-mono/concerns-about-mono/)
- - [Roadmap](/docs/about-mono/roadmap/) and [Plans](/docs/about-mono/plans/)
- - [Vulnerabilities](/docs/about-mono/vulnerabilities/)
- - Showcase: [Screenshots](/docs/about-mono/showcase/screenshots/), [Software](/docs/about-mono/showcase/software/), [Companies using Mono](/docs/about-mono/showcase/companies-using-mono/), [Mono Logos](/docs/about-mono/logos/)
+ - [概要](/docs/about-mono/)
+ - [サポートするプラットフォーム](/docs/about-mono/supported-platforms/)
+ - [言語](/docs/about-mono/languages/)
+ - [互換性](/docs/about-mono/compatibility/)と[クラス ステータス](/docs/about-mono/class-status/) 
+ - [リリース](/docs/about-mono/releases/)と[バージョンについて](/docs/about-mono/versioning/) 
+ - [メンテナー](/docs/about-mono/maintainers/)
+ - [履歴](/docs/about-mono/history/), [Monoの懸案事項](/docs/about-mono/concerns-about-mono/)
+ - [ロードマップ](/docs/about-mono/roadmap/)と[開発計画](/docs/about-mono/plans/)
+ - [脆弱性問題](/docs/about-mono/vulnerabilities/)
+ - ショーケース: [スクリーンショット](/docs/about-mono/showcase/screenshots/), [ソフトウェア](/docs/about-mono/showcase/software/), [Monoを利用している企業](/docs/about-mono/showcase/companies-using-mono/), [Monoのロゴ](/docs/about-mono/logos/)
 
-Compiling Mono
---------------
+Monoをコンパイルする
+------------------
 
- - [Overview](/docs/compiling-mono/), with instructions for compiling on OS X, Linux and Windows
- - [Compiling from Git](/docs/compiling-mono/compiling-from-git/) and [Compiling from Tarball](/docs/compiling-mono/compiling-from-tarball/)
- - [Advanced compile options](/docs/compiling-mono/advanced-mono-compile-options/)
- - [Unsupported advanced compile options](/docs/compiling-mono/unsupported-advanced-compile-options/)
- - [Parallel Mono environments](/docs/compiling-mono/parallel-mono-environments/)
- - [Small footprint](/docs/compiling-mono/small-footprint/)
+ - [概要](/docs/compiling-mono/), ここにはOS X、Linux、Windowsでのコンパイル方法があります
+ - [Gitからのコンパイル](/docs/compiling-mono/compiling-from-git/) and [Tarballからのコンパイル](/docs/compiling-mono/compiling-from-tarball/)
+ - [高度なコンパイル オプション](/docs/compiling-mono/advanced-mono-compile-options/)
+ - [サポートされていない高度なコンパイル オプション](/docs/compiling-mono/unsupported-advanced-compile-options/)
+ - [Mono環境の並列セットアップ](/docs/compiling-mono/parallel-mono-environments/)
+ - [最小フットプリント](/docs/compiling-mono/small-footprint/)
 
 FAQ
 ---
 
- - [General](/docs/faq/general/)
- - [Security](/docs/faq/security/)
- - [Technical](/docs/faq/technical/)
- - [Licensing](/docs/faq/licensing/)
- - [Documentation](/docs/faq/documentation/)
+ - [一般](/docs/faq/general/)
+ - [セキュリティ](/docs/faq/security/)
+ - [技術的な話題](/docs/faq/technical/)
+ - [ライセンス](/docs/faq/licensing/)
+ - [ドキュメンテーション](/docs/faq/documentation/)
  - [ASP.NET](/docs/faq/aspnet/)
  - [GTK](/docs/faq/gtk/)
  - [WinForms](/docs/faq/winforms/)
 
-Database Access
----------------
+データベース アクセス
+-------------------
 
- - [Overview](/docs/database-access/)
+ - [概要](/docs/database-access/)
  - [ADO.NET](/docs/database-access/adonet/)
  - [EntityFramework](/docs/database-access/entityframework/)
  
-Debug and Profile
------------------
+デバッグおよびプロファイリング
+----------------------------
 
- - [Debug - Overview](/docs/debug+profile/debug/)
-   - [Debugger](/docs/debug+profile/debug/debugger/)
- - [Profile - Overview](/docs/debug+profile/profile/)
-   - [Profiler](/docs/debug+profile/profile/profiler/)
+ - [デバッグ - 概要](/docs/debug+profile/debug/)
+   - [デバッガー](/docs/debug+profile/debug/debugger/)
+ - [プロファイリング - 概要](/docs/debug+profile/profile/)
+   - [プロファイラー](/docs/debug+profile/profile/profiler/)
    - [HeapShot](/docs/debug+profile/profile/heapshot/)
    - [DTrace](/docs/debug+profile/profile/dtrace/)
-   - [Code Coverage](/docs/debug+profile/profile/code-coverage/)
+   - [コード カバレッジ](/docs/debug+profile/profile/code-coverage/)
 
 GUI
 ---
 
- - [GUI Toolkits](/docs/gui/gui-toolkits/)
+ - [GUIツールキット群](/docs/gui/gui-toolkits/)
  - [WinForms](/docs/gui/winforms/)
  - [Gtk#](/docs/gui/gtksharp/)
  - [Drawing](/docs/gui/drawing/)
@@ -96,31 +96,31 @@ Web
  - [FastCGI](/docs/web/fastcgi/)
  - [mod_mono](/docs/web/mod_mono/)
  - [Moonlight](/docs/web/moonlight/)
- - [Porting ASP.NET applications](/docs/web/porting-aspnet-applications/)
- - [Using client certificates with XSP](/docs/web/using-clientcertificates-with-xsp/)
+ - [ASP.NETアプリケーションを移植する](/docs/web/porting-aspnet-applications/)
+ - [XSPでクライアント証明書を使用する](/docs/web/using-clientcertificates-with-xsp/)
 
-Tools and Libraries
--------------------
+ツールおよびライブラリ
+--------------------
 
- - [Tools - Overview](/docs/tools+libraries/tools/)
+ - [ツール - 概要](/docs/tools+libraries/tools/)
    - [Gendarme](/docs/tools+libraries/tools/gendarme/)
    - [MoMA](/docs/tools+libraries/tools/moma/)
    - [XBuild](/docs/tools+libraries/tools/xbuild/)
- - [Libraries - Overview](/docs/tools+libraries/libraries/)
+ - [ライブあり - 概要](/docs/tools+libraries/libraries/)
    - [MonoMac](/docs/tools+libraries/libraries/monomac/)
    - [XML](/docs/tools+libraries/libraries/xml/)
    - [Mono.Cairo](/docs/tools+libraries/libraries/Mono.Cairo/)
    - [Mono.Cecil](/docs/tools+libraries/libraries/Mono.Cecil/)
 
-Advanced Topics
----------------
+高度な話題
+---------
 
- - [Runtime](/docs/advanced/runtime/)
- - [Garbage Collector - SGEN](/docs/advanced/garbage-collector/sgen/)
-   - [GC Benchmark Suite](/docs/advanced/garbage-collector/benchmark-suite/)
+ - [ランタイム](/docs/advanced/runtime/)
+ - [ガベージ コレクター - SGEN](/docs/advanced/garbage-collector/sgen/)
+   - [GCベンチマーク スイート](/docs/advanced/garbage-collector/benchmark-suite/)
  - [AOT](/docs/advanced/aot/)
- - [Embedding](/docs/advanced/embedding/)
- - [Assemblies and the GAC](/docs/advanced/assemblies-and-the-gac/)
+ - [組み込みランタイム](/docs/advanced/embedding/)
+ - [アセンブリとGAC](/docs/advanced/assemblies-and-the-gac/)
  - [P/Invoke](/docs/advanced/pinvoke/)
  - [IOMap](/docs/advanced/iomap/)
  - [monolite](/docs/advanced/monolite/)
@@ -130,6 +130,6 @@ Advanced Topics
    - [COM-Interop](/docs/advanced/com-interop/)
  - [CoreCLR](/docs/advanced/coreclr/)
    - [CoreCLR HowTo](/docs/advanced/coreclr-howto/)
- - [Performance Tips](/docs/advanced/performance-tips/)
+ - [パフォーマンスTips](/docs/advanced/performance-tips/)
  - [SafeHandles](/docs/advanced/safehandles/)
  - [Sandbox](/docs/advanced/sandbox/)
