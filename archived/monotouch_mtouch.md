@@ -62,7 +62,7 @@ Building for the Device
 To build software for the device you will build your application using the `mtouch -dev` option, additionally you need to provide the name of the certificate used to sign your application. The following shows how the application is built for the device:
 
 ``` bash
-$ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
+mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 ```
 
 In this particular case, we are using the "iPhone Developer: Miguel de Icaza" certificate to sign the application. This step is very important, or the physical device will refuse to load the application.
@@ -101,7 +101,7 @@ If your application fails, you can see the fiels output and error to diagnose th
 Debugging on the Simulator
 --------------------------
 
-Debugging on the simulator is currently limited to debugging at the GDB level. This debugging is described in [Debugging with GDB](/Debugging#debugging-with-gdb "Debugging"). This means that it is mostly useful if you are debugging low-level operations or if you are familiar with Mono internals, it is not a complete managed debugger.
+Debugging on the simulator is currently limited to debugging at the GDB level. This debugging is described in [Debugging with GDB](/docs/debug+profile/debug/#debugging-with-gdb). This means that it is mostly useful if you are debugging low-level operations or if you are familiar with Mono internals, it is not a complete managed debugger.
 
 ``` bash
  $ mtouch -debugsim Hello.app
@@ -129,7 +129,7 @@ Reading symbols for shared libraries . done
 Debugging on the Device
 -----------------------
 
-Debugging on the device is currently provided thru the Xcode debugging mechanism and uses GDB. This debugging is described in [Debugging with GDB](/Debugging#debugging-with-gdb "Debugging"). This means that it is mostly useful if you are debugging low-level operations or if you are familiar with Mono internals, it is not a complete managed debugger.
+Debugging on the device is currently provided thru the Xcode debugging mechanism and uses GDB. This debugging is described in [Debugging with GDB](/docs/debug+profile/debug/#debugging-with-gdb). This means that it is mostly useful if you are debugging low-level operations or if you are familiar with Mono internals, it is not a complete managed debugger.
 
 ``` bash
  $ mtouch -xcode Hello -res MainWindow.xib -res Icon.png hello.exe

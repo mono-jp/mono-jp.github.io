@@ -4,25 +4,24 @@ redirect_from:
   - /Languages/
 ---
 
-Multiple languages can be used with the Mono platform. The Mono project provides [C\#](/docs/about-mono/languages/csharp/), [Basic](/docs/about-mono/languages/visualbasic/), and [Ilasm](/docs/tools+libraries/tools/monodis/) compilers, and there are both open source and commercial compilers that can be used with Mono.
+Multiple languages can be used with the Mono platform. The Mono project provides [C#](/docs/about-mono/languages/csharp/), [Basic](/docs/about-mono/languages/visualbasic/), and [Ilasm](/docs/tools+libraries/tools/monodis/) compilers, and there are both open source and commercial compilers that can be used with Mono.
 
 It's important to note that any language that compiles to pure IL should work under Mono. Some languages such as Microsoft's Managed C++ do not always compile to pure IL, so they will not always work as expected, since they are not truly platform independent.
-
 
 Mono-compatible compilers
 =========================
 
-C\#
+C#
 ---
 
-The main C\# compiler of the Mono Project is [**mcs**](/docs/about-mono/languages/csharp/). It covers all the features in C\# 3.0 (2.6) and 4.0 (preview), including 3.0 Linq and 4.0 dynamic. As of today, 'gmcs' is the default compiler based on 2.0 runtime profile, and 'dmcs' is for 4.0 runtime profile.
+The main C# compiler of the Mono Project is [**mcs**](/docs/about-mono/languages/csharp/). It covers all the features in C# 3.0 (2.6), 4.0, 5.0 and 6.0, including 3.0 LINQ, 4.0 dynamic and 5.0 async-await support.
 
-C\# is specified in the ISO/IEC 23271:2006 and ECMA 334 standards. Microsoft has [granted access to their patents](http://port25.technet.com/archive/2009/07/06/the-ecma-c-and-cli-standards.aspx) under their [Community Promise](http://www.microsoft.com/interop/cp/default.mspx).
+C# is specified in the ISO/IEC 23271:2006 and ECMA 334 standards. Microsoft has [granted access to their patents](http://port25.technet.com/archive/2009/07/06/the-ecma-c-and-cli-standards.aspx) under their [Community Promise](http://www.microsoft.com/interop/cp/default.mspx).
 
-F\#
+F#
 ---
 
-[F\#](http://msdn.microsoft.com/en-us/fsharp/default.aspx) is a hybrid language that brings flavors of functional languages and imperative languages, developed by Microsoft. They release compiler that targets mono in [some releases](http://blogs.msdn.com/b/dsyme/archive/2010/04/12/f-2-0-released-as-part-of-visual-studio-2010.aspx).
+[F#](http://fsharp.org/) is a hybrid language that brings flavors of functional languages and imperative languages, developed by Microsoft. They release compiler that targets mono in [some releases](http://blogs.msdn.com/b/dsyme/archive/2010/04/12/f-2-0-released-as-part-of-visual-studio-2010.aspx).
 
 Java
 ----
@@ -37,7 +36,7 @@ Scala is a modern language primarily targeting Java, and it's ported to .NET as 
 Boo
 ---
 
-[Boo](http://boo.codehaus.org/Home) is a statically-typed language supporting dynamic scripting and meta-programming capabilities (extensible compiler, extensible syntax, macros...) with a syntax similar to Python. For details on the particular language features see the [Boo Language Features](http://boo.codehaus.org/Language+Features) page.
+[Boo](http://boo-language.github.io/) is a statically-typed language supporting dynamic scripting and meta-programming capabilities (extensible compiler, extensible syntax, macros...) with a syntax similar to Python. For details on the particular language features see the [Boo Language Wiki](https://github.com/boo-lang/boo/wiki) page.
 
 Nemerle
 -------
@@ -54,23 +53,23 @@ Python
 
 There are two possible choices here: PythonNet and IronPython.
 
-**PythonNet:** [Brian Lloyd](mailto:brian@No.Spam.zope.com) wrote a bridge to link the Python runtime with the .NET runtime. More information on the PS.NET project can be found [here](http://pythonnet.sourceforge.net/). This uses the real Python engine and provides a bridge between the Python world and the .NET world to interoperate.
+**PythonNet:** [Brian Lloyd](mailto:brian@No.Spam.zope.com) wrote a bridge to link the Python runtime with the .NET runtime. More information on the PS.NET project can be found [here](http://pythonnet.github.io/). This uses the real Python engine and provides a bridge between the Python world and the .NET world to interoperate.
 
-**IronPython:** is Jim Hugunin's compiler for Python, it is a complete implementation of Python from scratch that compiles Python code into native CIL. More information is available on [the IronPython site](http://www.codeplex.com/Wiki/View.aspx?ProjectName=IronPython)
+**IronPython:** is Jim Hugunin's compiler for Python, it is a complete implementation of Python from scratch that compiles Python code into native CIL. More information is available on [the IronPython site](http://ironpython.net/)
 
 JavaScript
 ----------
 
-[IronJS](http://github.com/fholm/IronJS) is a DLR-based Javascript implementation that targets mono as well as .NET.
+[IronJS](https://github.com/fholm/IronJS) is a DLR-based Javascript implementation that targets mono as well as .NET.
 
 Historically mono used to ship 'mjs', an implementation of the JavaScript language as part of its distribution, the main author behind this effort is César Natarén.
 
-For more details see [JScript](/archived/jscript "JScript")
+For more details see [JScript](/archived/jscript)
 
 Oberon
 ------
 
-Check out [Oberon for .NET](http://www.bluebottle.ethz.ch/oberon.net/) project.
+Check out [Oberon for .NET](http://www.oberon.ethz.ch/archives/systemsarchive/dot_net) project.
 
 PHP
 ---
@@ -84,12 +83,12 @@ Object Pascal
 
 [RemObjects](http://www.remobjects.com) ships an object pascal compiler. Their product is supported in both .NET and Mono.
 
-Their [Delphi Prism](http://www.codegear.com/products/delphi/prism) compiler support Mono out of the box.
+Their [Delphi Prism](http://edn.embarcadero.com/prism) compiler support Mono out of the box.
 
-LUA
+Lua
 ---
 
-[Lua2Il](http://www.lua.inf.puc-rio.br/luanet/lua2il/) is a compiler that will allow you to run your existing Lua code or reuse the existent expertise you have on Lua in your application and run it with the Mono JIT compiler.
+[NLua](http://nlua.org/) is the bind between Lua world and the .NET world. It allows the usage of Lua from C#, on Windows, Linux, Mac, iOS , Android, Windows Phone 7 and 8.
 
 Cobra
 -----
@@ -98,20 +97,25 @@ Cobra
 
 Cobra combines productivity-boosting features that are otherwise scattered across multiple languages.
 
+Synergy-DBL
+-----
+
+[Synergy-DBL](http://www.synergex.com/language) is a flexible, object-oriented language that runs on Mono on Android, iOS, and Linux, as well as on .NET and other platforms.
+
 Other languages
 ---------------
 
--   [Component Pascal](http://plas.fit.qut.edu.au/gpcp/NET.aspx)
--   [Delta Forth](http://www.dataman.ro/dforth)
+-   [Component Pascal](http://www.cfbsoftware.com/gpcp/)
+-   [Delta Forth](http://www.bocan.ro/deltaforthnet)
 -   [DotLisp](http://sourceforge.net/projects/dotlisp)
--   [\#Smalltalk](http://www.refactory.com/Software/SharpSmalltalk)
+-   [#Smalltalk](http://www.refactory.com/tools/sharp-smalltalk)
 
 Supporting GCC languages
 ========================
 
-The choosen strategy is to use the GCC4 GIMPLE backend to target CIL bytecodes, as planned in the [GCC CIL](/archived/summer2006#gcc-cil-backend "Summer2006") SOC project (or the [2005 attempt](/archived/summer2005#gcc-cil "Summer2005")).
+The choosen strategy is to use the GCC4 GIMPLE backend to target CIL bytecodes, as planned in the [GCC CIL](/archived/summer2006#gcc-cil-backend) SOC project (or the [2005 attempt](/archived/summer2005#gcc-cil)).
 
-In 2006, the [Gcc4cil](/archived/gcc4cil "Gcc4cil") project was publicly announced. For now it supports the C language but it could be extended to support more gcc front ends.
+In 2006, the [Gcc4cil](/archived/gcc4cil) project was publicly announced. For now it supports the C language but it could be extended to support more gcc front ends.
 
 Missing languages
 =================
@@ -129,7 +133,7 @@ LCC is not an open source compiler, but it is free as long as you do not profit 
 
 ### Using GCC
 
-See [Gcc4cil](/archived/gcc4cil "Gcc4cil").
+See [Gcc4cil](/archived/gcc4cil).
 
 Ruby
 ----
@@ -138,12 +142,12 @@ Ruby
 
 The compiler can be used to statically compile a Ruby source file into a verifiable .NET v2.0 assembly or it can be used to directly execute a Ruby source file (compile, load and execute).
 
-[IronRuby](http://www.wilcob.com/Wilco/IronRuby.aspx) from Wilco Bauwer, includes an interactive Ruby Console and works with Mono.
+[IronRuby](http://ironruby.net/) from Wilco Bauwer, includes an interactive Ruby Console and works with Mono.
 
 ADA
 ---
 
-A\# is an ADA compiler for the CIL platform, it can be downloaded from: [here](http://asharp.martincarlisle.com/)
+A# is an ADA compiler for the CIL platform, it can be downloaded from: [here](http://asharp.martincarlisle.com/)
 
 Other PHP Efforts
 -----------------
@@ -152,7 +156,7 @@ Other PHP Efforts
 
 #### Old PHP efforts
 
-[Phalanger](http://www.php-compiler.net/) is a fairly complete PHP to CLI compiler that can even integrate with VS 2003 for console PHP applications.
+[Phalanger](http://www.php-compiler.net/) is a fairly complete PHP to CLI compiler that can even integrate with VS 2010 for console PHP applications.
 
 There is an older effort by Sterling to allow PHP developers to use Mono code, see this [site](http://pecl.php.net/package/mono/).
 
@@ -164,7 +168,7 @@ Languages which are believed to work, but have not had a complete run of all the
 Tachy
 -----
 
-A subset of Scheme language called [Tachy](http://www.kenrawlings.com/pages/Tachy)
+A subset of Scheme language called [Tachy](https://github.com/jeffdik/tachy/tree/master/src)
 
 Mixing with other languages
 ---------------------------
@@ -174,7 +178,6 @@ See [Mixing with other languages](/docs/about-mono/languages/mixing-with-other-l
 .net-language links
 ===================
 
-[DotNetPowered.com](http://www.dotnetpowered.com/languages.aspx) have a list of a lot of .net languages.
+[Brian Ritchie](https://bitbucket.org/brianritchie/wiki/wiki/.NET%20Languages) have a list of a lot of .NET languages.
 
 [Language Comparison](http://bean.wikidot.com/comparecsharpironpythonboo) - A simple comparison of some languages can be used with the Mono platform
-

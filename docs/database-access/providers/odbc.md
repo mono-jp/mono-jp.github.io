@@ -16,6 +16,7 @@ Info
 -   Works on Windows via the native Windows odbc32.dll
 
 -   Works on Linux/Unix via:
+    -   [Devart ODBC](http://www.devart.com/odbc/) works via Windows and Mac OS X too. Support from [Devart](http://www.devart.com) and free versions available.
     -   [unixODBC](http://www.unixodbc.org/) which has commercial support from [Easysoft](http://www.easysoft.com/)
     -   [iODBC](http://www.iodbc.org/) which has commercial support from [OpenLink Software](http://oplweb.openlinksw.com:8080/download/)
 
@@ -119,20 +120,24 @@ Testing ODBC provider with MySQL
 
 <!-- -->
 
-     "DSN=dataSetName;" +
-     "UID=myuserid;" + 
-     "PWD=mypassword" 
+``` text
+"DSN=dataSetName;" +
+"UID=myuserid;" +
+"PWD=mypassword"
+```
 
 -   Here is a ConnectionString format if you do not have a DSN (also called DSN-less connection). Note the use of DRIVER and SERVER parameters:
 
 <!-- -->
 
-     "DRIVER={MySQL ODBC 3.51 Driver};" + 
-     "SERVER=localhost;DATABASE=test;" + 
-     "UID=myuserid;PASSWORD=mypassword;" + 
-     "OPTION=3"
+``` text
+"DRIVER={MySQL ODBC 3.51 Driver};" +
+"SERVER=localhost;DATABASE=test;" +
+"UID=myuserid;PASSWORD=mypassword;" +
+"OPTION=3"
+```
 
-**C\# Example**
+**C# Example**
 
 ``` csharp
  using System;
@@ -183,7 +188,7 @@ Testing ODBC provider with MySQL
  }
 ```
 
--   Building C\# Example:
+-   Building C# Example:
 
 -   Save the example to a file, such as, TestExample.cs
 
@@ -191,11 +196,15 @@ Testing ODBC provider with MySQL
 
 <!-- -->
 
-     mcs TestExample.cs -r:System.Data.dll
+``` bash
+mcs TestExample.cs -r:System.Data.dll
+```
 
 -   Running the Example:
 
 <!-- -->
 
-     mono TestExample.exe 
+``` bash
+     mono TestExample.exe
+```
 

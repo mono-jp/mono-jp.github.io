@@ -2,7 +2,7 @@
 title: "Guide:Running Mono Applications"
 lastmodified: '2012-04-14'
 redirect_from:
-  - /Guide:Running_Mono_Applications/
+  - /Guide%3ARunning_Mono_Applications/
 ---
 
 Guide:Running Mono Applications
@@ -38,9 +38,9 @@ Mono includes two execution systems:
 
 With the mono JIT default, not all optimizations are turned on, since some of them can be quite time consuming. However, when using it in batch mode, it is recommended that you use the `-O=all` switch to improve the code generation, for example:
 
-    $ mono --aot -O=all library.dll
+    mono --aot -O=all library.dll
 
-The above will leave the native version of the code in \`library.dll.so'. See the page on [AOT](/AOT "AOT") for more details.
+The above will leave the native version of the code in \`library.dll.so'. See the page on [AOT](/AOT) for more details.
 
 Shell Scripts
 -------------
@@ -54,14 +54,14 @@ When you run "myprogram," the shell will replace \$@ with any arguments you prov
 
 If you installed mono to a different location, substitute that for /usr/bin/mono. You can check with the "which mono" command.
 
-See also [Application Deployment Layout Guidelines](/Guidelines:Application_Deployment#layout-recommendation "Guidelines:Application Deployment").
+See also [Application Deployment Layout Guidelines](/docs/getting-started/application-deployment/#layout-recommendation).
 
 Registering .exe as non-native binaries (Linux only)
 ----------------------------------------------------
 
 Because this is a Linux-specific feature, we do not recommend that developers deploy this solution, as it would limit the portability of their scripts.
 
-In addition, this mechanism does not work as intended by the [Application Deployment Guidelines](/Guidelines:Application_Deployment "Guidelines:Application Deployment").
+In addition, this mechanism does not work as intended by the [Application Deployment Guidelines](/Guidelines:Application_Deployment).
 
 You can also make a systemwide change, and use binfmt to register the exe files as non-native binaries. Then, when trying to launch an exe file, the kernel will run the mono interpreter to handle the command. Binfmt can also be used to launch Windows executables using WINE, or Java .class files using a JVM. To register exe with the kernel:
 
@@ -117,9 +117,9 @@ For example, to create a bundle for hello world, use the following command:
                  -rw-r--r--  1 ed users     136 2005-04-29 11:06 hello.cs
                  -rwxr-xr-x  1 ed users    3072 2005-04-29 11:06 hello.exe
 
-The resulting executable is self contained and does not need the Mono runtime installed to run. However, if your application relies on libraries linked to by the mono runtime or Gtk\#, those will need to be installed (Gtk\# helper libraries come to mind).
+The resulting executable is self contained and does not need the Mono runtime installed to run. However, if your application relies on libraries linked to by the mono runtime or Gtk#, those will need to be installed (Gtk# helper libraries come to mind).
 
-An example with a slightly more complex application (with the same mkbundle options) which uses Gtk\# and misc assemblies:
+An example with a slightly more complex application (with the same mkbundle options) which uses Gtk# and misc assemblies:
 
                 $ mkbundle eGuide.exe --deps -o eGuide
                 Sources: 1 Auto-dependencies: True
@@ -146,7 +146,7 @@ An example with a slightly more complex application (with the same mkbundle opti
                 as -o /tmp/tmp713f3cc1.o temp.s
                 cc -o eGuide -Wall temp.c `pkg-config --cflags --libs mono` /tmp/tmp713f3cc1.o
                 Done
-                
+
                 $ ls -l
                 -rwxr-xr-x  1 ed users 5022039 2005-04-29 10:52 eGuide
                 -rwxr-xr-x  1 ed users   16384 2005-04-13 16:20 eGuide.exe
@@ -155,14 +155,14 @@ The -z option allows you to compress the assemblies included in the bundle, and 
 
 The -c option will create a host.c file which contains the main function of the program, which you can modify before compiling and linking the application.
 
-With -c, the further option --nomain will generate the host.c file without a main method so that you can embed it as a library in an existing native application in which you are embedding the Mono runtime yourself. Just call mono\_mkbundle\_init() before initializing the JIT to make the bundled assemblies available.
+With -c, the further option --nomain will generate the host.c file without a main method so that you can embed it as a library in an existing native application in which you are embedding the Mono runtime yourself. Just call mono_mkbundle_init() before initializing the JIT to make the bundled assemblies available.
 
-Bundles in addition support a --static flag. The --static flag causes mkbundle to generate a static executable that statically links the Mono runtime. Be advised that this option will trigger the LGPL requirement that you still distribute the independent pieces to your user so he can manually upgrade his Mono runtime if he chooses to do so. Alternatively, you can obtain a proprietary license of Mono by [contacting Xamarin](/Contact "Contact").
+Bundles in addition support a --static flag. The --static flag causes mkbundle to generate a static executable that statically links the Mono runtime. Be advised that this option will trigger the LGPL requirement that you still distribute the independent pieces to your user so he can manually upgrade his Mono runtime if he chooses to do so. Alternatively, you can obtain a proprietary license of Mono by [contacting Xamarin](/Contact).
 
 macpack (Mac OS X only)
 -----------------------
 
-*macpack* is a tool that must be used to bundle Cocoa\# applications into Double-Clickable, Finder friendly, bundles on Mac OS X. It bundles static libraries and resources, as well as generates a basic info.plist into the .app bundle.
+*macpack* is a tool that must be used to bundle Cocoa# applications into Double-Clickable, Finder friendly, bundles on Mac OS X. It bundles static libraries and resources, as well as generates a basic info.plist into the .app bundle.
 
 For example the following commands are used to build the CurrencyConverter.exe into an application bundle:
 

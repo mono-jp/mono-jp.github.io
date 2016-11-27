@@ -4,25 +4,33 @@ redirect_from:
   - /Compatibility/
 ---
 
-The easiest way to describe what Mono currently supports is:
- **Everything in .NET 4.5** except **WPF**, **WWF**, and with **limited WCF** and **limited ASP.NET 4.5 async stack**.
+The easiest way to describe what Mono currently supports is:<br/>
+**Everything in .NET 4.5** except **WPF**, **WWF**, and with **limited WCF** and **limited ASP.NET 4.5 async stack**.
+
+System.Web and WCF are [candidates for 'almost immediate' porting from the .NET reference source back to Mono](/docs/about-mono/dotnet-integration/#entire-assemblies), so support coverage may improve.
 
 Here is a slightly more detailed view, by .NET framework version:
 
 |<i class="fa fa-check"/>|Implemented|<i class="fa fa-exclamation-triangle"/>|Partially Implemented|<i class="fa fa-ban"/>|Not Implemented|
 
+.NET 4.6
+--------
+
+|<i class="fa fa-check"/>|C# 6.0|
+
 .NET 4.5
 --------
 
-|<i class="fa fa-check"/>|C\# 5.0 - async support|
+|<i class="fa fa-check"/>|C# 5.0 - async support|
 |<i class="fa fa-check"/>|Async Base Class Library Upgrade|
 |<i class="fa fa-exclamation-triangle"/>|MVC4 *- Partial, no async features supported.*|
-|<i class="fa fa-ban"/>|ASP.NET 4.5 Async Pipeline *- Needs an parallel processing pipeline with async support, not done.*|
+|<i class="fa fa-exclamation-triangle"/>|MVC5 *- Partial, no async features supported.*|
+|<i class="fa fa-ban"/>|ASP.NET 4.5 Async Pipeline *- Needs a parallel processing pipeline with async support, not done.*|
 
 .NET 4.0
 --------
 
-|<i class="fa fa-check"/>|C\# 4.0|
+|<i class="fa fa-check"/>|C# 4.0|
 |<i class="fa fa-check"/>|ASP.Net 4.0|
 |<i class="fa fa-check"/>|ASP.Net MVC 1, MVC 2 and MVC3|
 |<i class="fa fa-check"/>|System.Numerics|
@@ -37,7 +45,7 @@ Here is a slightly more detailed view, by .NET framework version:
 .NET 3.5
 --------
 
-|<i class="fa fa-check"/>|C\# 3.0|
+|<i class="fa fa-check"/>|C# 3.0|
 |<i class="fa fa-check"/>|System.Core|
 |<i class="fa fa-check"/>|LINQ|
 |<i class="fa fa-check"/>|ASP.Net 3.5|
@@ -47,27 +55,27 @@ Here is a slightly more detailed view, by .NET framework version:
 .NET 3.0
 --------
 
-|<i class="fa fa-exclamation-triangle"/>|WCF *- silverlight 2.0 subset completed*|
-|<i class="fa fa-ban"/>|WPF *- no plans to implement*|
+|<i class="fa fa-exclamation-triangle"/>|WCF *- Silverlight 2.0 subset completed*|
+|<i class="fa fa-ban"/>|WPF *- No plans to implement*|
 |<i class="fa fa-ban"/>|WWF *- Will implement WWF 4 instead on future versions of Mono.*|
 
 .NET 2.0
 --------
 
-|<i class="fa fa-check"/>|C\# 2.0 (generics)|
+|<i class="fa fa-check"/>|C# 2.0 (generics)|
 |<i class="fa fa-check"/>|Core Libraries 2.0: mscorlib, System, System.Xml|
-|<i class="fa fa-check"/>|ASP.Net 2.0 *- except WebParts*|
+|<i class="fa fa-check"/>|ASP.Net 2.0 *- Except WebParts*|
 |<i class="fa fa-check"/>|ADO.Net 2.0|
-|<i class="fa fa-check"/>|Winforms/System.Drawing 2.0 *- does not support right-to-left*|
+|<i class="fa fa-check"/>|Winforms/System.Drawing 2.0 *- Does not support right-to-left*|
 
 .NET 1.1
 --------
 
-|<i class="fa fa-check"/>|C\# 1.0|
+|<i class="fa fa-check"/>|C# 1.0|
 |<i class="fa fa-check"/>|Core Libraries 1.1: mscorlib, System, System.Xml|
 |<i class="fa fa-check"/>|ASP.Net 1.1|
 |<i class="fa fa-check"/>|ADO.Net 1.1|
 |<i class="fa fa-check"/>|Winforms/System.Drawing 1.1|
 |<i class="fa fa-check"/>|System.Transactions|
-|<i class="fa fa-ban"/>|System.Management *- does not map to Linux*|
-|<i class="fa fa-ban"/>|System.EnterpriseServices *- deprecated*|
+|<i class="fa fa-ban"/>|System.Management *- Does not map to Linux*|
+|<i class="fa fa-ban"/>|System.EnterpriseServices *- Deprecated*|

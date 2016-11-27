@@ -8,7 +8,7 @@ redirect_from:
 Moonlight/SecurityStatus
 ========================
 
-This page list the security related **features** of Moonlight. Another [page](/SecurityValidation "SecurityValidation") list the **validations** needed to ensure **both** the [Moonlight](/Moonlight "Moonlight") and Mono security features are working.
+This page list the security related **features** of Moonlight. Another [page](/SecurityValidation) list the **validations** needed to ensure **both** the [Moonlight](/Moonlight) and Mono security features are working.
 
 **Note:** Simply search for **TODO** or **partial** on this page to see the current restrictions.
 
@@ -40,7 +40,7 @@ This page list the security related **features** of Moonlight. Another [page](/S
 <li><a href="#javascript">3.2.2 JavaScript</a></li>
 <li><a href="#client-http-stack">3.2.3 Client Http Stack</a></li>
 <li><a href="#http-stack-registration">3.2.4 Http Stack Registration</a></li>
-<li><a href="#others">3.2.5 Others</a></li>
+<li><a href="#other">3.2.5 Others</a></li>
 <li><a href="#security-zones">3.2.6 Security Zones</a></li>
 </ul></li>
 <li><a href="#sockets">3.3 Sockets</a>
@@ -56,14 +56,14 @@ This page list the security related **features** of Moonlight. Another [page](/S
 <ul>
 <li><a href="#quota">4.1.1 Quota</a></li>
 <li><a href="#classes">4.1.2 Classes</a></li>
-<li><a href="#additional-documentation_2">4.1.3 Additional documentation</a></li>
+<li><a href="#isolated-storage-additional-documentation">4.1.3 Additional documentation</a></li>
 </ul></li>
 <li><a href="#openfiledialog">4.2 OpenFileDialog</a></li>
 <li><a href="#savefiledialog">4.3 SaveFileDialog</a></li>
 <li><a href="#local-messaging">4.4 Local Messaging</a></li>
 </ul></li>
 <li><a href="#digital-rights-management">5 Digital Rights Management</a></li>
-<li><a href="#others_2">6 Others</a>
+<li><a href="#others">6 Others</a>
 <ul>
 <li><a href="#regular-expressions">6.1 Regular Expressions</a></li>
 <li><a href="#user-initiated-events">6.2 User Initiated Events</a></li>
@@ -100,8 +100,8 @@ CoreCLR Security Model
     -   Based on the output of tools located inside [moon/class/tuning/SecurityAttributes/](http://anonsvn.mono-project.com/viewvc/trunk/moon/class/tuning/SecurityAttributes/)
     -   status: **active**
 -   Documentation
-    -   [CoreCLR security model](/Moonlight2CoreCLR "Moonlight2CoreCLR")
-    -   [Moonlight Implementation Details](/MoonlightSecurity "MoonlightSecurity")
+    -   [CoreCLR security model](/Moonlight2CoreCLR)
+    -   [Moonlight Implementation Details](/MoonlightSecurity)
 
 Plugin Sandbox
 ==============
@@ -225,7 +225,7 @@ Since Silverlight 3 support two similar HTTP stack there are some ways to select
 
 Ref: [http://msdn.microsoft.com/en-us/library/dd920295%28VS.95%29.aspx](http://msdn.microsoft.com/en-us/library/dd920295%28VS.95%29.aspx)
 
-### Others
+### Other
 
 There are different rules for downloading special content, by type:
 
@@ -303,7 +303,7 @@ In the *classic* framework the isolation was based on the appdomain, assembly, a
 -   IsolatedStorageFileStream (mscorlib) [source](http://anonsvn.mono-project.com/viewvc/trunk/mcs/class/corlib/System.IO.IsolatedStorage/MoonIsolatedStorageFileStream.cs?view=markup), [MSDN](http://msdn.microsoft.com/en-us/library/system.io.isolatedstorage.isolatedstoragefilestream(VS.95).aspx)
 -   IsolatedStorageSettings (System.Windows) [source](http://anonsvn.mono-project.com/viewvc/trunk/moon/class/System.Windows/System.IO.IsolatedStorage/IsolatedStorageSettings.cs?view=markup), [MSDN](http://msdn.microsoft.com/en-us/library/system.io.isolatedstorage.isolatedstoragesettings(VS.95).aspx)
 
-### Additional documentation
+### Isolated Storage Additional documentation
 
 -   [CLR Inside Out: Isolated Storage In Silverlight 2](http://msdn.microsoft.com/en-us/magazine/dd458794.aspx)
 -   [Silverlight 3: Out of the Browser](http://blogs.msdn.com/jonbox/archive/2009/03/22/silverlight-3-out-of-the-browser.aspx), Mike Harsh @ MIX09 (beta)
@@ -383,7 +383,7 @@ Assembly Loading
     -   status: **complete**
 -   Special handling of `[InternalsVisibleTo]` wrt platform code
     -   make sure we are not opening our internals to assemblies in the XAP file masquerading (name and public key token) as platform code
-    -   see [SecurityValidation](/SecurityValidation "SecurityValidation") for more details
+    -   see [SecurityValidation](/SecurityValidation) for more details
     -   status: **complete**
 
 Shader Effects
@@ -391,12 +391,12 @@ Shader Effects
 
 Silverlight 3 feature
 
--   -   status: **TODO**
+-   status: **TODO**
 
 Surface reduction
 -----------------
 
-Why ? beside the standard *less code, less vulnerabilities* it is also easier and faster, in general, to remove features than to audit them (now and in the future). As a bonus [Moonlight](/Moonlight "Moonlight") gets a smaller download size and the Mono runtime get usable in smaller embedded systems.
+Why ? beside the standard *less code, less vulnerabilities* it is also easier and faster, in general, to remove features than to audit them (now and in the future). As a bonus [Moonlight](/Moonlight) gets a smaller download size and the Mono runtime get usable in smaller embedded systems.
 
 ### Mono
 

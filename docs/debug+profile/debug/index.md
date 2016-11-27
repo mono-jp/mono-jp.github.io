@@ -8,7 +8,7 @@ redirect_from:
 
 Debugging a problem in an application is like solving a puzzle. There are certain tools that can help you solve the puzzle. This page documents some of the strategies, tools and tricks that you can use in solving these puzzles.
 
-You can find bugs by using a debugger: setting breakpoints, running the code line-by-line, examining variables, changing its state, exploring what other threads are doing, and see what the call stacks for each routines are. See the sections [Mono Debugger](/docs/debug+profile/debug/#mono-debugger), [Debugging with GDB](/docs/debug+profile/debug/#debugging-with-gdb) and [Debugging with LLDB](/docs/debug+profile/debug/#debugging-with-lldb) for more information on this.
+You can find bugs by using a debugger: setting breakpoints, running the code line-by-line, examining variables, changing its state, exploring what other threads are doing, and see what the call stacks for each routines are. See the sections [Debugging with GDB](/docs/debug+profile/debug/#debugging-with-gdb) and [Debugging with LLDB](/docs/debug+profile/debug/#debugging-with-lldb) for more information on this.
 
 You can also debug an application by looking at stack traces. These are typically the result of an exception being thrown, or are the result of the code containing explicit calls to `Console.WriteLine(Environment.StackTrace)`. This helps you understand what the call frames were at the point of the stack traces and you can use this to understand what could have lead to the particular state that you are exploring (the crash, the exception, the report).
 
@@ -19,7 +19,7 @@ Another diagnostics mechanism is exploring which exceptions are being thrown (yo
 Debugging information
 ---------------------
 
-To debug applications or obtain line number information in stack traces, it is necessary to compile your programs with debugging information. This is achieved using the -debug command line option to the C\# compiler. In Mono 1.0.x this embeds the debugging information in the resulting assembly, in Mono 1.1.x a separate file with the extension .mdb is produced.
+To debug applications or obtain line number information in stack traces, it is necessary to compile your programs with debugging information. This is achieved using the -debug command line option to the C# compiler. In Mono 1.0.x this embeds the debugging information in the resulting assembly, in Mono 1.1.x a separate file with the extension .mdb is produced.
 
 To get stack traces with line number information, you need to run your program like this:
 
@@ -47,7 +47,7 @@ For example, when faced with a stack trace, like this:
     #3  0x0817f266 in ?? ()
     #4  0x0817f1a5 in ?? ()
 
-You can find out what methods are at each address using the mono\_print\_method\_from\_ip function (or mono\_pmip if you are using Mono 1.1.x):
+You can find out what methods are at each address using the mono_print_method_from_ip function (or mono_pmip if you are using Mono 1.1.x):
 
     (gdb) p mono_pmip (0x0817f490)
     IP 0x817f490 at offset 0x28 of method (wrapper managed-to-native) System.String:GetHashCode () (0x817f468 0x817f4a4)
@@ -73,7 +73,7 @@ Sometimes you will want to produce a complete dump of all the managed names from
      end
     end
 
-Then you can issue the "mono\_backtrace 15" from the gdb prompt to obtain a trace of the last 15 frames.
+Then you can issue the "mono_backtrace 15" from the gdb prompt to obtain a trace of the last 15 frames.
 
 If you use P/Invoke often, it is often helpful to set a breakpoint in an unmanaged function and then print a managed stack trace. Starting with 1.1.13.4, you can add the following gdb macro to your .gdbinit file. (Note, this has only been tested on x86):
 
@@ -89,7 +89,7 @@ If you use P/Invoke often, it is often helpful to set a breakpoint in an unmanag
      end
     end
 
-Using "mono\_stack" from gdb will print a managed stack trace *to the program's stdout*. It will not print out in your gdb console! You can also use "thread apply all mono\_stack" to print stacks for all threads.
+Using "mono_stack" from gdb will print a managed stack trace *to the program's stdout*. It will not print out in your gdb console! You can also use "thread apply all mono_stack" to print stacks for all threads.
 
 Output will look something like this:
 
@@ -125,7 +125,7 @@ Use `mono_value_describe_fields` to prints to stdout a small description of each
 
 Use `mono_class_describe_statics` to prints to stdout a small description of each static field of the type @klass in the current application domain.
 
-Use `mono_debug_print_vars` to prints to stdout the information about the local variables in a method (if @only\_arguments is false) or about the arguments.
+Use `mono_debug_print_vars` to prints to stdout the information about the local variables in a method (if @only_arguments is false) or about the arguments.
 
 The information includes the storage info (where the variable lives, in a register or in memory). The method is found by looking up what method has been emitted at the instruction address @ip.
 
@@ -154,37 +154,13 @@ Here is an example session:
 Debugging with LLDB
 -------------------
 
-You can use the following LLDB python script to get backtraces in lldb:
+You can use the following LLDB python script to get backtraces in lldb: [monobt.py]( https://github.com/mono/mono/blob/master/data/lldb/monobt.py)
 
-    import lldb
-
-    def monobt(debugger, command, result, dict):
-        target = debugger.GetSelectedTarget()
-        process = target.GetProcess()
-        thread = process.GetSelectedThread()
-        for frame in thread:
-            pc = str(frame.GetPCAddress())
-            if pc[0] == '0':
-                try:
-                    print 'frame #' + str(frame.GetFrameID()) + ': ' + pc + frame.EvaluateExpression('(char*)mono_pmip((void*)' + pc + ')').GetSummary()[1:-1]
-                except:
-                    print frame
-            else:
-                print frame
-
-        return None
-
-    def __lldb_init_module (debugger, dict):
-        # This initializer is being run from LLDB in the embedded command interpreter
-        # Add any commands contained in this module to LLDB
-        debugger.HandleCommand('command script add -f monobt.monobt monobt')
-        print '"monobt" command installed'
-
-Assuming the above script is saved in \~/Library/lldb/monobt.py, you can load it automatically in every lldb session by putting the following into .lldbinit (in your \$HOME directory):
+Assuming the above script is saved in `~/Library/lldb/monobt.py`, you can load it automatically in every lldb session by putting the following into .lldbinit (in your \$HOME directory):
 
     command script import ~/Library/lldb/monobt.py
 
-Once the script is loaded, you can type \`monobt' to get a backtrace of the currently selected thread with managed frames symbolicated.
+Once the script is loaded, you can type `monobt` to get a backtrace of the currently selected thread with managed frames symbolicated.
 
 Debugging With Visual Studio on Windows
 ---------------------------------------
@@ -204,7 +180,7 @@ When mono was loaded from a dynamic library, and the above command doesn't work,
 Debugging Managed Lock Deadlocks
 --------------------------------
 
-Managed locks (implemented in the Monitor class and usually invoked with the lock () construct in C\#) are subject to the same incorrect uses of normal locks, though they can be safely taken recursively by the same thread.
+Managed locks (implemented in the Monitor class and usually invoked with the lock () construct in C#) are subject to the same incorrect uses of normal locks, though they can be safely taken recursively by the same thread.
 
 One of the obviously incorrect way to use locks is to have multiple locks and acquire them in different orders in different codepaths. Here is an example:
 
@@ -290,7 +266,7 @@ In this particular case it's pretty easy since the objects used for locking are 
 TestDeadlock object at 0x2ffd8 (klass: 0x820922c)
 ```
 
-Now we know the class (0x820922c) and we can get a list of the static fields and their values and correlate with the objects locked in the mono\_locks\_dump () list:
+Now we know the class (0x820922c) and we can get a list of the static fields and their values and correlate with the objects locked in the mono_locks_dump () list:
 
 ``` bash
 (gdb) call mono_class_describe_statics (0x820922c)
@@ -309,21 +285,21 @@ If the deadlock you're experiencing is not caused by your code, it might be a Mo
 
 -   Get your application to deadlock.
 -   Launch gdb from the command line.
--   Execute "attach \<the-mono-process-id\>" (to find the process, pursue "ps -A | grep mono").
--   Execute "thread apply all bt".
+-   Execute `attach <the-mono-process-id>` (to find the process, pursue `ps -A | grep mono`).
+-   Execute `thread apply all bt`.
 
  The output you got with the last step is good to diagnose the problem or to attach to a bug.
 
 Debugging Pinned Objects
 ------------------------
 
-The Mono GC will conservatively scan part of the stacks of the threads to find if they reference objects that thus would need to be kept alive. Sometimes the stack, though, contains intergers or other data that look like a pointer to an object, but it isn't really used to hold a reference to managed memory. When using the SGen GC, to help debug those cases, you can call the function find\_pinning\_ref\_from\_thread(obj, obj\_size) to check whether the object obj is being pinned from some thread locations. Make sure you have a mono debug build, as the linker could optimize away this function from production builds.
+The Mono GC will conservatively scan part of the stacks of the threads to find if they reference objects that thus would need to be kept alive. Sometimes the stack, though, contains intergers or other data that look like a pointer to an object, but it isn't really used to hold a reference to managed memory. When using the SGen GC, to help debug those cases, you can call the function find_pinning_ref_from_thread(obj, obj_size) to check whether the object obj is being pinned from some thread locations. Make sure you have a mono debug build, as the linker could optimize away this function from production builds.
 
 ### Triggering the Debugger
 
 From managed code, you can invoke the System.Diagnostics.Debugger.Break () method in your code to break execution and get to the GDB prompt.
 
-From unmanaged code, you can use the G\_BREAKPOINT() macro in your code.
+From unmanaged code, you can use the G_BREAKPOINT() macro in your code.
 
 Debugging with GDB in XDEBUG mode
 ---------------------------------
@@ -338,7 +314,7 @@ gdb is not designed to handle 1000s of symbol files (one per JITted method), so 
 
 ### For older gdb versions
 
--   Set the MONO\_XDEBUG env variable to '1'.
+-   Set the MONO_XDEBUG env variable to '1'.
 -   Add the following to your .gdbinit:
 
 <!-- -->
@@ -471,7 +447,7 @@ You can turn off the output by sending the USR2 signal again to the process.
 Runtime Logging
 ---------------
 
-You can ask the runtime to log various message to stdout using: MONO\_LOG\_LEVEL=debug
+You can ask the runtime to log various message to stdout using: MONO_LOG_LEVEL=debug
 
 Using Valgrind on Mono
 ----------------------
@@ -482,7 +458,7 @@ Historically Mono and Valgrind didn't always played well together. If this has d
 
 Recent valgrind versions are able to deal with for self-modifying programs (which is what the mono JIT does) by using the --smc-check=all option.
 
-As an extra bonus, Paolo (lupus) has shared his suppression file for Mono. This removes a lot, but not all, false positives (or unimportant) logs coming from the Mono runtime. This makes it easier and faster to find what you're looking for. The suppression file is available in Mono's SVN as /mono/data/mono.supp
+As an extra bonus, Paolo (lupus) has shared his suppression file for Mono. This removes a lot, but not all, false positives (or unimportant) logs coming from the Mono runtime. This makes it easier and faster to find what you're looking for. The suppression file is available in Mono's git as /mono/data/mono.supp
 
 Sample usage:
 
@@ -492,7 +468,7 @@ sh$ valgrind --tool=memcheck -v --leak-check=full \
 >  mono app.exe
 ```
 
-This will run the app.exe application using mono and create a log file named "log.\#\#\#\#" (where \#\#\#\# is the process id). The log file will indicates what leaked (and from where), what was (badly) reused after being freed
+This will run the app.exe application using mono and create a log file named "log.####" (where #### is the process id). The log file will indicates what leaked (and from where), what was (badly) reused after being freed
 
 ### libgdiplus
 

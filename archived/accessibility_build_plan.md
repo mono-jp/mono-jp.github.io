@@ -2,7 +2,7 @@
 title: "Accessibility: Build Plan"
 lastmodified: '2010-05-06'
 redirect_from:
-  - /Accessibility:_Build_Plan/
+  - /Accessibility%3A_Build_Plan/
 ---
 
 Accessibility: Build Plan
@@ -44,7 +44,7 @@ Accessibility: Build Plan
 <li><a href="#build1">4.11.1.2 Build1</a></li>
 </ul></li>
 <li><a href="#architectures">4.11.2 Architectures</a></li>
-<li><a href="#software_2">4.11.3 Software:</a></li>
+<li><a href="#software-needs">4.11.3 Software:</a></li>
 </ul></li>
 <li><a href="#responsibilities">4.12 Responsibilities</a></li>
 <li><a href="#staffing-needs">4.13 Staffing needs</a></li>
@@ -70,17 +70,17 @@ A build plan for the Accessibility team's efforts in bringing accessibility to m
 Build Team
 ----------
 
-Stephen Shaw (aka decriptor)
+Stephen Shaw (aka decriptor)<br/>
  Ray Wang (aka Ray)
 
-[Full A11y team](/Accessibility:_Team "Accessibility: Team")
+[Full A11y team](/Accessibility:_Team)
 
 Build Meetings
 --------------
 
 As needed on irc
 
-Where: \#mono-a11y on irc.gimp.org
+Where: #mono-a11y on irc.gimp.org
 
 Outline
 -------
@@ -178,7 +178,6 @@ at-spi-sharp
 
        nightly builds
        currenty released
-     
 
 #### Build Distributions
 
@@ -206,7 +205,7 @@ Distros that have packaged it (or parts of it)
 Current
 
 -   i586
--   x86\_64
+-   x86_64
 
 #### Build risk issues
 
@@ -218,7 +217,7 @@ Current
 
 #### General Guidelines
 
--   All builders shall be on the team IRC channel (\#mono-a11y on irc.gimp.org) during work hours.
+-   All builders shall be on the team IRC channel (#mono-a11y on irc.gimp.org) during work hours.
 -   Builds shall be automated whenever possible. Time constraint is not a good excuse not to automate.
 
 #### Suspension criteria and Resumption requirements
@@ -254,7 +253,7 @@ Individual Preparation:
 
 Build Servers with root jails for each of the various architectures and distributions. This is largely taken care of by the build service and osc. osc creates jails on the fly.
 
-##### Hardware:
+##### Hardware
 
 Currently there are 2 build servers (build0 and build1) There are now several other machines
 
@@ -274,9 +273,9 @@ Currently there are 2 build servers (build0 and build1) There are now several ot
 ##### Architectures
 
 -   i586
--   x86\_64
+-   x86_64
 
-##### Software:
+##### Software needs
 
 -   Hudson
 -   OBS
@@ -293,7 +292,7 @@ Currently there are 2 build servers (build0 and build1) There are now several ot
 #### Staffing needs
 
 -   Build Engineers
-    -   Programming experience with C\#, Python, and bash
+    -   Programming experience with C#, Python, and bash
     -   Build Engineer experience
     -   Autotools experience
     -   Build system experience
@@ -304,7 +303,7 @@ Anyone interested in learn/helping with build is welcome to join our team.
 
 #### Schedule
 
-*Built around the [roadmap](/Accessibility:_Roadmap "Accessibility: Roadmap")*
+*Built around the [roadmap](/Accessibility:_Roadmap)*
 
 Based on Q2 in roadmap, our initial testing schedule is below:
 
@@ -338,13 +337,13 @@ Based on Q2 in roadmap, our initial testing schedule is below:
 References
 ----------
 
-The [Product roadmap](/Accessibility:_Roadmap)
- The [Architecture overview](/Accessibility#Architecture)
+The [Product roadmap](/Accessibility:_Roadmap)<br/>
+ The [Architecture overview](/archived/accessibility_architecture/)<br/>
  [The Novell & Microsoft announcement](http://www.novell.com/news/press/microsoft-and-novell-celebrate-year-of-interoperability-expand-collaboration-agreement) to create cross-platform accessibility framework
 
 ### Build Systems
 
-[BuildSystem/MonoBuild](/BuildSystem/MonoBuild) MonoBuild---The current mono build system. We have tied into this for the time being.
+[BuildSystem/MonoBuild](/BuildSystem/MonoBuild) MonoBuild---The current mono build system. We have tied into this for the time being.<br/>
  [https://build.opensuse.org/](https://build.opensuse.org/) OBS---This is a really cool build system that can handle several different distributions and architectures
 
 Build plan identifier

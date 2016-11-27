@@ -20,7 +20,7 @@ There are various kinds of tests in Mono:
 
 -   **Web Services tests**: Web Services client/server tests.
 
-The latest test results are available at [https://wrench.mono-project.com/Wrench/](https://wrench.mono-project.com/Wrench/) for all major platform run continuously after every commit.
+The latest test results are available at [https://jenkins.mono-project.com/](https://jenkins.mono-project.com/) for all major platform run continuously after every commit.
 
 Class Library tests
 -------------------
@@ -34,15 +34,15 @@ In some classes, we might also provide standalone tests because of some reasons 
 To run the class library tests for a particular class library, go into the directory for the class library, and run make with \`run-test' argument. For example, to run the mscorlib tests do this:
 
 ``` bash
-$ cd mcs/class/corlib
-$ make run-test && make run-test PROFILE=net_2_0
+cd mcs/class/corlib
+make run-test && make run-test PROFILE=net_2_0
 ```
 
 This will run the mscorlib tests for the default profile and then 2.0, if you only want to run the 2.0 tests, run:
 
 ``` bash
-$ cd mcs/class/corlib
-$ make run-test PROFILE=net_2_0
+cd mcs/class/corlib
+make run-test PROFILE=net_2_0
 ```
 
 The PROFILE variable controls which profile will be used to run the tests, if you do not specify it, it will be limited to 4.5.
@@ -50,8 +50,8 @@ The PROFILE variable controls which profile will be used to run the tests, if yo
 If you want to run a single fixture, you can use the convenience parameter FIXTURE which assumes that your test is in the MonoTests namespace, like this:
 
 ``` bash
-$ cd mcs/class/corlib
-$ make run-test FIXTURE=System.DecimalTest
+cd mcs/class/corlib
+make run-test FIXTURE=System.DecimalTest
 ```
 
 That will run the fixture for MonoTests.System.DecimalTest
@@ -59,15 +59,15 @@ That will run the fixture for MonoTests.System.DecimalTest
 You can pass arbitrary command line options to nunit-console, like this:
 
 ``` bash
-$ cd mcs/class/corlib
-$ make run-test TEST_HARNESS_FLAGS=-fixture=MonoTests.System.DateTimeTest
+cd mcs/class/corlib
+make run-test TEST_HARNESS_FLAGS=-fixture=MonoTests.System.DateTimeTest
 ```
 
 If you think you're getting failures related to l10n/i18n of your system, run them with the default language setting:
 
 ``` bash
-$ cd mcs/class/corlib
-$ LANG=en make run-test && make run-test
+cd mcs/class/corlib
+LANG=en make run-test && make run-test
 ```
 
 ### Other Class Library Tests
@@ -88,15 +88,15 @@ there are some standalone tests. See the bottom of [ADO.NET page](/docs/database
 
 -   System.Windows.Forms/SWFTest/
 
--   System.XML/Test/System.Xml/standalone\_tests : see README
+-   System.XML/Test/System.Xml/standalone_tests : see README
 
--   System.XML/Test/System.Xml.Schema/standalone\_tests : see README
+-   System.XML/Test/System.Xml.Schema/standalone_tests : see README
 
--   System.XML/System.Xml.Serialization/standalone\_tests/
+-   System.XML/System.Xml.Serialization/standalone_tests/
 
--   System.XML/Test/System.Xml.Xsl/standalone\_tests : see README
+-   System.XML/Test/System.Xml.Xsl/standalone_tests : see README
 
--   Commons.Xml.Relaxng/Test/standalone\_tests : see README
+-   Commons.Xml.Relaxng/Test/standalone_tests : see README
 
 **Getting started**
 
@@ -117,7 +117,7 @@ You should look at the [NUnit documentation](http://nunit.org), as it is a fanta
 
 ### Provide an unique error message for Assert()
 
-Include an unique message for each Assert() so that when the assert fails, it is trivial to locate it in the source. Otherwise, it may be difficult to determine which part of the test is failing. A good way to ensure unique messages is to use something like \#A01, \#A02 etc.
+Include an unique message for each Assert() so that when the assert fails, it is trivial to locate it in the source. Otherwise, it may be difficult to determine which part of the test is failing. A good way to ensure unique messages is to use something like #A01, #A02 etc.
 
 Ok:
 
@@ -145,7 +145,7 @@ Ok:
 
 Excellent:
 
-    Assert.AreEqual (myTicks[0], t1.Ticks, "A01"); 
+    Assert.AreEqual (myTicks[0], t1.Ticks, "A01");
 
 ### Test your test with the Microsoft runtime
 
@@ -163,20 +163,20 @@ Why do unit testing? It becomes simple to run automated tests for the whole libr
 
 We welcome all contributions to the Class Libary Test Suite.
 
-There is information to help you get started in SVN at mcs/class/doc/NUnitGuidelines. Once you have written your test, please post it to [mono-list](/community/help/mailing-lists/).
+There is information to help you get started in git at mcs/class/doc/NUnitGuidelines. Once you have written your test, please post it to [mono-list](/community/help/mailing-lists/).
 
-Someone will make sure to add the file or apply the patch as appropriate. If you plan to be an on-going contributor and would like to get a svn account, email [miguel](mailto:miguel@ximian.com).
+Someone will make sure to add the file or apply the patch as appropriate. If you plan to be an on-going contributor and would like to get a git account, email [miguel](mailto:miguel@ximian.com).
 
 Normally, after you send a couple of well-written new files and/or patches to the list, you will be given Git access.
 
 Compiler tests
 --------------
 
-Mono ships with three compilers: C\#, VB.NET and JScript. The tests are executed by running the makefile target \`make run-test-local' in the appropriate directory.
+Mono ships with three compilers: C#, VB.NET and JScript. The tests are executed by running the makefile target \`make run-test-local' in the appropriate directory.
 
-The C\# compilation tests live in mcs/tests, and the C\# error tests live in mcs/errors.
+The C# compilation tests live in mcs/tests, and the C# error tests live in mcs/errors.
 
-The VB.NET compilation tests live in mcs/btests.
+The VB.NET compilation tests live in vbnc/tests in the [mono-basic](https://github.com/mono/mono-basic) repository.
 
 Runtime tests
 -------------

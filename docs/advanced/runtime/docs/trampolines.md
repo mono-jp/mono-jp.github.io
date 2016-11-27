@@ -1,7 +1,7 @@
 ---
 title: Trampolines
 redirect_from:
-  - /Mono:Runtime:Documentation:Trampolines/
+  - /Mono%3ARuntime%3ADocumentation%3ATrampolines/
 ---
 
 Trampolines are small, hand-written pieces of assembly code used to perform various tasks in the mono runtime. They are generated at runtime using the native code generation macros used by the JIT. They usually have a corresponding C function they can fall back to if they need to perform a more complicated task. They can be viewed as ways to pass control from JITted code back to the runtime.
@@ -10,12 +10,12 @@ The common code for all architectures is in mini-trampolines.c, this file contai
 
 Most, but not all trampolines consist of two parts:
 
--   a generic part containing most of the code. This is created by the mono\_arch\_create\_trampoline\_code () function in tramp-\<ARCH\>.c. Generic trampolines can be large (1kb).
--   a specific part whose job is to call the generic part, passing in a parameter. The parameter to pass and the method by it is passed depends on the type of the trampoline. Specific trampolines are created by the mono\_arch\_create\_specific\_trampoline () function in tramp-\<ARCH\>.c. Specific trampolines are small, since the runtime creates lots of them.
+-   a generic part containing most of the code. This is created by the mono_arch_create_trampoline_code () function in tramp-\<ARCH\>.c. Generic trampolines can be large (1kb).
+-   a specific part whose job is to call the generic part, passing in a parameter. The parameter to pass and the method by it is passed depends on the type of the trampoline. Specific trampolines are created by the mono_arch_create_specific_trampoline () function in tramp-\<ARCH\>.c. Specific trampolines are small, since the runtime creates lots of them.
 
 The generic part saves the machine state to the stack, and calls one of the trampoline functions in mini-trampolines.c with the state, the call site, and the argument passed by the specific trampoline. After the C function returns, it either returns normally, or branches to the address returned by the C function, depending on the trampoline type.
 
-Trampoline types are given by the MonoTrampolineType enumeration in [mini.h](http://anonsvn.mono-project.com/viewvc/trunk/mono/mono/mini/mini.h?view=log).
+Trampoline types are given by the MonoTrampolineType enumeration in [mini.h](https://github.com/mono/mono/blob/master/mono/mini/mini.h).
 
 The platform specific code for trampolines is in the file tramp-\<ARCH\>.c for each architecture, while the cross platform code is in mini-trampolines.c. There are two types of functions in mini-trampolines.c:
 
@@ -36,7 +36,7 @@ The function should return a pointer to the newly created trampoline, allocating
 
 ### JIT Trampolines
 
-These trampolines are used to JIT compile a method the first time it is called. When the JIT compiles a call instruction, it doesn't compile the called method right away. Instead, it creates a JIT trampoline, and emits a call instruction referencing the trampoline. When the trampoline is called, it calls mono\_magic\_trampoline () which compiles the target method, and returns the address of the compiled code to the trampoline which branches to it. This process is somewhat slow, so mono\_magic\_trampoline () tries to patch the calling JITted code so it calls the compiled code instead of the trampoline from now on. This is done by mono\_arch\_patch\_callsite () in tramp-\<ARCH\>.c.
+These trampolines are used to JIT compile a method the first time it is called. When the JIT compiles a call instruction, it doesn't compile the called method right away. Instead, it creates a JIT trampoline, and emits a call instruction referencing the trampoline. When the trampoline is called, it calls mono_magic_trampoline () which compiles the target method, and returns the address of the compiled code to the trampoline which branches to it. This process is somewhat slow, so mono_magic_trampoline () tries to patch the calling JITted code so it calls the compiled code instead of the trampoline from now on. This is done by mono_arch_patch_callsite () in tramp-\<ARCH\>.c.
 
 ### Virtual Call Trampolines
 
@@ -46,11 +46,11 @@ There is one virtual call trampoline per vtable slot index. The trampoline uses 
 
 ### Jump Trampolines
 
-Jump trampolines are very similar to JIT trampolines, they even use the same mono\_magic\_trampoline () C function. They are used to implement the LDFTN and the JMP IL opcodes.
+Jump trampolines are very similar to JIT trampolines, they even use the same mono_magic_trampoline () C function. They are used to implement the LDFTN and the JMP IL opcodes.
 
 ### Class Init Trampolines
 
-These trampolines are used to implement the type initialization sematics of the CLI spec. They call the mono\_class\_init\_trampoline () C function which executes the class initializer of the class passed as the trampoline argument, then replaces the code calling the class init trampoline with NOPs so it is not executed anymore.
+These trampolines are used to implement the type initialization sematics of the CLI spec. They call the mono_class_init_trampoline () C function which executes the class initializer of the class passed as the trampoline argument, then replaces the code calling the class init trampoline with NOPs so it is not executed anymore.
 
 ### Generic Class Init Trampoline
 
@@ -70,7 +70,7 @@ These trampolines handle calls made from AOT code though the PLT.
 
 ### Delegate Trampolines
 
-These trampolines are used to handle the first call made to the delegate though its Invoke method. They call mono\_delegate\_trampoline () which creates a specialized calling sequence optimized to the delegate instance before calling it. Further calls will go through to this optimized code sequence.
+These trampolines are used to handle the first call made to the delegate though its Invoke method. They call mono_delegate_trampoline () which creates a specialized calling sequence optimized to the delegate instance before calling it. Further calls will go through to this optimized code sequence.
 
 ### Monitor Enter/Exit Trampolines
 

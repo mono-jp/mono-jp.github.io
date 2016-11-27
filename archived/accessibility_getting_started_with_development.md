@@ -2,7 +2,7 @@
 title: "Accessibility: Getting Started With Development"
 lastmodified: '2009-02-02'
 redirect_from:
-  - /Accessibility:_Getting_Started_With_Development/
+  - /Accessibility%3A_Getting_Started_With_Development/
 ---
 
 Accessibility: Getting Started With Development
@@ -40,7 +40,7 @@ Accessibility: Getting Started With Development
 Introduction
 ------------
 
-So you've just joined the [UIA team](/Accessibility:_Team "Accessibility: Team"), or are interested in contributing to the development effort. Welcome! Here are some guidelines to get started with building our software, making changes, submitting patches, and committing to SVN.
+So you've just joined the [UIA team](/Accessibility:_Team), or are interested in contributing to the development effort. Welcome! Here are some guidelines to get started with building our software, making changes, submitting patches, and committing to SVN.
 
 Getting the Code
 ----------------
@@ -58,38 +58,23 @@ As of this writing, you will also need gtk-sharp, mono, and mcs from SVN.
 Setting Up Your Environment
 ---------------------------
 
--   You need a bunch of bleeding edge stuff in your GAC. Easiest way to do that is to set up [Parallel Mono Environments](/Parallel_Mono_Environments "Parallel Mono Environments"). We recommend using a user-writable path for your prefix, so you don't have to use \`sudo\` whenever you \`make install\`. On this page we'll use the example prefix of /home/[user]/parallel-mono
+-   You need a bunch of bleeding edge stuff in your GAC. Easiest way to do that is to set up [Parallel Mono Environments](/Parallel_Mono_Environments). We recommend using a user-writable path for your prefix, so you don't have to use \`sudo\` whenever you \`make install\`. On this page we'll use the example prefix of /home/[user]/parallel-mono
     -   Follow the wiki page exactly, installing mono/gtk-sharp/etc from latest SVN (not from tarballs).
     -   Follow the same instructions but for uia2atk/UIAutomation.
     -   Install [Mono.Addins 0.3.1 from tarball](http://www.go-mono.com/sources/mono-addins/mono-addins-0.3.1.tar.bz2) in the parallel environment.
     -   Install MonoDevelop in the parallel environment:
-        -   Checkout the latest MonoDevelop trunk (or use MonoDevelop 1.9.1 (aka 2.0 Alpha 2)):
+        -   Checkout the latest MonoDevelop trunk (or use MonoDevelop 1.9.1 (aka 2.0 Alpha 2)): `svn co svn+ssh://[yournamehere]@mono-cvs.ximian.com/source/trunk/monodevelop`
+        -   And build it with:
 
-<!-- -->
+            ``` bash
+            cd monodevelop
+            ./configure --profile=core --prefix=/home/[user]/parallel-mono
+            make
+            ```
 
-     svn co svn+ssh://[yournamehere]@mono-cvs.ximian.com/source/trunk/monodevelop
-
--   -   -   And build it with:
-
-<!-- -->
-
-    cd monodevelop
-    ./configure --profile=core --prefix=/home/[user]/parallel-mono
-    make
-
--   -   -   You can run it uninstalled if you like:
-
-<!-- -->
-
-    make run
-
--   -   -   Or install it in your parallel environment (may require sudo):
-
-<!-- -->
-
-    make install
-
--   -   -   If you have trouble starting your new MD, you may need to delete your old addin configuration by doing \`rm -rf \~/.config/MonoDevelop/addin\*\`.
+        -   You can run it uninstalled if you like: `make run`
+        -   Or install it in your parallel environment (may require sudo): `make install`
+        -   If you have trouble starting your new MD, you may need to delete your old addin configuration by doing \`rm -rf \~/.config/MonoDevelop/addin\*\`.
     -   **Whenever you deal with mono-a11y stuff, make sure you're running in the parallel environment!** You do this by doing everything from a terminal that has run \`source \~/mono-dev-env\` (replace \~/mono-dev-env with the location of your parallel mono environment script).
 
 Building the Code
@@ -100,7 +85,7 @@ First, always make sure you are running in the parallel mono environment when yo
     sandy@linux:~> source ~/mono-dev-env
     [mono] ~ @
 
-(If you don't have your [CONFIG\_SITE](/Parallel_Mono_Environments#Tip:_CONFIG_SITE) set up, you will need to specify the correct prefix when you run autogen.sh, for example \`./autogen.sh --prefix=/home/[user]/parallel-mono\`)
+(If you don't have your [CONFIG_SITE](/docs/compiling-mono/parallel-mono-environments/#tip-configsite) set up, you will need to specify the correct prefix when you run autogen.sh, for example \`./autogen.sh --prefix=/home/[user]/parallel-mono\`)
 
     [mono] ~/mono-svn/uia2atk/UIAutomation @ ./autogen.sh && make && make install
 
@@ -121,9 +106,9 @@ We highly recommend using MonoDevelop to edit UIA code. If you are adding any ne
 
 ### Coding Guidelines
 
-In general we follow the [Mono Coding Guidelines](/Coding_Guidelines "Coding Guidelines"), with the following notable exceptions:
+In general we follow the [Mono Coding Guidelines](/Coding_Guidelines), with the following notable exceptions:
 
--   We use camelCase instead of names\_with\_underscores for all private/protected fields and local variables.
+-   We use camelCase instead of names_with_underscores for all private/protected fields and local variables.
 -   We put the opening curly brace ('{') for a class on the next line.
 -   We align method call arguments the same way method declaration arguments are aligned according to the Mono guidelines (this is MonoDevelop's default behavior).
 -   Almost every non-private class you write should be internal instead of public. Make sure you have a good reason for making a class public.
@@ -131,8 +116,8 @@ In general we follow the [Mono Coding Guidelines](/Coding_Guidelines "Coding Gui
 
 ### Good resources
 
--   [Writing Provider from Scratch](/Accessibility:_Provider_From_Scratch "Accessibility: Provider From Scratch")
--   [Windows Forms Implementation](/Accessibility:_Winforms_Implementation "Accessibility: Winforms Implementation")
+-   [Writing Provider from Scratch](/Accessibility:_Provider_From_Scratch)
+-   [Windows Forms Implementation](/Accessibility:_Winforms_Implementation)
 
 Testing Your Changes
 --------------------
@@ -174,7 +159,7 @@ Some of our files should be editable in Windows and in Linux. To make sure we do
 
 You need to edit your subversion configuration file. On Linux, this file is located at \~/.subversion/config . On Windows, using TortoiseSVN, right-click anywhere on the Desktop and go to TortoiseSVN -\> Settings -\> General -\> Subversion configuration file, and select the Edit button.
 
-Unless you have already customized yours, most of the file will be commented out with "\#" characters. Add this to your configuration file:
+Unless you have already customized yours, most of the file will be commented out with "#" characters. Add this to your configuration file:
 
     ### Set enable-auto-props to 'yes' to enable automatic properties
     ### for 'svn add' and 'svn import', it defaults to 'no'.

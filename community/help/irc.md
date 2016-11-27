@@ -15,6 +15,7 @@ Channels:
 
 - **#mono**: general discussion of Mono.
 - **#monodev**: discussion more geared toward development.
+- **#monosoc**: discussions about working with Mono in the Google Summer of Code.
 - **#mono-winforms**: development of the Windows.Forms stack.
 - **#monodevelop**: Chat related to the [MonoDevelop](http://www.monodevelop.com) IDE.
 - **#mono-hispano**: general discussion of Mono (in spanish).
@@ -41,4 +42,3 @@ There are various IRC clients available, here are some recommendations:
 -   Linux: [XChat](http://www.xchat.org/)
 -   MacOS X: [Colloquy](http://www.colloquy.info)
 -   Windows: [mIRC](http://www.mirc.com)
--   Web Interface (via Mibbit): [http://go-mono.com/chat/](http://go-mono.com/chat/)

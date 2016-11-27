@@ -41,7 +41,7 @@ Starting with Mono 1.2.3, packages of the Mono Visual Basic Compiler and Visual 
 
 ### From Source Code
 
-The code is currently available from SVN from the module **mono-basic**, alternatively a source code package is available from our [Downloads](/download/) page.
+The code is currently available from git from the module **mono-basic**, alternatively a source code package is available from our [Downloads](/download/) page.
 
 To install Mono Basic, use the usual:
 
@@ -102,5 +102,5 @@ There are certain API calls that are Windows-specific which we have mapped to Li
 Old Visual Basic Framework
 ==========================
 
-For information about the old visual basic framework in Mono, see our [Old Visual Basic](/archived/old_visual_basic "Old Visual Basic") page.
+For information about the old visual basic framework in Mono, see our [Old Visual Basic](/archived/old_visual_basic) page.
 

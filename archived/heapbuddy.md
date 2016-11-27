@@ -8,9 +8,9 @@ redirect_from:
 HeapBuddy
 =========
 
-Note: HeapBuddy is obsolete, Mono from git has a better profiler that is documented [here](/Profiler "Profiler").
+Note: HeapBuddy is obsolete, Mono from git has a better profiler that is documented [here](/Profiler).
 
-HeapBuddy is a summarizing profiler. It is part of the Mono [profiling](/Profile "Profile") tools.
+HeapBuddy is a summarizing profiler. It is part of the Mono [profiling](/Profile) tools.
 
 HeapBuddy collects allocation statistics while the program is running and writes out the aggregate info to a file which you analyze with a command-line tool after it's finished running.
 
@@ -35,7 +35,7 @@ Collecting the Data
 Run your application like this:
 
 ``` bash
-$ mono --profile=heap-buddy:outputfile program.exe
+mono --profile=heap-buddy:outputfile program.exe
 ```
 
 Run your application under a regular load, and once you are done, terminate it. You will need the application to terminate completely before you can examine the data.
@@ -48,7 +48,7 @@ Examining the Data
 To examine the data you use the **heap-buddy** command, for example:
 
 ``` bash
-$ heap-buddy outfile types
+heap-buddy outfile types
 ```
 
 The above instructs Heap Buddy to process the data using the types mode. The tool has four basic modes: summary, history, types and backtraces.
@@ -73,22 +73,22 @@ Obtaining HeapBuddy
 HeabBuddy is availale as an [Subversion](/SourceCodeRepository) checkout, use the following command line to download it:
 
 ``` bash
-$ svn co svn://anonsvn.mono-project.com/source/trunk/heap-buddy
+svn co svn://anonsvn.mono-project.com/source/trunk/heap-buddy
 ```
 
 To build HeapBuddy use:
 
 ``` bash
-$ cd heap-buddy
-$ ./autogen.sh 
-$ make
-$ make install
+cd heap-buddy
+./autogen.sh
+make
+make install
 ```
 
 See Also
 ========
 
-[Performance Tips](/Performance_Tips "Performance Tips")
+[Performance Tips](/Performance_Tips)
 
-[Heap Shot Memory Profiler](/HeapShot "HeapShot")
+[Heap Shot Memory Profiler](/HeapShot)
 

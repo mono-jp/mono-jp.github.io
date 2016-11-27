@@ -2,7 +2,7 @@
 title: "Accessibility: White%27s white list"
 lastmodified: '2009-09-11'
 redirect_from:
-  - /Accessibility:_White%27s_white_list/
+  - /Accessibility%3A_White%27s_white_list/
 ---
 
 Accessibility: White%27s white list
@@ -14,28 +14,19 @@ Accessibility: White%27s white list
 <tr class="odd">
 <td align="left"><h2>Table of contents</h2>
 <ul>
-<li><a href="#whites-white-list">1 White's white list</a>
-<ul>
-<li><a href="#introduction">1.1 Introduction</a>
-<ul>
+<li><a href="#introduction">1.1 Introduction</a></li>
 <li><a href="#whats-white">1.1.1 What's White?</a></li>
 <li><a href="#why-our-qas-need-white">1.1.2 Why our QAs need White?</a></li>
 <li><a href="#whats-the-risk-for-writing-test-samples-with-white">1.1.3 What's the risk for writing test samples with White</a></li>
 <li><a href="#whats-the-white-list-for-white">1.1.4 What's the white list for White</a></li>
-</ul></li>
-<li><a href="#whites-white-list_2">1.2 White's white list</a>
-<ul>
+<li><a href="#whites-white-list">1.2 White's white list</a></li>
 <li><a href="#note">1.2.1 Note</a></li>
 <li><a href="#list">1.2.2 List</a></li>
-</ul></li>
-</ul></li>
-</ul></td>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
-
-White's white list
-==================
 
 Introduction
 ------------
@@ -90,7 +81,7 @@ White's white list
 -   All types in Core.Session namespace
 -   All types in Core.UIA namespace
 -   All types in Core.UIItemEvents namespace
-    -   Though in the static ctor of many \*Event classes, native Win32 APIs are called, but they are just used to set the event name, and I don't think they will cause the risk mentioned in [\#What's the risk for writing test samples with White](#whats-the-risk-for-writing-test-samples-with-white)
+    -   Though in the static ctor of many \*Event classes, native Win32 APIs are called, but they are just used to set the event name, and I don't think they will cause the risk mentioned in [#What's the risk for writing test samples with White](#whats-the-risk-for-writing-test-samples-with-white)
 -   All types in Core.UIItems.Finders namespace
 -   All types in Core.UIItems.Actions namespace
 -   All types in Core.UIItems.Container namespace

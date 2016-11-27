@@ -2,13 +2,13 @@
 title: "User:ZacBowling"
 lastmodified: '2005-11-25'
 redirect_from:
-  - /User:ZacBowling/
+  - /User%3AZacBowling/
 ---
 
 User:ZacBowling
 ===============
 
-Local Mono contributor based out of Dallas TX. Contributions to Gecko\#, Gtk\#, MWF, this site, Monodoc, IRC, packaging.
+Local Mono contributor based out of Dallas TX. Contributions to Gecko#, Gtk#, MWF, this site, Monodoc, IRC, packaging.
 
 1.1.10
 

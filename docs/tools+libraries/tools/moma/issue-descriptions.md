@@ -9,7 +9,7 @@ There are 4 types of issues that MoMA will detect and report. Here is a descript
 Missing Methods
 ---------------
 
-This is the most severe type of issue. These methods are methods that are not implemented in Mono is any way, not even as stubs. If you try to compile your application that uses these methods with Mono, you will get an error like:
+This is the most severe type of issue. These methods are methods that are not implemented in Mono in any way, not even as stubs. If you try to compile your application that uses these methods with Mono, you will get an error like:
 
 myfile.cs(22,16): error CS0117: 'xxxxxxxxxxxxxxxxx' does not contain a definition for 'xxxxxxxxxxxxxxx'
 
@@ -50,7 +50,7 @@ P/Invokes (platform invokes) are used to call functions that are written in unma
 
 **What to do:**
 
-The long answer is available here: [Interop\_with\_Native\_Libraries](/docs/advanced/pinvoke/).
+The long answer is available here: [Interop_with_Native_Libraries](/docs/advanced/pinvoke/).
 
 The summary:
 
@@ -62,5 +62,5 @@ If you are calling into your own native library, then it depends on the cross-pl
 
 The native library that is being called is listed in the last column on MoMA's detail report.
 
-To find out at runtime which platform your application is running on, see: [FAQ:\_Technical\#How\_to\_detect\_the\_execution\_platform\_.3F](/docs/faq/technical/#how-to-detect-the-execution-platform-3f)
+To find out at runtime which platform your application is running on, see: [FAQ:\_Technical#How\_to\_detect\_the\_execution_platform\_.3F](/docs/faq/technical/)
 

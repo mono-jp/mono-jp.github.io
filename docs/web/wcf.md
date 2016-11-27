@@ -14,10 +14,10 @@ WCF in Mono was originally developed as part of the "olive" module in our source
 WCF development was started in 2005 and has been suspended and resumed various times. These are the four major efforts over the years:
 
 -   Initial development by the time of Mono Summit 2006 in Boston. ([Presentation](http://www.go-mono.com/meeting06/infocard-indigo.pdf))
--   Google Sumemr of Code development for P2P binding development by Marcos Cobena Morian. Seealso: [Mono Olive: Introducing Windows Communication Foundation notebook](http://www.youcannoteatbits.org/Files/Documents/Mono%20Olive%20Notebook%20-%2018-09-07.pdf)
+-   Google Summer of Code development for P2P binding development by Marcos Cobena Morian. Seealso: [Mono Olive: Introducing Windows Communication Foundation notebook](http://www.youcannoteatbits.org/Files/Documents/Mono%20Olive%20Notebook%20-%2018-09-07.pdf)
 -   Development led by Mainsoft team. See [Noam Lampert's blog](http://noamlampert.blogspot.com/search/label/Mono)
 -   Current phase, originally started as part of Moonlight 2.0 effort since 2009.
-    -   We were working on WSHttpBinding support, which is mostly for the security stack (WS-Security, WS-Trust, WS-SecureConversation). It is left incomplete. For details, see [WCF\_WSHttpBindingHacking](/archived/wcf_wshttpbindinghacking "WCF WSHttpBindingHacking") page.
+    -   We were working on WSHttpBinding support, which is mostly for the security stack (WS-Security, WS-Trust, WS-SecureConversation). It is left incomplete. For details, see [WCF_WSHttpBindingHacking](/archived/wcf_wshttpbindinghacking) page.
 
 Status
 ======
@@ -96,7 +96,7 @@ Other than System.ServiceModel.dll
     -   SAML implementation is incomplete, and not implemented as SecurityToken. (contribute)
 -   System.IdentityModel.Selectors.dll
     -   On Win32 it should work. The actual implementation is in Mono.IdentityModel.Selectors.dll which P/Invokes cardspaceapi.dll.
-    -   On Linux and/or Mac, the entire UI must be implemented. (contribute: write card manager UI (in any form; Gtk\#, WinForms or even CUI). It could be done as part of mono-tools (especially if it depends on Gtk\#) or mcs/tools. There is Mono.IdentityModel.Selectors.dll that holds implementation for win32.)
+    -   On Linux and/or Mac, the entire UI must be implemented. (contribute: write card manager UI (in any form; Gtk#, WinForms or even CUI). It could be done as part of mono-tools (especially if it depends on Gtk#) or mcs/tools. There is Mono.IdentityModel.Selectors.dll that holds implementation for win32.)
 -   System.ServiceModel.Web.dll
     -   3.5 is mostly done. 4.0 needs more work. (contribute)
 -   System.ServiceModel.Routing.dll
@@ -174,5 +174,5 @@ Incomplete work. WS-Trust authenticator hash was not clear at the development a 
 Old Milestones and status (for reference)
 -----------------------------------------
 
-For older status of WCF, see [WCFStatusOld](/archived/wcfstatusold "WCFStatusOld").
+For older status of WCF, see [WCFStatusOld](/archived/wcfstatusold).
 

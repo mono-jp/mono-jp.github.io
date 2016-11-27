@@ -2,8 +2,8 @@
 title: "Accessibility: Test Plan WinForms Controls"
 lastmodified: '2009-08-06'
 redirect_from:
-  - /Accessibility:_Test_Plan_WinForms_Controls/
-  - /Accessibility:_Test_Plan_WinForms_Control/
+  - /Accessibility%3A_Test_Plan_WinForms_Controls/
+  - /Accessibility%3A_Test_Plan_WinForms_Control/
 ---
 
 Accessibility: Test Plan WinForms Controls
@@ -18,7 +18,7 @@ The Google document(s) linked below contains information about the progress of o
 
 ### Strongwind Tests
 
-[http://spreadsheets.google.com/ccc?key=pwydy7S3XPTBTRS9n\_oBjJA&hl=en](http://spreadsheets.google.com/ccc?key=pwydy7S3XPTBTRS9n_oBjJA&hl=en)
+[http://spreadsheets.google.com/ccc?key=pwydy7S3XPTBTRS9n_oBjJA&hl=en](http://spreadsheets.google.com/ccc?key=pwydy7S3XPTBTRS9n_oBjJA&hl=en)
 
 "Test Status" Guidelines:
 

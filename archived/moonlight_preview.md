@@ -48,7 +48,7 @@ To build the above, you should build the modules in this order:
 -   mono-basic
 -   moon
 
-Follow the instructions in our [Compiling Mono From SVN](/Compiling_Mono_From_SVN "Compiling Mono From SVN") page.
+Follow the instructions in our [Compiling Mono From SVN](/Compiling_Mono_From_SVN) page.
 
 As always, you can get the development source from trunk:
 
@@ -76,11 +76,11 @@ As always, you can get the development source from trunk:
 
 -   Firefox 3.6 and 3.7: We added a Firefox 3.6 specific bridge, and as long as the app doesn't do anything with mms urls, things \*should\* work in Firefox 3.7. For instance, the nbc olympics site works in 3.7, and performance of both the plugin and the browser is improved on multi-cpu systems.
 
--   Olympics support. This is our first preview to really start working with the NBC Olympics site. We are tracking issues at [Moonlight/OlympicsPlayerIssues](/Moonlight/OlympicsPlayerIssues "Moonlight/OlympicsPlayerIssues")
+-   Olympics support. This is our first preview to really start working with the NBC Olympics site. We are tracking issues at [Moonlight/OlympicsPlayerIssues](/Moonlight/OlympicsPlayerIssues)
 
 -   Local Messaging. Demos from last year's MIX, such as Chess Wars and the Bouncing Balls, work.
 
--   Effects are available now. Our blur effect is a hand coded version, while the DropShadow and all ShaderEffects are implemented by converting to Gallium's shader language. They can cause a big perf hit, but you can disable them by adding "effects=no" to the MOONLIGHT\_OVERRIDES environment variable before starting your browser. The Olympics player uses the BlurEffect pretty extensively, so you'll want to use that environment variable if you run into performance problems.
+-   Effects are available now. Our blur effect is a hand coded version, while the DropShadow and all ShaderEffects are implemented by converting to Gallium's shader language. They can cause a big perf hit, but you can disable them by adding "effects=no" to the MOONLIGHT_OVERRIDES environment variable before starting your browser. The Olympics player uses the BlurEffect pretty extensively, so you'll want to use that environment variable if you run into performance problems.
 
 -   Some optimizations making DependencyObject::GetValue a bit speedier, and we also do fewer GetValues in general by caching things locally (particularly when used in loop conditions).
 

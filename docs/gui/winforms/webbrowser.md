@@ -20,7 +20,7 @@ The Mono implementation
 
 This is an overview of all the components that support both the Gecko and WebKit backends. Each square with a thin border represents a different library.
 
-On top is the System.Windows.Forms class library. It has litle logic in itself for the WebBrowser control, and just uses the interfaces exposed by the next library, Mono.WebBrowser.
+On top is the System.Windows.Forms class library. It has little logic in itself for the WebBrowser control, and just uses the interfaces exposed by the next library, Mono.WebBrowser.
 
 Mono.WebBrowser is also a class library, but a private one (i.e., it's in the gac but can't be "discovered" by pkg-config tools since it doesn't ship a .pc file. It can obviously be linked to directly). Winforms depends on it directly, and it exposes interfaces that hide browser engine implementation details. The interfaces are more in line with the DOM spec, but are not as complete, mainly because the .NET Winforms WebBrowser control is not feature-complete in itself.
 
@@ -47,11 +47,11 @@ Mono.WebBrowser.Manager is the entry point to this library, initializing one of 
 Mono.WebBrowser - Gecko support via gluezilla
 ---------------------------------------------
 
-Gluezilla is a c/c++ glue helper library that does the main job of initializing gecko. The gecko embedding libraries (known as xulrunner or libxul) are not available in LD\_LIBRARY\_PATH, and have to be linked in via a c library. The xulrunner initialization functions track down the location of the embedding libraries and load them dynamically at runtime, making it necessary to have a c library that can link and initialize the engine before the C\# wrappers can take over.
+Gluezilla is a c/c++ glue helper library that does the main job of initializing gecko. The gecko embedding libraries (known as xulrunner or libxul) are not available in LD_LIBRARY_PATH, and have to be linked in via a c library. The xulrunner initialization functions track down the location of the embedding libraries and load them dynamically at runtime, making it necessary to have a c library that can link and initialize the engine before the C# wrappers can take over.
 
-After the initial embedding work was done and we had a embedded browser engine working on MWF, it was time to decide how to expose all the DOM features that MWF supports. Althought the classes that MWF has for DOM support (HtmlElement, HtmlDocument, etc) are small, they allow for a broad use of DOM methods (like getProperty, attachEvent, etc). Since xulrunner is all c++ and has, on a first count, some 85 classes just for basic DOM support, wrapping all of these in C calls that C\# could pinvoke would be complicated.
+After the initial embedding work was done and we had a embedded browser engine working on MWF, it was time to decide how to expose all the DOM features that MWF supports. Althought the classes that MWF has for DOM support (HtmlElement, HtmlDocument, etc) are small, they allow for a broad use of DOM methods (like getProperty, attachEvent, etc). Since xulrunner is all c++ and has, on a first count, some 85 classes just for basic DOM support, wrapping all of these in C calls that C# could pinvoke would be complicated.
 
-Fortunately, one feature of gecko is that all classes that it exposes are XPCOM - basically COM classes. At the time when we had to wrap these DOM classes, the COM support on Mono was just about complete, so we decided to try and expose the XPCOM classes as COM classes and wrap the engine this way - with very good results. The gluezilla library was reduced to a set of functions to convert strings (because gecko exposes strings as classes) and to retrieve COM pointers that can be marshalled automatically to C\# COM interfaces. A tool called xpidl2cs was created to parse the IDL files that xulrunner distributes and create C\# COM interfaces from these definitions. With one call to gluezilla to retrieve the top object that represents a browser window and marshalling that to a C\# interface, everything else can be done in C\# with COM calls.
+Fortunately, one feature of gecko is that all classes that it exposes are XPCOM - basically COM classes. At the time when we had to wrap these DOM classes, the COM support on Mono was just about complete, so we decided to try and expose the XPCOM classes as COM classes and wrap the engine this way - with very good results. The gluezilla library was reduced to a set of functions to convert strings (because gecko exposes strings as classes) and to retrieve COM pointers that can be marshalled automatically to C# COM interfaces. A tool called xpidl2cs was created to parse the IDL files that xulrunner distributes and create C# COM interfaces from these definitions. With one call to gluezilla to retrieve the top object that represents a browser window and marshalling that to a C# interface, everything else can be done in C# with COM calls.
 
 Currently supported browser engine backends
 -------------------------------------------
@@ -96,7 +96,7 @@ Architecture:
 Implementation Overview
 =======================
 
-The WebBrowser implimentation is made up of several parts:
+The WebBrowser implementation is made up of several parts:
 
 -   libmozembed - The native wrapper that wraps Mozilla. Built to satisfy the requirements of the MWF control, it remains versatile enough to be reusable for other embedding projects that require a simple and static C based interface.
     -   Source: [http://anonsvn.mono-project.com/viewvc/trunk/mozembed/src/](http://anonsvn.mono-project.com/viewvc/trunk/mozembed/src/)
@@ -105,7 +105,7 @@ The WebBrowser implimentation is made up of several parts:
 
 -   **Mono.Mozilla.WebBrowser.dll** - A System.Windows.Forms/Managed.Windows.Forms control that embeds Mozilla and exposes the root features of libmozembed
 
--   **Mono.Mozilla.Widget.dll** - A GTK\# Widget that embeds Mozilla and exposes the root features of libmozembed
+-   **Mono.Mozilla.Widget.dll** - A GTK# Widget that embeds Mozilla and exposes the root features of libmozembed
 
 -   **Interop.SHDocVw.dll** - the managed implementation of the COM wrapper generated by tlb2asm
 

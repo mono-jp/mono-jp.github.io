@@ -7,18 +7,18 @@ redirect_from:
 GUI Development
 ===============
 
-[Gtk\#](/docs/gui/gtksharp/)
+[Gtk#](/docs/gui/gtksharp/)
 ---------------------------------------------------------
 
-[![](/archived/images/5/57/IFolder_Linux.png)](/archived/images/5/57/IFolder_Linux.png)
+[![IFolder_Linux.png](/archived/images/5/57/IFolder_Linux.png)](/archived/images/5/57/IFolder_Linux.png)
 
-[GTK\#](/docs/gui/gtksharp/) action with iFolder
+[GTK#](/docs/gui/gtksharp/) action with iFolder
 
 Hompepage: [http://gtk-sharp.sf.net](http://gtk-sharp.sf.net)
 
 Wiki: [GtkSharp](/docs/gui/gtksharp/)
 
-This toolkit is a .NET binding for the Gtk+ toolkit. It is in active development, and there are various applications in the Mono world that use it (Monodoc, Monocov, Mono's Debugger and various smaller applications, a more complete list is available on the Gtk\# Wiki. Platforms: Unix, Windows, GPE, MacOS X (using the X server).
+This toolkit is a .NET binding for the Gtk+ toolkit. It is in active development, and there are various applications in the Mono world that use it (Monodoc, Monocov, Mono's Debugger and various smaller applications, a more complete list is available on the Gtk# Wiki. Platforms: Unix, Windows, GPE, MacOS X (using the X server).
 
 Pros:
 
@@ -38,7 +38,7 @@ Cons:
 
 ### Complementary Libraries
 
-The following are some libraries that might be useful while developing Gtk\# based applications or Gnome applications:
+The following are some libraries that might be useful while developing Gtk# based applications or Gnome applications:
 
 #### Gnome-KeyRing-Sharp
 
@@ -50,31 +50,31 @@ Availability: [GitHub](http://www.github.com/mono/gnome-keyring-sharp), [Web](ht
 
 This library provides access to reading and writing structured files (OLE files), this depends on the libgsf library from the GNOME project:
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/gsf-sharp/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/gsf-sharp.tar.gz?view=tar)
+Availability: [Web](https://github.com/mono/gsf-sharp/) [snapshot](https://github.com/mono/gsf-sharp/archive/master.zip)
 
 #### GtkGlArea Sharp
 
-A binding for GtkGlArea, a widget that can host an OpenGL context in your Gtk\# application.
+A binding for GtkGlArea, a widget that can host an OpenGL context in your Gtk# application.
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/gtkglarea-sharp/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/gtkglarea-sharp.tar.gz?view=tar)
+Availability: [Web](https://github.com/mono/gtkglarea-sharp/) [snapshot](https://github.com/mono/gtkglarea-sharp/archive/master.zip)
 
 #### WebKit Sharp
 
 webkit-sharp provides access to [WebKit](http://live.gnome.org/WebKitGtk), a fast, high-quality web browser engine suited for embedding in GTK+ applications. It features bleeding-edge HTML5, AJAX, SVG and JavaScript capabilities with seamless UI integration.
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/webkit-sharp/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/webkit-sharp.tar.gz?view=tar)
+Availability: [Web](https://github.com/mono/webkit-sharp/) [snapshot](https://github.com/mono/webkit-sharp/archive/master.zip)
 
 #### GtkMozEmbed Sharp
 
 This library provides access to the Mozilla rendering engine with Gtk+ using the GtkMozEmbed widget:
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/gtkmozembed-sharp/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/gtkmozembed-sharp.tar.gz?view=tar)
+Availability: [Web](https://github.com/mono/gtkmozembed-sharp/) [snapshot](https://github.com/mono/gtkmozembed-sharp/archive/master.zip)
 
 #### GtkSourceView Sharp
 
 Bindings to the GtkSourceView widget, this widget is typically used for writing programmer editors.
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/gtksourceview-sharp/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/gtksourceview-sharp.tar.gz?view=tar)
+Availability: [Web](https://github.com/mono/gtksourceview-sharp/) [snapshot](https://github.com/mono/gtksourceview-sharp/archive/master.zip)
 
 #### Hal Sharp
 
@@ -82,7 +82,7 @@ This library provides access to the Hardware Abstraction Layer (HAL) from FreeDe
 
 This is used when you need to interact with the hardware. For example Banshee uses this to detect new media (reading and burning).
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/hal-sharp/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/hal-sharp.tar.gz?view=tar).
+Availability: [Web](https://github.com/mono/hal-sharp/) [snapshot](https://github.com/mono/hal-sharp/archive/master.zip).
 
 #### DBus Sharp
 
@@ -94,19 +94,19 @@ Availability: [Web](http://www.ndesk.org/DBusSharp) [downloads](http://www.ndesk
 
 ipod-sharp is a library that allows manipulation of the iTunesDB used in Apple iPod devices. Currently it supports adding/removing songs and manipulating playlists.
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/ipod-sharp/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/ipod-sharp.tar.gz?view=tar).
+Availability: [Web](https://github.com/mono/ipod-sharp/) [snapshot](https://github.com/mono/ipod-sharp/archive/master.zip).
 
 #### Maemo Sharp
 
-Maemo\# is a Gtk\# bindings for Maemo libraries.
+Maemo# is a Gtk# bindings for Maemo libraries.
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/maemo-sharp/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/maemo-sharp.tar.gz?view=tar)
+Availability: [Web](https://github.com/mono/maemo-sharp/) [snapshot](https://github.com/mono/maemo-sharp/archive/master.zip)
 
 #### JScall Sharp
 
-JSCall is a simple JavaScript bridge for Gecko\#. It's an interim solution until someone writes a proper XPCOM bridge for Mono, and uses unmanaged code and P/Invoke to invoke Gecko's XPCOM components from managed code. It should work with any .NET language, but I've referred to C\# for simplicity. I don't expect many people to use this, so the documentation is little more than minimal; lease contact me \<m.j.hutchinson@gmail.com\> if you need help working out how it works.
+JSCall is a simple JavaScript bridge for Gecko#. It's an interim solution until someone writes a proper XPCOM bridge for Mono, and uses unmanaged code and P/Invoke to invoke Gecko's XPCOM components from managed code. It should work with any .NET language, but I've referred to C# for simplicity. I don't expect many people to use this, so the documentation is little more than minimal; lease contact me \<m.j.hutchinson@gmail.com\> if you need help working out how it works.
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/jscall-sharp/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/jscall-sharp.tar.gz?view=tar)
+Availability: [Web](https://github.com/mono/jscall-sharp/) [snapshot](https://github.com/mono/jscall-sharp/archive/master.zip)
 
 #### NPlot Gtk
 
@@ -114,9 +114,9 @@ The first version of NPlot-Gtk was made by Miguel de Icaza, and was a wrapper of
 
 Now the wrapper of version 0.9.9.2 has just an NPlot upgrade and a few hacks over the work of Miguel (Carlos)
 
-This version of NPlot has been extended to support Gtk\# on Linux.
+This version of NPlot has been extended to support Gtk# on Linux.
 
-The version is based on NPlot 0.9.9.2 Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/nplot-gtk/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/nplot-gtk.tar.gz?view=tar).
+The version is based on NPlot 0.9.9.2 Availability: [Web](https://github.com/mono/nplot-gtk/) [snapshot](https://github.com/mono/nplot-gtk/archive/master.zip).
 
 #### Taglib Sharp
 
@@ -126,24 +126,24 @@ It supports a large variety of movie and music formats which abstract away the w
 
 A library for reading and writing metadata from audio files.
 
-Availability: [Web](http://developer.novell.com/wiki/index.php/TagLib_Sharp) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/taglib-sharp.tar.gz?view=tar).
+Availability: [Web](http://developer.novell.com/wiki/index.php/TagLib_Sharp) [snapshot](https://github.com/mono/taglib-sharp/archive/master.zip).
 
 #### Daap Sharp
 
 daap-sharp is a DAAP (Digial Audio Access Protocol) implementation. It is used by Apple's iTunes software to share music.
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/daap-sharp/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/daap-sharp.tar.gz?view=tar).
+Availability: [Web](https://github.com/mono/daap-sharp/) [snapshot](https://github.com/mono/daap-sharp/archive/master.zip).
 
 #### Mono.ZeroConf
 
 Supports the ZeroConf/Bonjour protocol using mdnsdresponder or Avahi.
 
-Availability: [Web](http://anonsvn.mono-project.com/viewvc/trunk/Mono.Zeroconf/) [snapshot](http://anonsvn.mono-project.com/viewvc/trunk/Mono.Zeroconf.tar.gz?view=tar).
+Availability: [Web](https://github.com/mono/Mono.Zeroconf/) [snapshot](https://github.com/mono/Mono.Zeroconf/archive/master.zip).
 
 [Windows.Forms](/docs/gui/winforms/)
 -----------------------------------------------------------------
 
-[![](/archived/images/e/ec/Colordialog.png)](/archived/images/e/ec/Colordialog.png)
+[![Colordialog.png](/archived/images/e/ec/Colordialog.png)](/archived/images/e/ec/Colordialog.png)
 
 [MWF](/docs/gui/winforms/)'s color dialog box
 
@@ -168,6 +168,27 @@ Cons:
 -   Bad layout mechanisms: font size changes, and internationalization require manual relayout most of the time.
 -   All the Windows.Forms efforts are under heavy development.
 
+Xamarin.Mac
+-----------
+
+Xamarin.Mac is a API that binds the Cocoa API on the Mac and uses the same internals of Xamarin.iOS.
+
+Homepage: [http://xamarin.com/mac](http://xamarin.com/mac)
+
+Native MacOS toolkit.
+
+Pros:
+
+-   Native look and feel on MacOS X
+-   Extensive API and core documentation
+-   Samples
+-   Active, vibrant community.
+-   Actively developed by Xamarin
+
+Cons:
+
+-   Not portable outside of MacOS X
+
 MonObjc
 -------
 
@@ -186,58 +207,22 @@ Cons:
 
 -   Not portable outside of MacOS X
 
-Cocoa\#
--------
-
-Native MacOSX toolkit.
-
-Pros:
-
--   Native look and feel on MacOS X
--   Substrate is well documented, this API lacks documentations.
-
-Cons:
-
--   Not portable outside of MacOS X
-
 Clutter
 -------
 
-C\# bindings for the [Clutter](http://clutter-project.org/) toolkit, a library for creating lfast, visually rich graphical user interfaces now has Mono bindings. They are available [here](http://git.clutter-project.org/bindings/clutter-sharp/).
+C# bindings for the [Clutter](http://clutter-project.org/) toolkit, a library for creating lfast, visually rich graphical user interfaces now has Mono bindings. They are available [here](http://git.clutter-project.org/bindings/clutter-sharp/).
 
 Vanilla DotNet
 --------------
 
-[Vanilla.NET](http://code.google.com/p/vanilla-dotnet/) is a cross-platform graphical user interface toolkit, application framework and desktop environment based on Cairo and the .NET framework. It is written primarily in Boo, however code contributions will be accepted in other languages (e.g. C\#). Vanilla.NET is still in development and not yet ready for production use.
+[Vanilla.NET](http://code.google.com/p/vanilla-dotnet/) is a cross-platform graphical user interface toolkit, application framework and desktop environment based on Cairo and the .NET framework. It is written primarily in Boo, however code contributions will be accepted in other languages (e.g. C#). Vanilla.NET is still in development and not yet ready for production use.
 
-wxNet
------
-
-[![](/archived/images/c/cf/Linux-05.png)](/archived/images/c/cf/Linux-05.png)
-
-wx\# Sample
-
-Homepage: [[|http://wxnet.sourceforge.net/](http://wxnet.sourceforge.net/)]
-
-wxNet is a .NET binding for the wxWindows cross-platform toolkit.
-
-Pros:
-
--   Native look and feel on each platform.
--   Substrate (wxWindows) is well documented, .NET binding lacks documentation.
-
-Cons:
-
--   Binding to non-supported extra widgets is hard.
--   Custom-authored widgets look and feel is not preserved across platforms.
--   Common denominator subset API problem.
+It is GPLv2 licensed, so it can only be used for open source software.
 
 Dead efforts
 ------------
 
-There are a couple of [Dead Toolkits](/archived/dead_toolkits "Dead Toolkits") that have been developed in the past.
-
-* * * * *
+There are a couple of [Dead Toolkits](/docs/tools+libraries/dead-toolkits/) that have been developed in the past.
 
 ASP.NET Components
 ==================
@@ -246,13 +231,6 @@ JayRock
 -------
 
 [JayRock](http://jayrock.berlios.de/) is a modest and an open source (LGPL) implementation of JSON and JSON-RPC for the Microsoft .NET Framework, including ASP.NET. What can you do with Jayrock? In a few words, Jayrock allows clients, typically JavaScript in web pages, to be able to call into server-side methods using JSON as the wire format and JSON-RPC as the procedure invocation protocol. The methods can be called synchronously or asynchronously.
-
-Gaia Ajax Widgets
------------------
-
-[Gaia Ajax Widgets](http://ajaxwidgets.com/more/about_gaia_ajax_framework/mono_support.aa) was built to mimic 100% the logic of conventional ASP.NET and basically this means that if you know ASP.NET you know how to use Gaia Ajax Widgets! Gaia Ajax Web Widgets does not have ANY cryptic properties or code model you need to learn before you can use Gaia effectively, almost none of our controls uses any other properties than the ones that comes with native ASP.NET so if you know your way around ASP.NET you know your way around Gaia! This can be seen from the fact that you don't need to use WebServices to e.g. populate our AutoCompleter and from the event that retrieves the AutoComplete data you can do whatever you like, including for instance making a DropDownList visible or showing a modal window.
-
-Gaia AjaxWidgets provides Mono support.
 
 ExtJS Extender Controls
 -----------------------
@@ -281,15 +259,13 @@ PostgreSQL Provider Suite
 
 [[1]](http://dev.nauck-it.de/projects/show/aspsqlprovider) from NauckIT is a PostgreSQL implementation of the ASP.NET 2.0 Membership, Role, Profile and Session State providers.
 
-* * * * *
-
 Web Frameworks
 ==============
 
 Emerge Toolkit
 --------------
 
-[Emerge Toolkit](http://www.emergetk.com/emergetk), The emerge toolkit is a web application development framework. The server is written in C\#, and runs on .NET and Mono.
+[Emerge Toolkit](http://www.emergetk.com/emergetk), The emerge toolkit is a web application development framework. The server is written in C#, and runs on .NET and Mono.
 
 From their site:
 
@@ -307,19 +283,17 @@ MonoRail differs from the standard WebForms way of development as it enforces se
 Deveel Ajax
 -----------
 
-[Deveel Ajax](http://deveel-ajax.svn.sourceforge.net): Another great library from Antonello Provenzano, the aim of this project was to increase development speed of .NET/Mono web applications by replicating, through a JavaScript proxies, the OO structure of imported types, based on prototype ([http://www.prototypejs.org](http://www.prototypejs.org)) AJAX framework. Read an [introduction to Deveel AJAX](/archived/introduction_to_deveel_ajax "Introduction to Deveel AJAX") on [Mono Project]().
+[Deveel Ajax](http://deveel-ajax.svn.sourceforge.net): Another great library from Antonello Provenzano, the aim of this project was to increase development speed of .NET/Mono web applications by replicating, through a JavaScript proxies, the OO structure of imported types, based on prototype ([http://www.prototypejs.org](http://www.prototypejs.org)) AJAX framework. Read an [introduction to Deveel AJAX](/archived/introduction_to_deveel_ajax) on Mono Project.
 
 Magic Ajax
 ----------
 
 [Magic Ajax](http://www.magicajax.net/), MagicAjax.NET is a free open-source framework, designed to make it easier and more intuitive for developers to integrate AJAX technology into their web pages, without replacing the ASP.NET controls and/or writing tons of javascript code. MagicAjax initially appeared as a [codeproject article](http://www.codeproject.com/ajax/magicajax.asp). Now it is hosted on Sourceforge and you can find the latest release at the [downloads section](http://www.magicajax.net/Default.aspx/tabid/29). [Ajax.Net](http://ajax.schwarz-interactive.de/csharpsample/default.aspx) Another Ajax framework.
 
-* * * * *
-
-Apple Push Notification and Feedback Services Client C\# Library
+Apple Push Notification and Feedback Services Client C# Library
 ----------------------------------------------------------------
 
-[Apple Push, Notification Services](http://code.google.com/p/apns-sharp/) is a free, open source, independent and mono compatible C\#/.NET Library for interacting with Apple's Push Notification & Feedback Services for the iPhone/iPod.
+[Apple Push, Notification Services](http://code.google.com/p/apns-sharp/) is a free, open source, independent and mono compatible C#/.NET Library for interacting with Apple's Push Notification & Feedback Services for the iPhone/iPod.
 
 Features:
 
@@ -333,7 +307,7 @@ Reporting
 fyiReporting
 ------------
 
-[![](/archived/images/c/ca/Fyireporting.jpg)](/archived/images/c/ca/Fyireporting.jpg)
+[![Fyireporting.jpg](/archived/images/c/ca/Fyireporting.jpg)](/archived/images/c/ca/Fyireporting.jpg)
 
 Designer screenshot
 
@@ -353,7 +327,7 @@ ReportMan is open source software.
 FlexCelNet
 ----------
 
-[![](/archived/images/b/bb/FlexCelPreview.gif)](/archived/images/b/bb/FlexCelPreview.gif)
+[![FlexCelPreview.gif](/archived/images/b/bb/FlexCelPreview.gif)](/archived/images/b/bb/FlexCelPreview.gif)
 
 An Excel report rendered
 
@@ -362,8 +336,6 @@ An Excel report rendered
 [Product WhitePaper](http://www.tmssoftware.com/flexcel/FlexcelWhitepaper.pdf)
 
 FlexNet is commercial software.
-
-* * * * *
 
 3D and Games Frameworks
 =======================
@@ -406,12 +378,12 @@ Irrlicht NETCP
 Axiom 3D
 --------
 
-[Axiom 3D Engine](http://axiomengine.sourceforge.net/wiki/index.php/Main_Page) is an open-source, cross-platform 3D graphics rendering engine for .NET and Mono. The engine is a high-performance C\# port of the powerful OGRE engine. Its flexible component-oriented architecture allows easy extension and provides full support for both DirectX and OpenGL. The engine is also cross platform supporting both Windows and Linux operating systems.
+[Axiom 3D Engine](http://axiomengine.sourceforge.net/wiki/index.php/Main_Page) is an open-source, cross-platform 3D graphics rendering engine for .NET and Mono. The engine is a high-performance C# port of the powerful OGRE engine. Its flexible component-oriented architecture allows easy extension and provides full support for both DirectX and OpenGL. The engine is also cross platform supporting both Windows and Linux operating systems.
 
-[GtkGLAreaSharp](/archived/gtkglareasharp "GtkGLAreaSharp")
+[GtkGLAreaSharp](/archived/gtkglareasharp)
 ------------------------------------------------------------------------------
 
-Still in its infancy, this library provides an OpenGL interface to the GTK\# UI platform
+Still in its infancy, this library provides an OpenGL interface to the GTK# UI platform
 
 Spreadsheets
 ============
@@ -420,8 +392,6 @@ GemBoxSoftware
 --------------
 
 [GemBox.Spreadsheet](http://www.gemboxsoftware.com/) is a .NET component which provides easy and high performance way to write, read or convert native Microsoft Excel files (XLS files in BIFF format, CSV files in text format or XLSX files in Open XML format) without the need for Microsoft Excel on either the developer or client machines. GemBox.Spreadsheet Free comes free of charge while GemBox.Spreadsheet Professional is a commercial version (licensed per developer).
-
-* * * * *
 
 Charting
 ========
@@ -433,18 +403,16 @@ NPlot
 
 [NPlot](http://netcontrols.org/nplot/wiki/) is a free charting library for .NET and supports various kinds of graphic modes.
 
-It boasts an elegant and flexible API. NPlot includes controls for Windows.Forms, ASP.NET and a class for creating Bitmaps. A GTK\# control is also available.
+It boasts an elegant and flexible API. NPlot includes controls for Windows.Forms, ASP.NET and a class for creating Bitmaps. A GTK# control is also available.
 
 ZedGraph
 --------
 
 [![Combo400.png](/archived/images/0/0f/Combo400.png)](/archived/images/0/0f/Combo400.png)
 
-[ZedGraph](http://zedgraph.org) ZedGraph is a set of classes, written in C\#, for creating 2D line and bar graphs of arbitrary datasets. The classes provide a high degree of flexibility -- almost every aspect of the graph can be user-modified. At the same time, usage of the classes is kept simple by providing default values for all of the graph attributes. The classes include code for choosing appropriate scale ranges and step sizes based on the range of data values being plotted.
+[ZedGraph](http://zedgraph.org) ZedGraph is a set of classes, written in C#, for creating 2D line and bar graphs of arbitrary datasets. The classes provide a high degree of flexibility -- almost every aspect of the graph can be user-modified. At the same time, usage of the classes is kept simple by providing default values for all of the graph attributes. The classes include code for choosing appropriate scale ranges and step sizes based on the range of data values being plotted.
 
 ZedGraph also includes a UserControl interface, allowing drag and drop editing within the Visual Studio forms editor, plus access from other languages such as C++ and VB. ZedGraph is licensed under the LGPL.
-
-* * * * *
 
 Parallel Computing
 ==================
@@ -454,7 +422,7 @@ MPAPI
 
 [Message Passing API (MPAPI)](http://www.codeplex.com/MPAPI) is a framework that enables programmers to easily write parallel as well as distributed software systems without having to use standard thread synchronization techniques like locks, monitors, semaphors, mutexes and volatile memory.
 
-It is written in C\# and runs on Microsoft .NET 2.0 or newer, as well as Mono.NET 1.2.6.
+It is written in C# and runs on Microsoft .NET 2.0 or newer, as well as Mono.NET 1.2.6.
 
 -   Easy parallel programming through the use of message passing concurrency instead of the traditional shared state concurrency.
 -   A few simple primitives to handle communication between - and control with - different threads.
@@ -466,7 +434,7 @@ A [paper describing MPAPI](http://sector0.dk/public_files/Introduction%20to%20Me
 MPI.NET
 -------
 
-[MPI.NET](http://www.osl.iu.edu/research/mpi.net/software/) is a .NET library that enables the creation of high-performance parallel applications that can be deployed on multi-threaded workstations and Windows clusters. MPI.NET provides access to the [Message Passing Interface (MPI)](http://www-unix.mcs.anl.gov/mpi/) in C\# and all of the other .NET languages. MPI is a standard for message-passing programs that is widely implemented and used for high-performance parallel programs that execute on clusters and supercomputers.
+[MPI.NET](http://www.osl.iu.edu/research/mpi.net/software/) is a .NET library that enables the creation of high-performance parallel applications that can be deployed on multi-threaded workstations and Windows clusters. MPI.NET provides access to the [Message Passing Interface (MPI)](http://www-unix.mcs.anl.gov/mpi/) in C# and all of the other .NET languages. MPI is a standard for message-passing programs that is widely implemented and used for high-performance parallel programs that execute on clusters and supercomputers.
 
 CLI Parallel
 ------------
@@ -507,14 +475,12 @@ Features include:
 -   Support for Unicode XML-RPC strings in both client and server
 -   Support for optional struct members when mapping between .NET and XML-RPC types
 
-The XML-RPC.NET library is CLS-compliant and so can be called from any CLS-compliant language, the main examples being C\# and VB.NET.
+The XML-RPC.NET library is CLS-compliant and so can be called from any CLS-compliant language, the main examples being C# and VB.NET.
 
 NauckIT.Remoting
 ----------------
 
 [[2]](http://dev.nauck-it.de/projects/show/utilities) NauckIT.Remoting is a small helper library to setup .NET remoting and publish or consume remote objects.
-
-* * * * *
 
 System Programming
 ==================
@@ -522,7 +488,7 @@ System Programming
 Mono.Addins
 -----------
 
-[Mono.Addins](/archived/introduction_to_monoaddins "Introduction to Mono.Addins") is a generic framework for creating extensible applications, and for creating libraries which extend those applications.
+[Mono.Addins](/archived/introduction_to_monoaddins) is a generic framework for creating extensible applications, and for creating libraries which extend those applications.
 
 This framework is derived from the add-in engine used by MonoDevelop, although it has been completely rewritten and improved in many ways to make it more generic and easier to use. The MonoDevelop add-in engine was an improvement over the SharpDevelop engine, which took many ideas from the Eclipse add-in engine.
 
@@ -540,7 +506,7 @@ The [Google Diff Match and Patch](http://code.google.com/p/google-diff-match-pat
 -   Patch:
     -   Apply a list of patches onto plain text. Use best-effort to apply patch even when the underlying text doesn't match.
 
-This library supports Mono and C\# and is also available in Java, JavaScript, C++ and Python. Regardless of language, each library features the same API and the same functionality. All versions also have comprehensive test harnesses.
+This library supports Mono and C# and is also available in Java, JavaScript, C++ and Python. Regardless of language, each library features the same API and the same functionality. All versions also have comprehensive test harnesses.
 
 Empinia
 -------
@@ -557,26 +523,26 @@ Read the [Cecil](/docs/tools+libraries/libraries/Mono.Cecil/) on this site for m
 Mono.Reflection
 ---------------
 
-[Mono.Reflection](http://github.com/jbevain/mono.reflection/) is a helper library to complement the System.Reflection and System.Reflection.Emit with useful extension methods and helpers, including a IL disassembler.
+[Mono.Reflection](https://github.com/jbevain/mono.reflection/) is a helper library to complement the System.Reflection and System.Reflection.Emit with useful extension methods and helpers, including a IL disassembler.
 
 Bittorrent Libraries
 --------------------
 
-You can use [BitSharp](/archived/monotorrent), the Bittorrent libraries created my Alan McGovern, available from our [SVN](/community/contributing/source-code-repository/) repository in the module "bitsharp".
+You can use [BitSharp](/archived/monotorrent), the Bittorrent libraries created my Alan McGovern, available from our [git](/community/contributing/source-code-repository/) repository in the module "bitsharp".
 
 Data Conversion
 ---------------
 
-Mono provides [Mono DataConvert](/archived/mono_dataconvert "Mono DataConvert") as a replacement for [System.BitConverter](http://docs.go-mono.com/index.aspx?link=T:System.BitConverter) that is more versatile and does not have the design flaws in BitConverter
+Mono provides [Mono DataConvert](/archived/mono_dataconvert) as a replacement for [System.BitConverter](http://docs.go-mono.com/index.aspx?link=T:System.BitConverter) that is more versatile and does not have the design flaws in BitConverter
 
-Curses
-------
+Console/Curses
+--------------
 
 You can use Curses to build portable console-based applications.
 
-[Curses\#](http://home.nedlinux.nl/~florian/downloads/) uses PDCurses on Windows and NCurses on Linux. It's almost crossplatform on an binary level.
+[MonoCurses](/docs/tools+libraries/libraries/monocurses/) is an MIT licensed binding of curses, and it includes the minimalistic `gui.cs` GUI toolkit for creating console-based applications.
 
-[MonoCurses](/archived/monocurses "MonoCurses") is an MIT-X11 licensed binding of curses, and it includes the minimalistic `gui.cs` GUI toolkit for creating console-based applications.
+[ConsoleFramework]( https://github.com/elw00d/consoleframework) is a cross-platform MIT licensed library to create console applications using some WPF-inspired concepts.
 
 DBus
 ----
@@ -593,7 +559,7 @@ PEWRAPI
 Indy.Sockets
 ------------
 
-[Indy.Sockets](http://www.indyproject.org/Sockets/index.iwp) is an open source socket library that supports clients, servers, TCP, UDP, raw sockets, as well as over 100 higher level protocols such as SMTP, POP3, NNTP, HTTP, and many more. Indy.Sockets is available for C\#, C++, Delphi, Visual Basic.NET, any .NET language. This means that you can use it on Mono too!
+[Indy.Sockets](http://www.indyproject.org/Sockets/index.iwp) is an open source socket library that supports clients, servers, TCP, UDP, raw sockets, as well as over 100 higher level protocols such as SMTP, POP3, NNTP, HTTP, and many more. Indy.Sockets is available for C#, C++, Delphi, Visual Basic.NET, any .NET language. This means that you can use it on Mono too!
 
 Regular Expressions
 -------------------
@@ -613,7 +579,7 @@ Mono.Fuse
 NDesk.Options
 -------------
 
-[NDesk.Options](http://www.ndesk.org/Options) is a command line parsing library developed by Jonathan Pryor designed to be used with C\# 2 and C\# 3.
+[NDesk.Options](http://www.ndesk.org/Options) is a command line parsing library developed by Jonathan Pryor designed to be used with C# 2 and C# 3.
 
 DotNetCli
 ---------
@@ -623,9 +589,7 @@ DotNetCli
 NauckIT.MicroKernel
 -------------------
 
-[[3]](http://dev.nauck-it.de/projects/show/microkernel) NauckIT.MicroKernel is a lightweight Inversion-of-Control C\# library for .NET 2.0 and Mono.
-
-* * * * *
+[[3]](http://dev.nauck-it.de/projects/show/microkernel) NauckIT.MicroKernel is a lightweight Inversion-of-Control C# library for .NET 2.0 and Mono.
 
 Database Abstraction
 ====================
@@ -642,7 +606,7 @@ NDO is able to automatically enhance the code, written and compiled with .NET an
 -   Object data is stored and retrieved automatically into and out of the database.
 -   NDO generates new and can integrate existing databases.
 -   The NDO Query Language is much easier to use than SQL and provides nearly the same abilities.
--   NDO Queries are checked by the C\#- or Visual Basic compiler, while spelling mistakes in SQL queries might cause program interrupts.
+-   NDO Queries are checked by the C#- or Visual Basic compiler, while spelling mistakes in SQL queries might cause program interrupts.
 -   Developers benefit from the object oriented analysis, design, and coding methodologies.
 -   Thus your systems show a better maintainability and extensibility.
 -   With NDO switching to another database is easy. Develop an application with SQL Server\* today and use it with Oracle\* tomorrow.
@@ -652,14 +616,14 @@ You can read about how they ported NDO to work on Mono on their ["NDO runs under
 CouchDB access
 --------------
 
-The [Divan](http://github.com/gokr/Divan/tree/master) library can be used to access CouchDB servers.
+The [Divan](https://github.com/gokr/Divan/tree/master) library can be used to access CouchDB servers.
 
 DB4O
 ----
 
-[DB4O](/archived/db4o "DB4O") is a non-intrusive persistence system that stores any complex object with one single line of code. The class schema of your application classes is analysed and adjusted in real time when objects are stored. Object-oriented querying functionality is provided through Native Queries (NQ), the ability to query the database using .NET syntax and semantics (similar in concept to LINQ/DLINQ), Query by Example (QbE) and other APIs. High performance is achieved with indexed fields and by reducing database-file-internal redirections to the absolute minimum. db4o features ACID transactions, fast embedded single-user mode and multi-transactional Client/Server access, locally and through TCP, object-oriented replication, and the ObjectManager to browse database files.
+[DB4O](/archived/db4o) is a non-intrusive persistence system that stores any complex object with one single line of code. The class schema of your application classes is analysed and adjusted in real time when objects are stored. Object-oriented querying functionality is provided through Native Queries (NQ), the ability to query the database using .NET syntax and semantics (similar in concept to LINQ/DLINQ), Query by Example (QbE) and other APIs. High performance is achieved with indexed fields and by reducing database-file-internal redirections to the absolute minimum. db4o features ACID transactions, fast embedded single-user mode and multi-transactional Client/Server access, locally and through TCP, object-oriented replication, and the ObjectManager to browse database files.
 
-For more information see the Mono's [DB4O](/archived/db4o "DB4O") page.
+For more information see the Mono's [DB4O](/archived/db4o) page.
 
 EntitySpaces
 ------------
@@ -678,8 +642,6 @@ Berkeley DB bindings
 
 Joshua Tauberer has authored a binding for Berkeley DB, its available [here](http://razor.occams.info/code/repo/?/semweb/src/BDB.cs)
 
-* * * * *
-
 Configuration and Logging
 =========================
 
@@ -692,8 +654,6 @@ Log4net
 -------
 
 Apache sponsored logging framework.
-
-* * * * *
 
 Domain Specific
 ===============
@@ -723,22 +683,20 @@ PCSC-Sharp
 
 [pcsc-sharp](http://code.google.com/p/pcsc-sharp/): This is a set of libraries for accessing smartcards on Windows and Linux
 
-* * * * *
-
-C\# Bindings for Popular APIs
+C# Bindings for Popular APIs
 =============================
 
 GimpSharp
 ---------
 
-[GimpSharp](http://gimp-sharp.sourceforge.net/index.html) is an API wrapper around GIMP, written in C\#. However, it's not just a wrapper. It also adds a thin layer which adds C\# specific features, like iterating through a collection. An example of this is an iteration through the guides of an image.
+[GimpSharp](http://gimp-sharp.sourceforge.net/index.html) is an API wrapper around GIMP, written in C#. However, it's not just a wrapper. It also adds a thin layer which adds C# specific features, like iterating through a collection. An example of this is an iteration through the guides of an image.
 
-GIMP\# also offers a base plug-in class which does the difficult stuff for you. Implementing a new plug-in is just a matter of overriding a few virtual methods. See the samples directory for examples of how to do this.
+GIMP# also offers a base plug-in class which does the difficult stuff for you. Implementing a new plug-in is just a matter of overriding a few virtual methods. See the samples directory for examples of how to do this.
 
 Subversion Sharp
 ----------------
 
-SubversionSharp is a C\# wrapper that fully covers the client API of Subversion SCM. Easy access to the Subversion API is provided without any compromise on fonctionality. This library is the starting point to easily integrate Subversion repositories in any .NET managed software. These C\# bindings for Subversion has been written for portability and performances. This library is now available for both Mono/Linux and .NET/Windows environments.
+SubversionSharp is a C# wrapper that fully covers the client API of Subversion SCM. Easy access to the Subversion API is provided without any compromise on fonctionality. This library is the starting point to easily integrate Subversion repositories in any .NET managed software. These C# bindings for Subversion has been written for portability and performances. This library is now available for both Mono/Linux and .NET/Windows environments.
 
 [SubversionSharp HomePage](http://www.softec.st/en/OpenSource/ClrProjects/SubversionSharp/SubversionSharp.html)
 
@@ -756,9 +714,7 @@ Exiv2Sharp
 
 This poject, created by Stephane Delcroix during Novell's HackWeek III, is a managed binding of the popular exiv2 ([http://exiv2.org](http://exiv2.org)) metadata editor.
 
-The code is available from Mono's [SVN](/community/contributing/source-code-repository/) repository and can be browsed [here](http://anonsvn.mono-project.com/viewvc/trunk/exiv2-sharp/).
-
-* * * * *
+The code is available from Mono's [git](/community/contributing/source-code-repository/) repository and can be browsed [here](https://github.com/mono/exiv2-sharp/).
 
 Math
 ====
@@ -766,7 +722,7 @@ Math
 dnAnalytics
 -----------
 
-[dnAnalytics](http://dnanalytics.codeplex.com/) Numerical Library is a numerical library for the .NET Framework. The library is written in C\# and is available as a fully managed library, but also provides an interface to native BLAS and LAPACK libraries. The library is compatible with Mono and has been tested on Windows, and various Linux distributions. The current release includes matrix, vector and complex number classes, and support for basic linear algebra routines (such as LU, Cholesky, QR, Levinson, and SVD). We will be adding optimization, calculus, random number, statistical, option pricing, genetic programming, and neural network components in the future. The library is licensed under a BSD license.
+[dnAnalytics](http://dnanalytics.codeplex.com/) Numerical Library is a numerical library for the .NET Framework. The library is written in C# and is available as a fully managed library, but also provides an interface to native BLAS and LAPACK libraries. The library is compatible with Mono and has been tested on Windows, and various Linux distributions. The current release includes matrix, vector and complex number classes, and support for basic linear algebra routines (such as LU, Cholesky, QR, Levinson, and SVD). We will be adding optimization, calculus, random number, statistical, option pricing, genetic programming, and neural network components in the future. The library is licensed under a BSD license.
 
 Current features:
 
@@ -784,8 +740,6 @@ Current features:
 -   Runs under Microsoft® Windows and Linux.
 -   Works with Mono.
 
-* * * * *
-
 Science
 =======
 
@@ -794,7 +748,10 @@ MonoGIS
 
 [MonoGIS](http://www.monogis.org/) is a set of Geographic Information System (GIS) libraries.
 
-* * * * *
+ColorSharp
+----------
+
+[ColorSharp](https://github.com/Litipk/ColorSharp) is a .NET/Mono library to handle color spaces and light spectrums.
 
 Messaging
 =========
@@ -807,7 +764,7 @@ MIME Email
 agsXMPP SDK
 -----------
 
-[agsXMPP SDK](http://www.ag-software.de/index.php?page=agsxmpp-sdk) is a SDK for the eXtensible Messaging and Presence Protocol (XMPP) protocol written in managed C\# dedicated to .NET and Mono technologies. The SDK is released as open source under a dual licence.
+[agsXMPP SDK](http://www.ag-software.de/index.php?page=agsxmpp-sdk) is a SDK for the eXtensible Messaging and Presence Protocol (XMPP) protocol written in managed C# dedicated to .NET and Mono technologies. The SDK is released as open source under a dual licence.
 
 This is a very complete XMPP stack for application developers.
 
@@ -823,16 +780,14 @@ DotMSN
 
 Protocol: MSN Network
 
-[DotMSN](http://www.xihsolutions.net/dotmsn/) is an open-source stand-alone class library to provide connectivity with the MSN Messenger service. The library is built in C\# and can therefore be used by all languages the .NET environment supports. Because of a clean natural Object-Oriented approach the library is easy to use and implement. DotMSN is designed to be a flexible, robust and lightweight enhancement to any application. Applications of DotMSN vary from creating messaging robots to creating custom clients.
+[DotMSN](http://www.xihsolutions.net/dotmsn/) is an open-source stand-alone class library to provide connectivity with the MSN Messenger service. The library is built in C# and can therefore be used by all languages the .NET environment supports. Because of a clean natural Object-Oriented approach the library is easy to use and implement. DotMSN is designed to be a flexible, robust and lightweight enhancement to any application. Applications of DotMSN vary from creating messaging robots to creating custom clients.
 
 SmartIrc4net
 ------------
 
 Protocol: IRC
 
-[SmartIrc4net](http://smartirc4net.meebey.net/) is an multi-layered IRC library written in C\#.
-
-* * * * *
+[SmartIrc4net](http://smartirc4net.meebey.net/) is an multi-layered IRC library written in C#.
 
 Public Services
 ===============
@@ -840,23 +795,23 @@ Public Services
 GoogleSharp and PicassaSharp
 ----------------------------
 
-These modules created by Gonzalo Paniagua live in Mono's SVN repository and are used to provide applications with authentication facilities to a Google account (GoogleSharp) and access to the Picassa features for exporting, listing and accessing albums.
+These modules created by Gonzalo Paniagua live in Mono's git repository and are used to provide applications with authentication facilities to a Google account (GoogleSharp) and access to the Picassa features for exporting, listing and accessing albums.
 
-The code is available from Mono's [SVN](/community/contributing/source-code-repository/) repository and can be browsed [here](http://anonsvn.mono-project.com/viewvc/trunk/google-sharp/src/).
+The code is available from Mono's [git](/community/contributing/source-code-repository/) repository and can be browsed [here](https://github.com/mono/google-sharp/src/).
 
 FacebookSharp
 -------------
 
 This library lets you access the Facebook Platform services from within a Mono/.NET application or an ASP.NET web application.
 
-The code is available from Mono's [SVN](/community/contributing/source-code-repository/) repository and can be browsed [here](http://anonsvn.mono-project.com/viewvc/trunk/facebook-sharp/).
+The code is available from Mono's [git](/community/contributing/source-code-repository/) repository and can be browsed [here](https://github.com/mono/facebook-sharp/).
 
 SmugMugSharp
 ------------
 
 A library created by Thomas Van Machelen provides an API for managing pictures collections at the [SmugMug](http://www.smugmug.com/) photo-sharing site.
 
-The code is available from Mono's [SVN](/community/contributing/source-code-repository/) repository and can be browsed and downloaded [here](http://anonsvn.mono-project.com/viewvc/trunk/smugmug-sharp/)
+The code is available from Mono's [git](/community/contributing/source-code-repository/) repository and can be browsed and downloaded [here](https://github.com/mono/smugmug-sharp/)
 
 FlickrNet
 ---------
@@ -868,9 +823,7 @@ The code is available from [the CodePlex](http://www.codeplex.com/FlickrNet/Sour
 UpcomingSharp
 -------------
 
-[UpcomingSharp](http://anonsvn.mono-project.com/viewvc/trunk/upcoming-sharp/) is a .NET library that lets you log in to upcoming.org and perform several actions like getting your watchlist, adding and editing events, querying venue information,...
-
-* * * * *
+[UpcomingSharp](https://github.com/mono/upcoming-sharp/) is a .NET library that lets you log in to upcoming.org and perform several actions like getting your watchlist, adding and editing events, querying venue information,...
 
 Document Handling
 =================

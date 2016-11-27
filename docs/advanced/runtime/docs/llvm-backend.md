@@ -1,15 +1,22 @@
 ---
 title: LLVM Backend
 redirect_from:
-  - /Mono:Runtime:Documentation:LLVM/
+  - /Mono%3ARuntime%3ADocumentation%3ALLVM/
 ---
 
-Mono now includes an experimental backend which compiles methods to native code using LLVM instead of the built in JIT.
+Mono includes a backend which compiles methods to native code using LLVM instead of the built in JIT.
 
 Usage
 -----
 
-The llvm back end can be enabled by passing --enable-llvm=yes to configure. LLVM 2.6 or later is required.
+The back end requires the usage of our LLVM fork/branches, see 'The LLVM Mono Branch' section below.
+
+The llvm back end can be enabled by passing `--enable-llvm=yes` or `--with-llvm=<llvm prefix>` to configure.
+
+Platform support
+---------------
+
+LLVM is currently supported on x86, amd64, arm and arm64.
 
 Architecture
 ------------
@@ -28,20 +35,20 @@ The backend doesn't currently support all IL features, like vararg calls. Method
 Sources
 -------
 
-The backend is in the files mini-llvm.c and mini-llvm-cpp.c. The former contains the bulk of the backend, while the latter contains c++ code which is needed because of deficiencies in the LLVM C binding which the backend uses.
+The backend is in the files mini-llvm.c and mini-llvm-cpp.cpp. The former contains the bulk of the backend, while the latter contains c++ code which is needed because of deficiencies in the LLVM C binding which the backend uses.
 
 The LLVM Mono Branch
 --------------------
 
 We maintain a fork/branch of LLVM with various changes to enable better integration with mono. The repo is at:
 
-[http://github.com/mono/llvm](http://github.com/mono/llvm)
+[https://github.com/mono/llvm](https://github.com/mono/llvm)
 
 The LLVM backend is currently only supported when using this version of LLVM. When using this version, it can compile about 99% of mscorlib methods.
 
 The GIT repo is forked from the unofficial LLVM git mirror at:
 
-[http://github.com/earl/llvm-mirror](http://github.com/earl/llvm-mirror)
+[https://github.com/earl/llvm-mirror](https://github.com/earl/llvm-mirror)
 
 ### Changes relative to stock LLVM
 
@@ -61,25 +68,24 @@ The changes consist of about 1.5k lines of code. The majority of this is the EH 
 To view all changes, use:
 
 ``` bash
-git diff `git merge-base mirror/master mono`..mono
+git diff `git merge-base mirror/master master`..master
 ```
 
 ### Branches
 
--   'mono' is branched off mirror/master and contains our changes
+-   'master' is branched off mirror/master and contains our changes
 -   'mono-\<VER\>' is a branch which work with mono version \<VER\>, i.e. 'mono-2.10' is a version which works with mono-2.10.
 
 ### Maintaining the repository
 
-The 'mono' branch is maintained by regularly rebasing it on top of 'mirror/master'. This makes examining our changes easier. To merge changes from llvm-mirror to this repo, do:
+The master branch is maintained by regularly rebasing it on top of 'mirror/master'. This makes examining our changes easier. To merge changes from llvm-mirror to this repo, do:
 
 ``` bash
-git remote add mirror http://github.com/earl/llvm-mirror.git
-git checkout mono
+git remote add mirror https://github.com/earl/llvm-mirror.git
 git fetch mirror
 git rebase mirror/master
 <fix conflicts/commit>
-git push origin mono:mono
+git push origin
 ```
 
 Due to the rapid pace of development, and the frequent reorganization/refactoring of LLVM code, merge conflicts are pretty common, so maintaining our fork is time consuming. A subset of our changes can probably be submitted to upstream LLVM, but it would require some effort to clean them up, document them, etc.
@@ -87,19 +93,11 @@ Due to the rapid pace of development, and the frequent reorganization/refactorin
 Restrictions
 ------------
 
-There are a number of constructs that are not supported by the LLVM backend. In those cases the Mono code generation engine will fall back to Mono's default compilation engine. Most of the restrictions are lifted when using Mono's LLVM branch.
+There are a number of constructs that are not supported by the LLVM backend. In those cases the Mono code generation engine will fall back to Mono's default compilation engine.
 
 ### Exception Handlers
 
-These are currently not supported when using stock LLVM, mainly because LLVM doesn't support implicit exceptions thrown by the execution of instructions.
-
-An implicit exception is for example a NullReferenceException that would be raised when you access an invalid memory location, typically in Mono and .NET, an uninitialized pointer.
-
-### Generics sharing
-
-These are currently not supported when using stock LLVM.
-
-The main problem here is the hidden rgctx argument passed to/received by generic shared methods. We can't force LLVM to pass this argument, which is passed in an extra non-ABI register in mono.
+Nested exception handlers are not supported because of the differences in sematics between mono's exception handling the c++ abi based exception handling used by LLVM.
 
 ### Varargs
 
@@ -107,12 +105,20 @@ These are implemented using a special calling convention in mono, i.e. passing a
 
 It might be possible to support this using the [LLVM vararg intrinsics](http://llvm.org/docs/LangRef.html#int_varargs).
 
+### save_lmf
+
+Wrapper methods which have method->save_lmf set are not yet supported.
+
+### Calling conventions
+
+Some complicated parameter passing conventions might not be supported on some platforms.
+
 Implementation details
 ----------------------
 
 ### Virtual calls
 
-The problem here is that the trampoline handing virtual calls needs to be able to obtain the vtable address and the offset. This is currently done by an arch specific function named mono\_arch\_get\_vcall\_slot\_addr (), which works by disassembling the calling code to find out which register contains the vtable address. This doesn't work for LLVM since we can't control the format of the generated code, so disassembly would be very hard. Also, sometimes the code generated by LLVM is such that the vtable address cannot be obtained at all, i.e.:
+The problem here is that the trampoline handing virtual calls needs to be able to obtain the vtable address and the offset. This is currently done by an arch specific function named mono_arch_get_vcall_slot_addr (), which works by disassembling the calling code to find out which register contains the vtable address. This doesn't work for LLVM since we can't control the format of the generated code, so disassembly would be very hard. Also, sometimes the code generated by LLVM is such that the vtable address cannot be obtained at all, i.e.:
 
      mov %rax, <offset>(%rax)
      call %rax
@@ -131,20 +137,19 @@ The JIT needs unwind info to unwind through LLVM generated methods. This is solv
 
 Methods with exception clauses are supported, altough there are some corner cases in the class library tests which still fail when ran with LLVM.
 
-LLVM uses the platform specific exception handling abi, which is the c++ ehabi on linux, while we use our home grown exception handling system. To make these two work together, we only use one LLVM EH intrinsic, the llvm.eh.selector intrinsic. This will force LLVM to generate exception handling tables. We decode those tables in mono\_unwind\_decode\_fde () to obtain the addresses of the try-catch clauses, and save those to MonoJitInfo, just as with JIT compiled code. Finally clauses are handled differently than with JITted code. Instead of calling them from mono\_handle\_exception (), we save the exception handling state in TLS, then branch to them the same way we would branch to a catch handler. the code generated from ENDFINALLY will call mono\_resume\_unwind (), which will resume exception handling from the information saved in TLS.
+LLVM uses the platform specific exception handling abi, which is the c++ ehabi on linux, while we use our home grown exception handling system. To make these two work together, we only use one LLVM EH intrinsic, the llvm.eh.selector intrinsic. This will force LLVM to generate exception handling tables. We decode those tables in mono_unwind_decode_fde () to obtain the addresses of the try-catch clauses, and save those to MonoJitInfo, just as with JIT compiled code. Finally clauses are handled differently than with JITted code. Instead of calling them from mono_handle_exception (), we save the exception handling state in TLS, then branch to them the same way we would branch to a catch handler. the code generated from ENDFINALLY will call mono_resume_unwind (), which will resume exception handling from the information saved in TLS.
+
+LLVM doesn't support implicit exceptions thrown by the execution of instructions. An implicit exception is for example a NullReferenceException that would be raised when you access an invalid memory location, typically in Mono and .NET, an uninitialized pointer.
 
 Implicit exceptions are implemented by adding a bunch of LLVM intrinsics to do loads/stores, and calling them using the LLVM 'invoke' instruction.
 
 Instead of generating DWARF/c++ EHABI exception handling tables, we generate our own tables using a mono specific format, which the mono runtime reads during execution. This has the following advantages:
 
 -   the tables are compact and take up less space.
--   we can generate a lookup table similar to .eh\_frame\_hdr which is normally generated by the linker, allowing us to support OSX/iOS, since the apple linker doesn't support .eh\_frame\_hdr.
+-   we can generate a lookup table similar to .eh_frame_hdr which is normally generated by the linker, allowing us to support OSX/iOS, since the apple linker doesn't support .eh_frame_hdr.
 -   the tables are pointed to by a normal global symbol, instead of residing in a separate segment, whose address cannot be looked up under OSX.
 
-Generic Sharing
----------------
-
-Generic Sharing is only supported when using the LLVM mono branch.
+### Generic Sharing
 
 There are two problems here: passing/receiving the hidden rgctx argument passed to some shared methods, and obtaining its value/the value of 'this' during exception handling.
 
@@ -153,7 +158,7 @@ The former is implemented by adding a new mono specific calling convention which
 AOT Support
 -----------
 
-There is some support for using LLVM for AOT compilation. This is implemented by emitting the LLVM IR into a LLVM bytecode file, then using the LLVM llc compiler to compile it, producing a .s file, then we append our normal AOT data structures, plus the code for methods not supported by LLVM to this file.
+This is implemented by emitting the LLVM IR into a LLVM bytecode file, then using the LLVM llc compiler to compile it, producing a .s file, then we append our normal AOT data structures, plus the code for methods not supported by LLVM to this file.
 
 A runtime which is not configured by --enable-llvm=yes can be made to use LLVM compiled AOT modules by using the --llvm command line argument: mono --llvm hello.exe
 
@@ -162,16 +167,16 @@ Porting the backend to new architectures
 
 The following changes has to be made to port the LLVM backend to a new architecture:
 
--   Define MONO\_ARCH\_LLVM\_SUPPORTED in mini-\<ARCH\>.h.
--   Implement mono\_arch\_get\_llvm\_call\_info () in mini-\<ARCH\>.h. This function is a variant of the arch specific get\_call\_info () function, it should return calling convention information for a signature.
--   Define MONO\_CONTEXT\_SET\_LLVM\_EXC\_REG() in mini-\<ARCH\>.h to the register used to pass the exception object to LLVM compiled landing pads. This is usually defined by the platform ABI.
+-   Define MONO_ARCH_LLVM_SUPPORTED in mini-\<ARCH\>.h.
+-   Implement mono_arch_get_llvm_call_info () in mini-\<ARCH\>.h. This function is a variant of the arch specific get_call_info () function, it should return calling convention information for a signature.
+-   Define MONO_CONTEXT_SET_LLVM_EXC_REG() in mini-\<ARCH\>.h to the register used to pass the exception object to LLVM compiled landing pads. This is usually defined by the platform ABI.
 -   Implement the LLVM exception throwing trampolines in exceptions-\<ARCH\>.c. These trampolines differ from the normal ones because they receive the PC address of the throw site, instead of a displacement from the start of the method. See exceptions-amd64.c for an example.
--   Implement the resume\_unwind () trampoline, which is similar to the throw trampolines, but instead of throwing an exception, it should call mono\_resume\_unwind () with the constructed MonoContext.
+-   Implement the resume_unwind () trampoline, which is similar to the throw trampolines, but instead of throwing an exception, it should call mono_resume_unwind () with the constructed MonoContext.
 
 LLVM problems
 -------------
 
-Here is a list of problems whose solution would probably require changes to LLVM itself. Some of these problems are solved in various ways by changes on the LLVM Mono Branch.
+Here is a list of problems whose solution would probably require changes to LLVM itself. Some of these problems are solved in various ways by changes on the LLVM Mono branch.
 
 -   the llvm.sqrt intrinsic doesn't work with NaNs, even through the underlying C function/machine instruction probably works with them. Worse, an optimization pass transforms sqrt(NaN) to 0.0, changing program behaviour, and masking the problem.
 -   there is no fabs intrinsic, instead llc seems to replace calls to functions named 'fabs' with the corresponding assembly, even if they are not the fabs from libm ?
@@ -184,11 +189,11 @@ Here is a list of problems whose solution would probably require changes to LLVM
 
 The arr.Length load cannot be moved outside the loop, since the store inside the loop can alias it. There is a llvm.invariant.start/end intrinsic, but that seems to be only useful for marking a memory area as invariant inside a basic block, so it cannot be used to mark a load globally invariant.
 
-[http://hlvm.llvm.org/bugs/show\_bug.cgi?id=5441](http://hlvm.llvm.org/bugs/show_bug.cgi?id=5441)
+[http://hlvm.llvm.org/bugs/show_bug.cgi?id=5441](http://hlvm.llvm.org/bugs/show_bug.cgi?id=5441)
 
 -   LLVM has no support for implicit exceptions:
 
-[http://llvm.org/bugs/show\_bug.cgi?id=1269](http://llvm.org/bugs/show_bug.cgi?id=1269)
+[http://llvm.org/bugs/show_bug.cgi?id=1269](http://llvm.org/bugs/show_bug.cgi?id=1269)
 
 -   LLVM thinks that loads from a NULL address lead to undefined behaviour, while it is quite well defined on most unices (SIGSEGV signal being sent). If an optimization pass determines that the source address of a load is NULL, it changes it to undef/unreachable, changing program behaviour. The only way to work around this seems to be marking all loads as volatile, which probably doesn't help optimizations.
 -   There seems to be no way to disable specific optimizations when running 'opt', i.e. do -std-compile-opts except tailcallelim.
@@ -200,12 +205,6 @@ The arr.Length load cannot be moved outside the loop, since the store inside the
       call *reg
 
 This makes it hard/impossible to patch the calling address after the called method has been compiled. \<p\> [http://lists.cs.uiuc.edu/pipermail/llvmdev/2009-December/027999.html](http://lists.cs.uiuc.edu/pipermail/llvmdev/2009-December/027999.html)
-
--   LLVM doesn't emit unwind info on arm, neither the DWARF style, or the ARM style.
-
-[ARM Exception Handling ABI](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ihi0038a/index.html)
-
-[GAS Directives to emit ARM unwind info](http://sourceware.org/binutils/docs-2.20/as/ARM-Directives.html#ARM-Directives)
 
 -   LLVM Bugs: [[1]](http://llvm.org/bugs/show_bug.cgi?id=6102)
 
@@ -237,5 +236,5 @@ LLVM has a LoopUnswitch pass which can do something like this for constant expre
 
 An experimental version of this optimization which can only handle simple cases is now in mono's llvm repository:
 
-[http://github.com/mono/llvm/tree/mono-abcrem](http://github.com/mono/llvm/tree/mono-abcrem)
+[https://github.com/mono/llvm/tree/mono-abcrem](https://github.com/mono/llvm/tree/mono-abcrem)
 

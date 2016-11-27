@@ -2,7 +2,7 @@
 title: "User:MarioCarrion"
 lastmodified: '2005-10-22'
 redirect_from:
-  - /User:MarioCarrion/
+  - /User%3AMarioCarrion/
 ---
 
 User:MarioCarrion
@@ -16,7 +16,7 @@ Veracruz Ver, MÉXICO
 
 He's a sofware engineering freak, [mono-hispano](http://www.monohispano.org) contributor, [monouml](http://www.monouml.org) and mono active developer.
 
-Meet him in \#monouml - irc.gimp.net
+Meet him in #monouml - irc.gimp.net
 
 **References**
 

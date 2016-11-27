@@ -4,7 +4,7 @@ redirect_from:
   - /CPlusPlus/
 ---
 
-The CLI is able to host C++ compiled code on all [supported platforms](/docs/about-mono/supported-platforms/) as long as the compiled code only contains CIL instructions and not a mix of CIL and native code. Microsoft Managed C++ and C++/CLI compilers produce mixed-mode assemblies by default.
+The CLI is able to host C++ compiled code on all [supported platforms](/docs/about-mono/supported-platforms/) as long as the compiled code only contains CIL instructions and not a mix of CIL and native code. Microsoft Managed C++ and C++/CLI compilers produce mixed-mode assemblies by default, see [this guide](https://msdn.microsoft.com/en-us/library/t337zeha.aspx) on MSDN about converting them to pure CIL projects.
 
 Mixed-mode assemblies are experimentally supported only on Windows because native code is platform specific. With the help of [Wine](http://www.winehq.org/) mixed-mode assemblies can be used on other platforms by the [Windows version](/docs/getting-started/install/windows/) of Mono.
 
@@ -39,7 +39,7 @@ If you don't use CRT at all you can use it under Mono.
 
 Using /clr:safe you cannot use CRT so it will run under Mono. Note that /clr:safe uses a more strict syntax than /clr:pure so it may be better to use /clr:pure.
 
-I think that eliminating CRT references (replacing them with class library) is simpler than rewriting the code in C\#.
+I think that eliminating CRT references (replacing them with class library) is simpler than rewriting the code in C#.
 
 -   Use [Run-Time Routines by Category](http://msdn.microsoft.com/en-us/library/2aza74he.aspx) on MSDN to find class library replacements for CRT functions.
 
@@ -56,7 +56,7 @@ Alternatively, or additionally, you may need to do the following:
 <!-- -->
 
      #pragma warning(disable:4483)
-     
+
      void __clrcall __identifier(".cctor")()
      {
      }
@@ -76,7 +76,7 @@ Through Google's Summer of Code funding work has been done to modify GCC to prod
 
 But this is not sufficient to compile C++ CLI code that targets Mono, as these extensions will require modifications to GCC to recognize this new language and emit the proper code.
 
-The ideal path to support C++ is to finish the work that was started by Jey on the summer of code to make GCC emit CIL code. You can get some links to the work-in-progress from: [Summer of Code GCC CIL project](/archived/summer2005#gcc-cil "Summer2005")
+The ideal path to support C++ is to finish the work that was started by Jey on the summer of code to make GCC emit CIL code. You can get some links to the work-in-progress from: [Summer of Code GCC CIL project](/archived/summer2005#gcc-cil)
 
 The blog linked there has some details about the progress so far.
 

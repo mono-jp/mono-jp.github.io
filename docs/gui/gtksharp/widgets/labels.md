@@ -1,10 +1,10 @@
 ---
 title: "GtkSharp: Labels"
 redirect_from:
-  - /GtkSharp:_Labels/
+  - /GtkSharp%3A_Labels/
 ---
 
-Labels are used a lot in Gtk\#, and are relatively simple. Labels emit no events as they do not have an associated X window. If you need to catch events, or do clipping, place it inside a EventBox widget or a Button widget.
+Labels are used a lot in Gtk#, and are relatively simple. Labels emit no events as they do not have an associated X window. If you need to catch events, or do clipping, place it inside an EventBox widget or a Button widget.
 
 [Image:labels.png]
 
@@ -26,7 +26,7 @@ If you want your label underlined, then you can set a pattern on the label:
 label1.Pattern = pattern;
 ```
 
-The pattern argument indicates how the underlining should look. It consists of a string of underscore and space characters. An underscore indicates that the corresponding character in the label should be underlined. For example, the string "`__     __`" would underline the first two characters and eight and ninth characters.
+The pattern argument indicates how the underlining should look. It consists of a string of underscore and space characters. An underscore indicates that the corresponding character in the label should be underlined. For example, the string "`__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__`" would underline the first two characters and eight and ninth characters.
 
 If you simply want to have an underlined accelerator ("mnemonic") in your label, you should create the Label with LabelWithMnemonic() or use the TextWithMnemonic property, not the Pattern property.
 
@@ -70,7 +70,7 @@ namespace GtkSharpTutorial {
                         Frame frame;
                         Label label;
  
-                        Application.Init ();   
+                        Application.Init ();
  
  
                         window = new Window ("Label sample");
@@ -105,8 +105,8 @@ namespace GtkSharpTutorial {
  
                         frame.Add (label);
                         vbox.PackStart (frame, false, false, 0);
- 
-                        frame = new Frame ("Right Justified Label");                    
+
+                        frame = new Frame ("Right Justified Label");
                         label = new Label ("This is a Right Justified\nMulti-line label.\n" + "Fourth Line, (j/k)");
                         label.Justify = Justification.Right;
                         frame.Add (label);

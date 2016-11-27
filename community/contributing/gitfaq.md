@@ -8,9 +8,9 @@ redirect_from:
 Availability
 ============
 
-Mono is using GitHub's [Organizations](http://github.com/blog/674-introducing-organizations) functionality which allows us to keep all of the Mono modules that used to be hosted on our Subversion repository as repositories of the **mono** organization on GitHub.
+Mono is using GitHub's [Organizations](https://github.com/blog/674-introducing-organizations) functionality which allows us to keep all of the Mono modules that used to be hosted on our Subversion repository as repositories of the **mono** organization on GitHub.
 
-The Mono organization is available at [http://github.com/mono](http://github.com/mono)
+The Mono organization is available at [https://github.com/mono](https://github.com/mono)
 
 Windows Users
 =============
@@ -50,7 +50,7 @@ The `git push` will fail if you're not up-to-date: for instance, if there was so
 Merge branch 'master' of git@github.com:/mono/repo
 ```
 
-This is a merge commit, and our policy is to avoid these for pushes with a small number of commits, especially for single commit pushes. So use `git pull --rebase`, and remember to make sure you're not pushing merge commits (check this [FAQ entry](/community/contributing/gitfaq/#how-do-i-know-whats-going-to-be-pushed "GitFAQ"))
+This is a merge commit, and our policy is to avoid these for pushes with a small number of commits, especially for single commit pushes. So use `git pull --rebase`, and remember to make sure you're not pushing merge commits (check this [FAQ entry](/community/contributing/gitfaq/#how-do-i-know-whats-going-to-be-pushed))
 
 Workflow 2: Use 'master' as integration branch
 ----------------------------------------------
@@ -98,7 +98,7 @@ git push
 git branch -d work-on-topic
 ```
 
-If `git push` fails, it's because your master is not up to date. Refresh it with ` git pull --rebase `, do ` make check ` and then you can try `git push` again.
+If `git push` fails, it's because your master is not up to date. Refresh it with `git pull --rebase`, do `make check` and then you can try `git push` again.
 
 Branches are useful to isolate several pieces of work, so you can have some changes on one branch that relate to a certain feature, other changes on another branch for another feature, while master is left clean and pristine, just updated with the latest commits from upstream and used, in this workflow, when you're ready to push your changes.
 
@@ -156,7 +156,7 @@ git checkout long-lived-topic
 git merge master
  
 # at this point you've resolved any conflicts, and 'git rerere' has recorded
-# your conflict resolution decisions.  We can throw away the merge since it 
+# your conflict resolution decisions.  We can throw away the merge since it
 # would clutter history.  'git rerere' already has the relevent information
 # from the merge attempt.
  
@@ -170,7 +170,7 @@ If you actually wanted a bugfix from 'master', just skip the last step, while ke
 
 If you want to publish the long-lived topic without integrating it into 'master', you should use a personal fork.
 
-This process is fairly efficient on Github. Go to the repository webpage and create a fork in your personal workspace. For instance, you take an origin repository `git://github.com/mono/mono.git` and fork it into `git@github.com:myrepos/mono.git` by going to `http://github.com/mono/mono` and clicking on the button marked "Fork".
+This process is fairly efficient on Github. Go to the repository webpage and create a fork in your personal workspace. For instance, you take an origin repository `git://github.com/mono/mono.git` and fork it into `git@github.com:myrepos/mono.git` by going to `https://github.com/mono/mono` and clicking on the button marked "Fork".
 
 You can add your personal fork as an additional remote with
 
@@ -324,7 +324,7 @@ Please add the following to either your Mono repository's .git/config or your gl
 When I commit, my commit "repeats" commits of other people
 ----------------------------------------------------------
 
-There's nothing to worry -- you don't need to do anything, there's nothing to "fix" on that commit. 'git' probably created a merge commit when it found that independent commits occured on the repository while you were working on the current commit/push. In fact, it's the Github UI for displaying merges that misleads us to think that there are "repeats", and make us worry about unintended changes.
+There's nothing to worry -- you don't need to do anything, there's nothing to "fix" on that commit. 'git' probably created a merge commit when it found that independent commits occurred on the repository while you were working on the current commit/push. In fact, it's the Github UI for displaying merges that misleads us to think that there are "repeats", and make us worry about unintended changes.
 
 There's no information loss, and no duplication of work. Using a better UI, like 'gitk' or the Github "Network" view, will help better illustrate the non-linear commit history around such a merge.
 
@@ -350,13 +350,13 @@ before trying to push again.
 I can't checkout the required submodules because the git:// protocol is blocked by a firewall
 ---------------------------------------------------------------------------------------------
 
-You can replace git:// with https:// globally in your user preference:
+You can replace `git://` with `https://` globally in your user preference:
 
 ``` bash
 git config --global url."https://".insteadOf git://
 ```
 
-Source: [http://stackoverflow.com/questions/4891527/git-protocol-blocked-by-company-how-can-i-get-around-that/10729634\#10729634](http://stackoverflow.com/questions/4891527/git-protocol-blocked-by-company-how-can-i-get-around-that/10729634#10729634)
+Source: [http://stackoverflow.com/questions/4891527/git-protocol-blocked-by-company-how-can-i-get-around-that/10729634#10729634](http://stackoverflow.com/questions/4891527/git-protocol-blocked-by-company-how-can-i-get-around-that/10729634#10729634)
 
 Links
 =====

@@ -42,7 +42,7 @@ Would be nice to fix, but are not show-stoppers:
 -   [get rid of global generics caches in metadata.c](http://bugzilla.ximian.com/show_bug.cgi?id=77596)
 -   [Runtime must check constraints](http://bugzilla.ximian.com/show_bug.cgi?id=77522)
 -   [Runtime crashes with P/Invoke to generics signature](http://bugzilla.ximian.com/show_bug.cgi?id=80455)
--   [SafeHandles Limitations](/SafeHandles "SafeHandles"): There are a handful of features that are missing from the SafeHandles implementation that would be nice to have implemented.
+-   [SafeHandles Limitations](/SafeHandles): There are a handful of features that are missing from the SafeHandles implementation that would be nice to have implemented.
 -   Critical finalizers and related implementation issues.
 
 Currently no plan to implement:
@@ -62,7 +62,7 @@ mscorlib
     -   Activator (CreateInstance methods)
     -   AppDomain (Needs to implement ExecuteAssembly)
     -   AppDomainSetup
-    -   Array (need to clean up exposed InternalArray\_\*)
+    -   Array (need to clean up exposed InternalArray_\*)
     -   Console
     -   GC (internalize or remove RecordPressure)
     -   MarshalByRefObject
@@ -173,7 +173,7 @@ ADO.NET
 
 -   System.Data
     -   DataSetSchemaImporterExtension
-    -   DataSet (probably) support for importing and exporting annotated xsd files. The annotation format is not really documented anywhere, so it's a hard task, but a lot of ASP.NET 2.0 applications use xsd files which take advantage of the feature (I believe it is created by the VS2005 designers). A related bug report is [https://bugzilla.novell.com/show\_bug.cgi?id=325464](https://bugzilla.novell.com/show_bug.cgi?id=325464)
+    -   DataSet (probably) support for importing and exporting annotated xsd files. The annotation format is not really documented anywhere, so it's a hard task, but a lot of ASP.NET 2.0 applications use xsd files which take advantage of the feature (I believe it is created by the VS2005 designers). A related bug report is [https://bugzilla.novell.com/show_bug.cgi?id=325464](https://bugzilla.novell.com/show_bug.cgi?id=325464)
 -   System.Data.Odbc
     -   OdbcConnectionStringBuilder
     -   OdbcParameterCollection
@@ -219,11 +219,11 @@ Would be nice to have, but is not necessary:
 Windows.Forms
 -------------
 
-What we are still missing in Windows.Forms is tracked at [Winforms 2.0](/Winforms_2.0 "Winforms 2.0").
+What we are still missing in Windows.Forms is tracked at [Winforms 2.0](/Winforms_2.0).
 
 Additional resources:
 
--   [WinForms CodeOwners](/WinForms_CodeOwners "WinForms CodeOwners")
+-   [WinForms CodeOwners](/WinForms_CodeOwners)
 -   [Moma Reports](http://primates.ximian.com/~miguel/momareports).
 
 

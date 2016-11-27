@@ -9,15 +9,17 @@ This is the Mono Project's SoC rules page. For project ideas and other informati
 Ground Rules
 ============
 
+**This must be your primary project for the duration of the Summer of Code coding period**, and you should expect to put in put in the amount of work that you would for a full-time job. You should not have another internship or job during this time. The only default exception to this rule is examinations and other academic requirements.
+
 **Language:** Code must be written in the same language as the host of the project:
 
 -   GCC extensions in C
 -   Mono VM extensions in C
--   Tools extensions in C\#
--   APIs in C\#
+-   Tools extensions in C#
+-   APIs in C#
 -   etc.
 
-**Licensing:** All of the code submitted must be contributed under the terms of the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html)
+**Licensing:** All of the code submitted must be contributed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 **Acceptance criteria:** The results must be maintainable and clean. If the code works as advertised but its a quick hack or something we would have to rewrite from scratch, we would not accept the project as completed.
 
@@ -52,7 +54,7 @@ Your proposal should be submitted in the [Google Summer of Code](https://www.goo
 Contacting the Mono Team
 ------------------------
 
-If you have questions or suggestions that you want to make in real-time and talk to a member of the team, please join us on IRC on the server "irc.gnome.org" in channel "\#monosoc", "\#monodev" or the "\#mono" channel. Various mentors and students from past years are usually there and can answer some quick questions about the program and about Mono.
+If you have questions or suggestions that you want to make in real-time and talk to a member of the team, please join us on IRC on the server "irc.gnome.org" in channel "#monosoc", "#monodev" or the "#mono" channel. Various mentors and students from past years are usually there and can answer some quick questions about the program and about Mono.
 
 The mailing lists are a very important communication channel, students should use them to get more information and feedback about ideas and proposals. Community engagement is essential for a successful summer of code, so get involved!
 

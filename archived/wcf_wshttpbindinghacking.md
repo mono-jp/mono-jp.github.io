@@ -21,9 +21,8 @@ On this page I put my hacking notes for WSHttpBinding and relevant stuff which w
 <li><a href="#transactionflowbindingelement">1.1 TransactionFlowBindingElement</a></li>
 <li><a href="#reliablesessionbindingelement">1.2 ReliableSessionBindingElement</a></li>
 <li><a href="#compositeduplexbindingelement-and-onewaybindingelement">1.3 CompositeDuplexBindingElement and OneWayBindingElement</a></li>
-<li><a href="#securitybindingelement">1.4 SecurityBindingElement</a></li>
 </ul></li>
-<li><a href="#securitybindingelement_2">2 SecurityBindingElement</a>
+<li><a href="#securitybindingelement">2 SecurityBindingElement</a>
 <ul>
 <li><a href="#wshttpbindingsecuritymessage-nondualmessagesecurityoverhttp">2.1 WSHttpBinding.Security.Message (NonDualMessageSecurityOverHttp)</a></li>
 </ul></li>
@@ -91,9 +90,6 @@ CompositeDuplexBindingElement and OneWayBindingElement
 
 TBD
 
-SecurityBindingElement
-----------------------
-
 SecurityBindingElement provides several surfaces of the SOAP message security stack.
 
 SecurityBindingElement
@@ -108,13 +104,13 @@ SecurityBindingElement covers several security-related WS-\* specifications:
 
 There are three derived classes of SecurityBindingElement:
 
-SymmetricSecurityBindingElement  
+SymmetricSecurityBindingElement<br/>
 uses symmetric security key, meaning that initiator and recipient use the same security key (like HMAC-SHA1).
 
-AsymmetricSecurityBindingElement  
+AsymmetricSecurityBindingElement<br/>
 uses asymmetric security key, meaning that initiator and recipient use different security key for each (like RSA-SHA1).
 
-TransportSecurityBindingElement  
+TransportSecurityBindingElement<br/>
 supports custom "mixed mode" securirty.
 
 Message protection requirements are represented as SecurityTokenParameters (actually one of its derived classes) at binding element level.
@@ -215,7 +211,7 @@ If a SecurityTokenRequirement is confifured with TokenType as [http://schemas.mi
 SslSecurityTokenProvider implements ICommunicationObject, and thus before its Open() is called before GetTokenCore() is called. When opened, it processes all the WS-Trust negotiation messages. The actual negotiation is exchanged through a set of binary TLS blobs packaged in wst:BinaryExchange element, and the process flows as follows (C is client, S is server below):
 
 -   C-\>S: wst:RST (RequestSecurityToken) with TLS ClientHello
--   S-\>C: wst:RSTR (RequestSecurityTokenResponse) with TLS ServerHello, TLS \# ServerCertificate, TLS CertificateRequest if mutual negotiation, and TLS ServerHelloDone.
+-   S-\>C: wst:RSTR (RequestSecurityTokenResponse) with TLS ServerHello, TLS # ServerCertificate, TLS CertificateRequest if mutual negotiation, and TLS ServerHelloDone.
 -   C-\>S: wst:RSTR with TLS ClientKeyExchange and TLS Finished.
 -   S-\>C: wst:RSTR with TLS ChangeCipherSpec and TLS ServerFinished.
 

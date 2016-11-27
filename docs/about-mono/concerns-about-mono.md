@@ -4,7 +4,7 @@ redirect_from:
   - /MonoConcerns/
 ---
 
-Mono has attracted attention from those in the F/OSS community because of its origins as a Microsoft technology. While we believe Mono and .Net are useful tools, we respect the opinions of others that disagree and would rather use alternative languages and development frameworks. There are several common concerns, beyond that of personal choice, that we would like to answer.
+Mono has attracted attention from those in the F/OSS community because of its origins as a Microsoft technology. While we believe Mono and .NET are useful tools, we respect the opinions of others that disagree and would rather use alternative languages and development frameworks. There are several common concerns, beyond that of personal choice, that we would like to answer.
 
 If you have a concern that you would like us to consider addressing, please feel free to email chmorgan@gmail.com.
 
@@ -12,7 +12,7 @@ If you have a concern that you would like us to consider addressing, please feel
 
 #### Background
 
-Patents are a lightning rod of attention in the area of software development. The fact that .NET is a Microsoft created technology has caused concern about Mono, given Microsoft's history of tough, and sometimes monopolistic business practices. [Mono's Licensing page](/Licensing#Patents) addresses some of the issues with how any potential patent infringement would be delt with, via rewriting infringing portions of the code, as well as the basic issue of whether replicating the .Net languages is infringement.
+Patents are a lightning rod of attention in the area of software development. The fact that .NET is a Microsoft created technology has caused concern about Mono, given Microsoft's history of tough, and sometimes monopolistic business practices. [Mono's Licensing page](/docs/faq/licensing/#patents) addresses some of the issues with how any potential patent infringement would be delt with, via rewriting infringing portions of the code, as well as the basic issue of whether replicating the .Net languages is infringement.
 
 Microsoft has made some [claims of intellectual property violations by Linux companies](http://www.youtube.com/watch?v=5B0GTYfPoMo). Some have suggested that because .NET is Microsoft technology, that there are patents that Mono is infringing upon that will be brought out at an opportune time to take Mono and any Mono applications down.
 

@@ -9,7 +9,7 @@ At this point, no group in the Mono project has plans to implement Windows Prese
 
 We do not have any plans because the project is too large and there has not been any serious interest from the community to make this effort move forward.
 
-Some bits have been implemented for WindowsBase and they are distributed with Mono (mostly because System.IO.Packaging is part of WindowsBase). Various classes and stubs were developed and live in the [Olive](/archived/olive "Olive") module.
+Some bits have been implemented for WindowsBase and they are distributed with Mono (mostly because System.IO.Packaging is part of WindowsBase). Various classes and stubs were developed and live in the [Olive](/archived/olive) module.
 
 Anyone interested in contributing should follow the guidelines in the [Contributing](/community/contributing/) page and post their patches to the mono-devel-list@lists.ximian.com mailing list.
 
@@ -24,5 +24,5 @@ Silverlight does not have all the capabilities of WPF, but both technologies are
 
 Silverlight can now be used outside of the browser, and Moonlight can be configured to be used with the full .NET API outside of the browser.
 
-[WPF\_Notes](/docs/gui/wpf/)
+[WPF_Notes](/docs/gui/wpf/)
 

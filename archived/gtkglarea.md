@@ -8,7 +8,7 @@ redirect_from:
 GtkGLArea
 =========
 
-[![](/archived/images/7/72/Gtkgl.png)](/archived/images/7/72/Gtkgl.png)
+[![Gtkgl.png](/archived/images/7/72/Gtkgl.png)](/archived/images/7/72/Gtkgl.png)
 
 A view of a 3D model using GtkGLArea
 
@@ -53,11 +53,11 @@ The use of [Cairo](http://cairographics.org/introduction) and [Glitz](http://www
 Projects using this package
 ---------------------------
 
--   [Jenkara](/Jenkara "Jenkara")
--   [GtkGLAreaSharp](/GtkGLAreaSharp "GtkGLAreaSharp")
+-   [Jenkara](/Jenkara)
+-   [GtkGLAreaSharp](/GtkGLAreaSharp)
 
 Download
 --------
 
-[http://ftp.gnome.org/pub/GNOME/sources/gtkglarea/2.0/](http://ftp.gnome.org/pub/GNOME/sources/gtkglarea/2.0/)
+[https://ftp.gnome.org/pub/GNOME/sources/gtkglarea/2.0/](https://ftp.gnome.org/pub/GNOME/sources/gtkglarea/2.0/)
 

@@ -95,8 +95,8 @@ Packages for many Linux distributions are available through the Mono project in 
 -   [Fedora 8](http://download.opensuse.org/repositories/Mono/Fedora_8)
 -   [Fedora 7](http://download.opensuse.org/repositories/Mono/Fedora_7)
 -   [Fedora Core 6](http://download.opensuse.org/repositories/Mono/Fedora_Extras_6)
--   [Debian/Testing](http://packages.debian.org/testing/libmono-zeroconf1.0-cil)
--   [Debian/Unstable](http://packages.debian.org/unstable/libmono-zeroconf1.0-cil)
+-   [Debian/Testing](https://packages.debian.org/testing/libmono-zeroconf1.0-cil)
+-   [Debian/Unstable](https://packages.debian.org/unstable/libmono-zeroconf1.0-cil)
 
 ### Git
 
@@ -182,7 +182,7 @@ Since both `UInt16` and `Int16` are of the same size, the unchecked cast is lega
 
 ### Bug Reports and Support
 
-If you run into any issues with Mono.Zeroconf or would like help getting started, the usual Mono support channels including [IRC](/IRC "IRC") or an [appropriate mailing list](/Mailing_Lists "Mailing Lists").
+If you run into any issues with Mono.Zeroconf or would like help getting started, the usual Mono support channels including [IRC](/IRC) or an [appropriate mailing list](/Mailing_Lists).
 
 Additionally, if you think you have found a bug in Mono.Zeroconf, please feel free to file it in [Mono's Bugzilla](https://bugzilla.novell.com/enter_bug.cgi?classification=6841&product=Mono%3A+Class+Libraries+&component=Mono.Zeroconf).
 
@@ -210,13 +210,13 @@ browser.ServiceAdded += delegate (object o, ServiceBrowseEventArgs args) {
     Console.WriteLine ("Found Service: {0}", args.Service.Name);
     args.Service.Resolved += delegate (object o, ServiceResolvedEventArgs args) {
         IResolvableService s = (IResolvableService)args.Service;
-        Console.WriteLine ("Resolved Service: {0} - {1}:{2} ({3} TXT record entries)", 
+        Console.WriteLine ("Resolved Service: {0} - {1}:{2} ({3} TXT record entries)",
             s.FullName, s.HostEntry.AddressList[0], s.Port, s.TxtRecord.Count);
     };
     args.Service.Resolve ();
 };
  
-// 
+//
 // Trigger the request
 //
 browser.Browse ("_daap._tcp", "local");

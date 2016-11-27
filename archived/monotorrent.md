@@ -29,9 +29,7 @@ Some of the information here is out of date. For up to date information and samp
 <li><a href="#sample-code">2.2 Sample Code</a></li>
 </ul></li>
 <li><a href="#tracker-library">3 Tracker Library</a>
-<ul>
-<li><a href="#features_2">3.1 Features</a></li>
-</ul></li>
+</li>
 </ul></td>
 </tr>
 </tbody>
@@ -60,7 +58,7 @@ Currently there are no precompiled binaries hosted anywhere.
 
 #### UIs
 
-There is a curses based UI, in module [MonoCurses](/MonoCurses "MonoCurses") and a Windows.Forms UI in [http://code.google.com/p/monotorrent](http://code.google.com/p/monotorrent).
+There is a curses based UI, in module [MonoCurses](/MonoCurses) and a Windows.Forms UI in [http://code.google.com/p/monotorrent](http://code.google.com/p/monotorrent).
 
 Client Library
 --------------
@@ -180,8 +178,3 @@ Tracker Library
 ---------------
 
 The client library contains all the functionality to host a BitTorrent Tracker, or embed Tracker functionality in an application.
-
-#### Features
-
-?????
-

@@ -41,10 +41,9 @@ WCFStatusOld
 <ul>
 <li><a href="#core-compare">4.1 Core Compare</a></li>
 </ul></li>
-<li><a href="#configuration_2">5 Configuration</a></li>
 <li><a href="#contracts">6 Contracts</a>
 <ul>
-<li><a href="#serialization_2">6.1 Serialization</a>
+<li><a href="#serialization-features">6.1 Serialization</a>
 <ul>
 <li><a href="#data-contract">6.1.1 Data Contract</a></li>
 <li><a href="#message-contract">6.1.2 Message Contract</a>
@@ -114,7 +113,7 @@ WCFStatusOld
 This page is OLD
 ================
 
-This page had not been maintained for years, and it has been obsoleted a lot. It will be rewritten with the latest status, with updated milestones to achieve rational milestones and need. Check the new status at [WCF Development](/WCF_Development "WCF Development").
+This page had not been maintained for years, and it has been obsoleted a lot. It will be rewritten with the latest status, with updated milestones to achieve rational milestones and need. Check the new status at [WCF Development](/WCF_Development).
 
 We used to write WCF code in "Olive" module and hence there is a lot of lines that mention it in the following sections. But the WCF module is moved to mcs tree like other class libraries.
 
@@ -143,7 +142,7 @@ Each non working sample was analyzed in order to understand the source of the fa
 Features
 --------
 
-### Serialization
+### Serialization features
 
 -   XML Serialization (XmlSerializerFormatAttribute) - supported
 -   MTOM not supported
@@ -295,9 +294,6 @@ Core Compare
 ------------
 
 The class status for WCF is now included in the \<a href="[http://go-mono.com/status/](http://go-mono.com/status/)"\>class status pages\</a\>.
-
-Configuration
-=============
 
 Contracts
 =========

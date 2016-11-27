@@ -7,19 +7,100 @@ redirect_from:
 Reporting vulnerabilities
 =========================
 
-Please report security vulnerabilities using our [contact form](http://www.go-mono.com/contact/).
+Please report security vulnerabilities by sending email to hello@xamarin.com
 
 Known vulnerabilities
 =====================
 
-Some versions of Mono had security vulnerabilities found after their public release. This page contains a list of the known vulnerabilities, starting with the most recent one.
+Some versions of Mono had security vulnerabilities found after their
+public release. This page contains a list of the known
+vulnerabilities, starting with the most recent one.
+
+string-to-double parser bug
+---------------------------
+
+CVE: [CVE-2009-0689](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0689)
+
+Mono's string-to-double parser may crash, on specially crafted input.
+This could theoretically lead to arbitrary code execution.
+
+The following sample program may crash the runtime, on affected versions:
+
+```csharp
+using System;
+class Test
+{
+    static void Main()
+    {
+        string input = "1." + new string('1', 294912);
+        Double.Parse(input);
+    }
+}
+```
+
+Versions affected:
+
+- All versions prior to 4.2.0.179
+
+Versions fixed:
+
+- 3.10.0-0xamarin4, 3.12.1-0xamarin2, 3.8.0-0xamarin3, 4.0.5.1-0xamarin2 packages in our [Debian security repositories](http://www.mono-project.com/docs/getting-started/install/linux/#security-updates-for-older-releases).
+
+Individual patch for affected versions:
+
+[https://gist.github.com/directhex/01e853567fd2cc74ed39](https://gist.github.com/directhex/01e853567fd2cc74ed39)
+
+Credits:
+
+- Peter McLarnan <Peter.McLarnan@nccgroup.trust>
+- Andy Schmitz <andy.schmitz@nccgroup.trust>
+
+TLS bugs
+--------
+
+CVE: [CVE-2015-2318](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2318), [CVE-2015-2319](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2319), [CVE-2015-2320](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2320)
+
+Mono's implementation of the SSL/TLS stack failed to check the order
+of the handshake messages. Which would allow various attacks on the
+protocol to succeed.  Details of this vulnerability are discussed in
+[SKIP-TLS post](https://www.smacktls.com/#skip).
+
+Mono's implementation of SSL/TLS also contained support for the weak
+EXPORT cyphers and was susceptible to the
+[FREAK](https://www.smacktls.com/#freak) attack.
+
+Versions affected:
+
+- All Mono versions available before March 6th, 2015.
+
+Versions fixed:
+
+- [Mono 3.10.1](https://github.com/mono/mono/tree/mono-3.10.0-branch)
+- [Mono 3.12.1](https://github.com/mono/mono/tree/mono-3.12.0-branch)
+- [Mono 4.0.0](https://github.com/mono/mono/tree/mono-4.0.0-branch)
+
+Individual Patches for versions earlier than Mono 3.10:
+
+- Handshake fix: [patch](https://gist.github.com/directhex/f8c6e67f551d8a608154)
+- Removal of EXPORT ciphers: [patch](https://gist.github.com/directhex/728af6f96d1b8c976659)
+
+We also encourage developers to disable the SSLv2 fallback, patch for Mono:
+
+- <https://gist.github.com/spouliot/8e33a158e132e1738c90>
+
+Credits:
+
+- Karthikeyan Bhargavan <karthikeyan.bhargavan@inria.fr>
+- [miTLS Team at INRIA](http://www.mitls.org/)
 
 Moonlight RuntimeHelpers.InitializeArray on non-primitive value types
 ---------------------------------------------------------------------
 
 CVE: [CVE-2011-0989](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0989)
 
-Missing validations on RuntimeHelpers.InitializeArray can allow untrusted code to modify internal structures leading to plugin crashes and possibly corrupting Moonlight's security manager internal state.
+Missing validations on RuntimeHelpers.InitializeArray can allow
+untrusted code to modify internal structures leading to plugin crashes
+and possibly corrupting Moonlight's security manager internal state.
 
 Version affected:
 
@@ -45,7 +126,10 @@ Moonlight Race in Array.Copy "FastCopy" Internal Call
 
 CVE: [CVE-2011-0990](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0990)
 
-A race in the internal call implementing a fast-copy optimization for Array.Copy can allow untrusted code to modify internal structures leading to to plugin crashes and possibly corrupting Moonlight's security manager internal state.
+A race in the internal call implementing a fast-copy optimization for
+Array.Copy can allow untrusted code to modify internal structures
+leading to to plugin crashes and possibly corrupting Moonlight's
+security manager internal state.
 
 Version affected:
 
@@ -114,7 +198,7 @@ Notes:
 -   Moonlight 1.x does not execute managed code (i.e. does not include Mono) so it is not affected by this vulnerability.
 -   The vulnerability is located in mono source code but can only be exploited (by untrusted applications) when used by Moonlight.
 
-XSP/mod\_mono source code disclosure
+XSP/mod_mono source code disclosure
 ------------------------------------
 
 CVE: [CVE-2010-4225](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4225)
@@ -123,11 +207,11 @@ An unloading bug can, under some circumstances, let ASP.NET applications misbeha
 
 Version affected:
 
--   Mono / XSP / mod\_mono 2.8.x
+-   Mono / XSP / mod_mono 2.8.x
 
 Version fixed:
 
--   Mono / XSP / mod\_mono 2.8.2
+-   Mono / XSP / mod_mono 2.8.2
 
 Moonlight Generic Constraints Bypass Vulnerability
 --------------------------------------------------
@@ -151,12 +235,12 @@ Notes:
 -   Moonlight 1.x does not execute managed code (i.e. does not include Mono) so it is not affected by this vulnerability.
 -   The bug (and fix) is in mono source code but can only be exploited (by untrusted applications) when used by Moonlight.
 
-mono-debugger Insecure Use of LD\_LIBRARY\_PATH
+mono-debugger Insecure Use of LD_LIBRARY_PATH
 -----------------------------------------------
 
 CVE: [CVE-2010-3369](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3369)
 
-The mono debugger scripts (mdb and mdb-symbolreader) misuse the LD\_LIBRARY\_PATH environment variable (empty case) which could allow loading shared libraries from the current directory.
+The mono debugger scripts (mdb and mdb-symbolreader) misuse the LD_LIBRARY_PATH environment variable (empty case) which could allow loading shared libraries from the current directory.
 
 Version affected:
 
@@ -316,8 +400,8 @@ Notes:
 
 -   Mono's System.Web.dll assembly didn't consider, before version 1.2.5.2, some Win32-specific behavior affecting filenames ending with spaces or dots. Win32 operating systems ignores the trailing characters, even if the file-system supports them, and can access the similarly named files without reporting any error. This caused XSP to return ASP.NET source code, instead of rendered content, when executed with Mono under Windows
 
-XSP/mod\_mono source code disclosure
-------------------------------------
+XSP/mod_mono source code disclosure 2
+--------------------------------------
 
 CVE: [CVE-2006-6104](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6104)
 
@@ -333,11 +417,11 @@ Fixed in
 
 Notes
 
--   The problem is exhibited in XSP and, in certain cases mod\_mono (when configured with **SetHandler**) but the fix is in the Mono class libraries. To avoid any compatibility issues you should update both Mono and XSP/mod\_mono to the same version.
+-   The problem is exhibited in XSP and, in certain cases mod_mono (when configured with **SetHandler**) but the fix is in the Mono class libraries. To avoid any compatibility issues you should update both Mono and XSP/mod_mono to the same version.
 
 Workaround
 
--   Use Apache/[Mod\_mono](/docs/web/mod_mono/) configured with **AddHander**.
+-   Use Apache/[Mod_mono](/docs/web/mod_mono/) configured with **AddHander**.
 
 Local privilege escalation via System.Xml.Serialization
 -------------------------------------------------------
@@ -355,16 +439,16 @@ Fixed in
 
 Workaround
 
--   Code generation for serialization can be turned off using **export MONO\_XMLSERIALIZER\_THS=no** prior to executing Mono applications
+-   Code generation for serialization can be turned off using **export MONO_XMLSERIALIZER_THS=no** prior to executing Mono applications
 
-XSP/mod\_mono directory traversal
+XSP/mod_mono directory traversal
 ---------------------------------
 
 CVE: [CVE-2006-2658](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2658)
 
 Versions affected
 
--   mod\_mono 1.1.14 (and prior releases)
+-   mod_mono 1.1.14 (and prior releases)
 
 Fixed in
 
@@ -374,7 +458,7 @@ Fixed in
 
 Notes
 
--   Yes the affected/fixed products are confusing. The bug was in XSP but only exposed when using mod\_mono. You should update both packages to avoid compatibility issues.
+-   Yes the affected/fixed products are confusing. The bug was in XSP but only exposed when using mod_mono. You should update both packages to avoid compatibility issues.
 
 Mono ASP.NET Unicode Conversion Cross-Site Scripting
 ----------------------------------------------------

@@ -2,7 +2,7 @@
 title: "Accessibility: Team"
 lastmodified: '2010-07-15'
 redirect_from:
-  - /Accessibility:_Team/
+  - /Accessibility%3A_Team/
 ---
 
 Accessibility: Team
@@ -48,8 +48,6 @@ After that, to connect: Left-click on NM notification icon (systray) -\> VPN Con
 
 You can see a list of hackergotchis here along with their corresponding roles on the team, and links to their blogs:
 
- 
-
 [![Calen.png](/archived/images/5/59/Calen.png)](/archived/images/5/59/Calen.png)
 
 **Calen Chen**
@@ -68,8 +66,6 @@ You can see a list of hackergotchis here along with their corresponding roles on
 *a11y Hacker*
 *[wanderings of an aimless vortex](http://lightvortex.livejournal.com)*
 
- 
-
 [![Ngao.png](/archived/images/e/e9/Ngao.png)](/archived/images/e/e9/Ngao.png)
 
 **Neville Gao**
@@ -81,8 +77,6 @@ You can see a list of hackergotchis here along with their corresponding roles on
 **Ray Wang**
 *a11y Build Hacker*
 *[Ray Wang's Blog](http://gnuray.blogspot.com)*
-
- 
 
 [![None.png](/archived/images/e/e3/None.png)](/archived/images/e/e3/None.png)
 
@@ -101,8 +95,6 @@ You can see a list of hackergotchis here along with their corresponding roles on
 **Matt Guo**
 *a11y Hacker*
 *[Matt Guo](http://blog.mattguo.com)*
-
- 
 
 #### Former Team Members
 
@@ -124,15 +116,11 @@ You can see a list of hackergotchis here along with their corresponding roles on
 *a11y QA Hacker*
 *[Brian's lovable online gazette](http://bgmerrell.blogspot.com)*
 
- 
-
 [![Sandy.png](/archived/images/4/4e/Sandy.png)](/archived/images/4/4e/Sandy.png)
 
 **Sandy Armstrong**
 *a11y Hacker*
 *[5:55 AM](http://automorphic.blogspot.com)*
-
- 
 
 ### Getting Started
 
@@ -160,33 +148,33 @@ In the meantime, we'll request to the [LinuxFoundation](http://www.linuxfoundati
 
 ### Team Meetings
 
--   [2009, Feb 09](/Accessibility:_Team_Meetings_2009_Feb_09 "Accessibility: Team Meetings 2009 Feb 09") IRC - 1.0 Feature Freeze Planning
+-   [2009, Feb 09](/Accessibility:_Team_Meetings_2009_Feb_09) IRC - 1.0 Feature Freeze Planning
 -   2009, Jan 07 IRC - Sprint 5 Planning
--   [2008, Dec 10](/Accessibility:_Team_Meetings_2008_Dec_10 "Accessibility: Team Meetings 2008 Dec 10") IRC - Sprint 4 Planning
--   [2008, Nov 26](/Accessibility:_Team_Meetings_2008_Nov_26 "Accessibility: Team Meetings 2008 Nov 26") IRC - Sprint 3 Planning
--   [2008, Nov 12](/Accessibility:_Team_Meetings_2008_Nov_12 "Accessibility: Team Meetings 2008 Nov 12") IRC - Sprint 2 Planning
--   [2008, Oct 29](/Accessibility:_Team_Meetings_2008_Oct_29 "Accessibility: Team Meetings 2008 Oct 29") IRC - Sprint 1 Planning
--   [2008, Oct 15](/Accessibility:_Team_Meetings_2008_Oct_15 "Accessibility: Team Meetings 2008 Oct 15") IRC - Iteration 19 Planning
--   [2008, Oct 01](/Accessibility:_Team_Meetings_2008_Oct_01 "Accessibility: Team Meetings 2008 Oct 01") IRC - 1st 2week iteration Planning
--   [2008, Sep 17](/Accessibility:_Team_Meetings_2008_Sep_17 "Accessibility: Team Meetings 2008 Sep 17") IRC - Iteration 17 Planning
--   [2008, Sep 10](/Accessibility:_Team_Meetings_2008_Sep_10 "Accessibility: Team Meetings 2008 Sep 10") IRC - Iteration 16 Planning
--   [2008, Sep 03](/Accessibility:_Team_Meetings_2008_Sep_03 "Accessibility: Team Meetings 2008 Sep 03") IRC - Iteration 15 Planning
--   [2008, Aug 20](/Accessibility:_Team_Meetings_2008_Aug_20 "Accessibility: Team Meetings 2008 Aug 20") IRC - Iteration 14 Planning
--   [2008, Aug 13](/Accessibility:_Team_Meetings_2008_Aug_13 "Accessibility: Team Meetings 2008 Aug 13") IRC - Iteration 13 Planning
--   [2008, Aug 06](/Accessibility:_Team_Meetings_2008_Aug_06 "Accessibility: Team Meetings 2008 Aug 06") IRC - Iteration 12 Planning
--   [2008, Jul 30](/Accessibility:_Team_Meetings_2008_Jul_30 "Accessibility: Team Meetings 2008 Jul 30") IRC - Iteration 11 Planning
--   [2008, Jul 23](/Accessibility:_Team_Meetings_2008_Jul_23 "Accessibility: Team Meetings 2008 Jul 23") IRC - Iteration 10 Planning
--   [2008, Jul 16](/Accessibility:_Team_Meetings_2008_Jul_16 "Accessibility: Team Meetings 2008 Jul 16") IRC - Iteration 9 Planning
--   [2008, Jul 09](/Accessibility:_Team_Meetings_2008_Jul_09 "Accessibility: Team Meetings 2008 Jul 09") IRC - Iteration 8 Planning
--   [2008, Jul 02](/Accessibility:_Team_Meetings_2008_Jul_02 "Accessibility: Team Meetings 2008 Jul 02") IRC - Iteration 7 Planning
--   [2008, Jun 25](/Accessibility:_Team_Meetings_2008_Jun_25 "Accessibility: Team Meetings 2008 Jun 25") IRC - Iteration 6 Planning
--   [2008, Jun 18](/Accessibility:_Team_Meetings_2008_Jun_18 "Accessibility: Team Meetings 2008 Jun 18") IRC - Iteration 5 Planning
--   [2008, Jun 11](/Accessibility:_Team_Meetings_2008_Jun_11 "Accessibility: Team Meetings 2008 Jun 11") IRC - Iteration 4 Planning
--   [2008, Jun 04](/Accessibility:_Team_Meetings_2008_Jun_04 "Accessibility: Team Meetings 2008 Jun 04") IRC - Iteration 3 Planning
--   [2008, May 28](/Accessibility:_Team_Meetings_2008_May_28 "Accessibility: Team Meetings 2008 May 28") IRC - Iteration 2 Planning
--   [2008, May 15](/Accessibility:_Team_Meetings_2008_May_15 "Accessibility: Team Meetings 2008 May 15") IRC - Team Meeting
--   [2008, Aug 13](/Accessibility:_QA_Meetings_2008_Aug_13 "Accessibility: QA Meetings 2008 Aug 13") IRC - QA Meeting \#2
--   [2008, Jun 5](/Accessibility:_QA_Meetings_2008_Jun_5 "Accessibility: QA Meetings 2008 Jun 5") IRC - QA Meeting \#1
+-   [2008, Dec 10](/Accessibility:_Team_Meetings_2008_Dec_10) IRC - Sprint 4 Planning
+-   [2008, Nov 26](/Accessibility:_Team_Meetings_2008_Nov_26) IRC - Sprint 3 Planning
+-   [2008, Nov 12](/Accessibility:_Team_Meetings_2008_Nov_12) IRC - Sprint 2 Planning
+-   [2008, Oct 29](/Accessibility:_Team_Meetings_2008_Oct_29) IRC - Sprint 1 Planning
+-   [2008, Oct 15](/Accessibility:_Team_Meetings_2008_Oct_15) IRC - Iteration 19 Planning
+-   [2008, Oct 01](/Accessibility:_Team_Meetings_2008_Oct_01) IRC - 1st 2week iteration Planning
+-   [2008, Sep 17](/Accessibility:_Team_Meetings_2008_Sep_17) IRC - Iteration 17 Planning
+-   [2008, Sep 10](/Accessibility:_Team_Meetings_2008_Sep_10) IRC - Iteration 16 Planning
+-   [2008, Sep 03](/Accessibility:_Team_Meetings_2008_Sep_03) IRC - Iteration 15 Planning
+-   [2008, Aug 20](/Accessibility:_Team_Meetings_2008_Aug_20) IRC - Iteration 14 Planning
+-   [2008, Aug 13](/Accessibility:_Team_Meetings_2008_Aug_13) IRC - Iteration 13 Planning
+-   [2008, Aug 06](/Accessibility:_Team_Meetings_2008_Aug_06) IRC - Iteration 12 Planning
+-   [2008, Jul 30](/Accessibility:_Team_Meetings_2008_Jul_30) IRC - Iteration 11 Planning
+-   [2008, Jul 23](/Accessibility:_Team_Meetings_2008_Jul_23) IRC - Iteration 10 Planning
+-   [2008, Jul 16](/Accessibility:_Team_Meetings_2008_Jul_16) IRC - Iteration 9 Planning
+-   [2008, Jul 09](/Accessibility:_Team_Meetings_2008_Jul_09) IRC - Iteration 8 Planning
+-   [2008, Jul 02](/Accessibility:_Team_Meetings_2008_Jul_02) IRC - Iteration 7 Planning
+-   [2008, Jun 25](/Accessibility:_Team_Meetings_2008_Jun_25) IRC - Iteration 6 Planning
+-   [2008, Jun 18](/Accessibility:_Team_Meetings_2008_Jun_18) IRC - Iteration 5 Planning
+-   [2008, Jun 11](/Accessibility:_Team_Meetings_2008_Jun_11) IRC - Iteration 4 Planning
+-   [2008, Jun 04](/Accessibility:_Team_Meetings_2008_Jun_04) IRC - Iteration 3 Planning
+-   [2008, May 28](/Accessibility:_Team_Meetings_2008_May_28) IRC - Iteration 2 Planning
+-   [2008, May 15](/Accessibility:_Team_Meetings_2008_May_15) IRC - Team Meeting
+-   [2008, Aug 13](/Accessibility:_QA_Meetings_2008_Aug_13) IRC - QA Meeting #2
+-   [2008, Jun 5](/Accessibility:_QA_Meetings_2008_Jun_5) IRC - QA Meeting #1
 
-(Generated using [Irc2Wiki](/Irc2Wiki "Irc2Wiki"))
+(Generated using [Irc2Wiki](/Irc2Wiki))
 

@@ -2,7 +2,7 @@
 title: "Accessibility: Installing 2.1 From Source"
 lastmodified: '2010-08-23'
 redirect_from:
-  - /Accessibility:_Installing_2.1_From_Source/
+  - /Accessibility%3A_Installing_2.1_From_Source/
 ---
 
 Accessibility: Installing 2.1 From Source
@@ -50,8 +50,8 @@ Prerequisites
 -   atk
 -   nunit \>= 2.4.7 (if building tests)
 -   at-spi2 \>= 0.3.90
-    -   [http://download.gnome.org/sources/at-spi2-core/0.3/](http://download.gnome.org/sources/at-spi2-core/0.3/)
-    -   [http://download.gnome.org/sources/at-spi2-atk/0.3/](http://download.gnome.org/sources/at-spi2-atk/0.3/)
+    -   [https://download.gnome.org/sources/at-spi2-core/0.3/](https://download.gnome.org/sources/at-spi2-core/0.3/)
+    -   [https://download.gnome.org/sources/at-spi2-atk/0.3/](https://download.gnome.org/sources/at-spi2-atk/0.3/)
 
 Getting the Source
 ------------------
@@ -70,7 +70,7 @@ from [http://mono-a11y.org/releases/2.1/sources/](http://mono-a11y.org/releases/
 Building and Installing
 -----------------------
 
-If you have a [parallel Mono environment](/Parallel_Mono_Environments "Parallel Mono Environments"), make sure to specify the correct prefix during the *configure* stage.
+If you have a [parallel Mono environment](/Parallel_Mono_Environments), make sure to specify the correct prefix during the *configure* stage.
 
 ### mono-uia-2.1.tar.bz2
 
@@ -85,7 +85,7 @@ If you have a [parallel Mono environment](/Parallel_Mono_Environments "Parallel 
      tar xfj uiautomationwinforms-2.1.tar.bz2
      cd uiautomationwinforms-2.1/
      ./configure --prefix=/usr
-     make 
+     make
      sudo make install
 
 ### uiaatkbridge-2.1.tar.bz2
@@ -101,7 +101,7 @@ If you have a [parallel Mono environment](/Parallel_Mono_Environments "Parallel 
      tar xfj uiadbus-2.1.tar.bz2
      cd uiadbus-2.1/
      ./configure --prefix=/usr
-     make 
+     make
      sudo make install
 
 ### at-spi-sharp-1.1.0.tar.bz2

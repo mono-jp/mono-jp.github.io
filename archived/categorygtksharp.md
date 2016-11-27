@@ -2,11 +2,11 @@
 title: "Category:GtkSharp"
 lastmodified: '2005-09-06'
 redirect_from:
-  - /Category:GtkSharp/
+  - /Category%3AGtkSharp/
 ---
 
 Category:GtkSharp
 =================
 
-Pages related to [Gtk\#](/GtkSharp "GtkSharp")
+Pages related to [Gtk#](/GtkSharp)
 
