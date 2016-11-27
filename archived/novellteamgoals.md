@@ -47,7 +47,7 @@ It is the responsibility of team leaders to update the goals set in this page fo
 
 Since Mono is a relatively small team compared to the goals of the project, developers in the team should do much more than just write code, each developer should:
 
--   Run the [test suite](/Test_Suite "Test Suite") for the given component.
+-   Run the [test suite](/Test_Suite) for the given component.
 -   Monitor the [build bots](http://wrench.mono-project.com/builds) for potential failures and regressions.
 -   When writing code, ensure that tests exist for this new feature.
 -   Make sure that proper documentation exists.
@@ -57,7 +57,7 @@ Since Mono is a relatively small team compared to the goals of the project, deve
 Communication
 =============
 
-Communication happens mostly in public forums ([mailing lists](/Mailing_Lists "Mailing Lists"), [chat rooms](/IRC "IRC") and this web site).
+Communication happens mostly in public forums ([mailing lists](/Mailing_Lists), [chat rooms](/IRC) and this web site).
 
 Documentation
 =============
@@ -71,11 +71,11 @@ If you add a new tool, a new command line option, a new feature to a tool:
 If you introduce a new API to Mono-developed APIs:
 
 -   Ensure that there is proper coverage in Monodoc for it
--   If there is no Monodoc framework for it, make sure you [generate it](/Generating_Documentation "Generating Documentation").
+-   If there is no Monodoc framework for it, make sure you [generate it](/Generating_Documentation).
 
 If you improve or change the semantics of an API:
 
--   Make sure that [you contribute the update](/Monodoc_Contributing "Monodoc Contributing").
+-   Make sure that [you contribute the update](/Monodoc_Contributing).
 
 If you answer a public question on the forums, consider whether it would not be a good candidate for the FAQs.
 
@@ -92,10 +92,9 @@ Lead: Paolo Molaro.
 ### Runtime Team Goals
 
 -   Debugger
-    -   Plans is available [debugger plans' here](/Debugger#plan "Debugger").
 -   Generics Support Improvements
     -   The current support needs to be audited, and cleaned up
-    -   Optimize memory usage of generics-relate data structures (like removing generic\_container from non-generic MonoMethods).
+    -   Optimize memory usage of generics-relate data structures (like removing generic_container from non-generic MonoMethods).
     -   Far future: code sharing optimizations.
 -   Compacting Garbage Collector
 -   Correctness/Bug Fixes
@@ -109,7 +108,7 @@ Lead: Paolo Molaro.
 -   Security:
     -   Implementation of the Mono Verifier
     -   Implement stack overflow clean shutdown.
-    -   Implement new sandboxed execution system (see [Moonlight](/Moonlight#security-model "Moonlight") for details).
+    -   Implement new sandboxed execution system.
 -   Reduce Memory Usage
     -   For all runtime data structures (MonoMethod, MonoClassField, MonoClass, exception tables).
 -   IO-Layer
@@ -136,7 +135,7 @@ Windows.Forms Goals
 Moonlight Team
 --------------
 
-Details about the Silverlight implementation are available on the [Moonlight](/Moonlight "Moonlight") page.
+Details about the Silverlight implementation are available on the [Moonlight](/Moonlight) page.
 
 MonoDevelop Team
 ----------------
@@ -150,7 +149,7 @@ Ship MonoDevelop 1.0, the planning document is:
 Other Groups
 ------------
 
-Other groups include developers that do not directly belong to any of the previous groups, that own code in various places, or that on temporary loans to other projects (Mike Kestner for Gtk\#)
+Other groups include developers that do not directly belong to any of the previous groups, that own code in various places, or that on temporary loans to other projects (Mike Kestner for Gtk#)
 
 Lead by default: Miguel de Icaza
 

@@ -106,7 +106,7 @@ A code optimizer would convert a CIL stream into a different CIL stream that is 
 
 These optimizations could be a lot more complex than what the JIT compiler can do today doing things like loop unrolling or processing a file to automatically multithread some pieces of the program.
 
-It is rumored that the MS C++ compiler produces better code than the C\# compiler as it does do some IL-level loop unrolling for example.
+It is rumored that the MS C++ compiler produces better code than the C# compiler as it does do some IL-level loop unrolling for example.
 
 Medium-Hard
 
@@ -130,7 +130,7 @@ Documentation
 |Area|Description|Difficulty|Time estimate|Additional information|
 |:---|:----------|:---------|:------------|:---------------------|
 |Version Information|Update monodocer so it can consume the output of corcompare (our tool to track differences in APIs) and flag documentation with the proper XML elements to state when the API first became available|Medium|1 months|N/A|
-|C\# specification|Integrate the new C\# specification into Monodoc|Easy|1 week|N/A|
+|C# specification|Integrate the new C# specification into Monodoc|Easy|1 week|N/A|
 |Comment Service API|Design a full system for comments and ratings so people can annotate the documentation in Monodoc.|Easy|2-3 months.|N/A|
 |Web-editing for Monodoc|Modify Monodoc so that it can be used over the web to accept contributions and edit the existing documentation|Easy|1 months.|N/A|
 
@@ -168,7 +168,7 @@ If some people (or group of people) want to take on a task, they should write to
 There are different areas of interest where high-level contributions can be made:
 
 -   **JIT compiler:** tasks can be: adding more optimizations, reducing compile time, porting to different architectures.
--   **[AOT](/AOT "AOT") compiler:** optimizing the compiler output and the AOT loader, better support for multiple application domains.
+-   **[AOT](/AOT) compiler:** optimizing the compiler output and the AOT loader, better support for multiple application domains.
 -   **VM runtime:**optimizing the runtime data structures, experimenting with different garbage collectors, integration with different component models.
 -   **Class library:**many opportunities in the implementation of regular expressions, Xml related technologies (XPath, XLST, etc).
 -   **Compilers:**writing compilers, interpreters and runtimes for langauges so that they run on the CLR (using Reflection.Emit support, for example).

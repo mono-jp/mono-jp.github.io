@@ -2,7 +2,7 @@
 title: "MonoTouch:Limitations"
 lastmodified: '2009-09-04'
 redirect_from:
-  - /MonoTouch:Limitations/
+  - /MonoTouch%3ALimitations/
 ---
 
 MonoTouch:Limitations
@@ -43,14 +43,14 @@ Limited Debugging Support
 
 There is no support for debugging in MonoTouch, except for low-level debugging with GDB of the runtime.
 
-To learn how to use GDB to debug the runtime you can read [Debugging](/Debugging "Debugging")
+To learn how to use GDB to debug the runtime you can read [Debugging](/Debugging)
 
 Most of the debugging is done with Console.WriteLine.
 
 Limited Generics Support
 ========================
 
-Mono's [Full AOT](/AOT#full-aot "AOT") support has the following limitations with respect to generics:
+Mono's [Full AOT](/docs/advanced/aot/#full-aot) support has the following limitations with respect to generics:
 
 Generic Virtual Methods
 -----------------------
@@ -114,7 +114,7 @@ The lack of System.Reflection.Emit means that no code that depends on runtime co
 Reverse Callbacks
 -----------------
 
-In standard Mono it is possible to pass C\# delegate instances to unmanaged code in lieu of a function pointer. The runtime would typically transform those function pointers into a small thunk that allows unmanaged code to call back into managed code.
+In standard Mono it is possible to pass C# delegate instances to unmanaged code in lieu of a function pointer. The runtime would typically transform those function pointers into a small thunk that allows unmanaged code to call back into managed code.
 
 In Mono these bridges are implemented by the Just-in-Time compiler. When using the ahead-of-time compiler required by the iPhone there are two important limitations at this point:
 

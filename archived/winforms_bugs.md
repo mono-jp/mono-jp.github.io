@@ -68,13 +68,13 @@ Point Descriptions
 Examples
 --------
 
-A bug where Mono crashes when a user tries to show a Form:
+A bug where Mono crashes when a user tries to show a Form:<br/>
  (5 x 4 x 5) / 1.25 = 80
 
-A bug where TabControl draws a couple of pixels off:
+A bug where TabControl draws a couple of pixels off:<br/>
  (2 x 2 x 3) / 1.25 = 9.6
 
-A bug where ListBox doesn't databind correctly:
+A bug where ListBox doesn't databind correctly:<br/>
  (4 x 3 x 4) / 1.25 = 38.4
 
 Working with Bugzilla
@@ -82,13 +82,13 @@ Working with Bugzilla
 
 This value goes into the "Business Priority" field in Bugzilla.
 
-The composite values are available in the "NTS Support\#" field, like this: [5, 4, 5].
+The composite values are available in the "NTS Support#" field, like this: [5, 4, 5].
 
 You can then choose "Change Columns" at the bottom of the Bugzilla list to add the Business Priority column and sort by it.
 
 Reference
 ---------
 
-This methodology is adapted from this article:
+This methodology is adapted from this article:<br/>
  [http://lostgarden.com/2008/05/improving-bug-triage-with-user-pain.html](http://lostgarden.com/2008/05/improving-bug-triage-with-user-pain.html)
 

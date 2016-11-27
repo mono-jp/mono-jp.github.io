@@ -18,7 +18,7 @@ DB4BOO
 <li><a href="#boo">2 Boo</a></li>
 <li><a href="#lets-boo-first">3 Let's Boo first</a>
 <ul>
-<li><a href="#what-happened-">3.1 What happened ?</a></li>
+<li><a href="#what-happened">3.1 What happened ?</a></li>
 </ul></li>
 <li><a href="#pilot-class">4 Pilot class</a></li>
 </ul></td>
@@ -29,9 +29,9 @@ DB4BOO
 Introduction
 ------------
 
-Doing some research to build new Mono demos for tradeshows, I decided to research [db4o](/DB4O "DB4O"), an open source object database that works with Mono as well as [Boo](http://boo.codehaus.org/), an simple object oriented scripting language for the CLR. Boo's simple syntax is especially attractive to me as I prototype or build little applications. Also, the [Boo](http://boo.codehaus.org/) shell in [Monodevelop](/Development_Environments) (or in a Terminal, using *booish*) makes it very easy to try things out quickly.
+Doing some research to build new Mono demos for tradeshows, I decided to research [db4o](/DB4O), an open source object database that works with Mono as well as [Boo](http://boo.codehaus.org/), an simple object oriented scripting language for the CLR. Boo's simple syntax is especially attractive to me as I prototype or build little applications. Also, the [Boo](http://boo.codehaus.org/) shell in [Monodevelop](/Development_Environments) (or in a Terminal, using *booish*) makes it very easy to try things out quickly.
 
-Through this short tutorial, we'll use a little bit of [Boo](http://boo.codehaus.org/) to create a simplistic little application to test out and explore [db4o](/DB4O "DB4O")'s object persistence features.
+Through this short tutorial, we'll use a little bit of [Boo](http://boo.codehaus.org/) to create a simplistic little application to test out and explore [db4o](/DB4O)'s object persistence features.
 
 Boo
 ---
@@ -54,7 +54,7 @@ A very simple demo of Boo I like to give is the following:
 <!-- -->
 
 ``` csharp
-import Gtk from "gtk-sharp"                                                        // (a)       
+import Gtk from "gtk-sharp"                                                        // (a)
  
 myWindow = Window ("Mono")                                                         // (b)
 myWindow.Show()                                                                    // (c)
@@ -114,8 +114,8 @@ Pilot class
  
         public def ToString():
  
-            /* I could be using 
-               return _name + "/" + _points 
+            /* I could be using
+               return _name + "/" + _points
                but latexer mentionned that boo's string interpolation is best : */
             return "${_name}/${_points}"
 ```

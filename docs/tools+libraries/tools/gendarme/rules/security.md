@@ -4,7 +4,7 @@ redirect_from:
   - /Gendarme.Rules.Security/
 ---
 
-[Gendarme](/docs/tools+libraries/tools/gendarme/)'s security rules are located in the **Gendarme.Rules.Security.dll** assembly. Latest sources are available from [anonymous SVN](http://anonsvn.mono-project.com/viewcvs/trunk/mono-tools/gendarme/rules/Gendarme.Rules.Security/).
+[Gendarme](/docs/tools+libraries/tools/gendarme/)'s security rules are located in the **Gendarme.Rules.Security.dll** assembly. Latest sources are available from [git](https://github.com/mono/mono-tools/tree/master/gendarme/rules/Gendarme.Rules.Security).
 
 <table>
 <col width="100%" />
@@ -147,7 +147,7 @@ class HasReadOnlyNativeField {
 
 ### StaticConstructorsShouldBePrivateRule
 
-This rule will fire if a type's static constructor is not private. This is a problem because the static constructor is meant to be called by the runtime but if it is not private then other code may call it as well which may lead to security vulnerabilities. Note that C\# and VB.NET enforce this rule.
+This rule will fire if a type's static constructor is not private. This is a problem because the static constructor is meant to be called by the runtime but if it is not private then other code may call it as well which may lead to security vulnerabilities. Note that C# and VB.NET enforce this rule.
 
 Feedback
 ========

@@ -2,7 +2,7 @@
 title: "Accessibility: Reviews"
 lastmodified: '2009-06-10'
 redirect_from:
-  - /Accessibility:_Reviews/
+  - /Accessibility%3A_Reviews/
 ---
 
 Accessibility: Reviews
@@ -63,7 +63,7 @@ Submitting Review Requests
 
 Please place the "post-review" script from uia2atk/tools somewhere in your path. This script has [excellent documentation](http://review-board.org/docs/manual/dev/users/tools/post-review/) for its many features. The simplest use is to call it from within your SVN checkout or git repository.
 
-For Subversion, post-review will post the equivalent of \`svn diff\`. For git (as described in [our git workflow instructions](/Accessibility:_GitSVN:_Workflow#get-feedback-with-reviewboard "Accessibility: GitSVN: Workflow")), it will post the diff between everything you've committed on your feature branch, and the source SVN branch (trunk, 1.0, etc).
+For Subversion, post-review will post the equivalent of \`svn diff\`. For git (as described in [our git workflow instructions](/Accessibility:_GitSVN:_Workflow)), it will post the diff between everything you've committed on your feature branch, and the source SVN branch (trunk, 1.0, etc).
 
 The first time you run \`post-review\`, you will be prompted for your Reviewboard username and password, but your credentials will be cached after that.
 
@@ -71,7 +71,7 @@ If you experience any errors when running post-review, please send them to Brad 
 
 Part of the output of \`post-review\` should be a URL for your review draft. You will need to visit that URL and complete your review before publishing it.
 
-    [mono] ~/mono-svn/uia2atk-1.0 @ post-review 
+    [mono] ~/mono-svn/uia2atk-1.0 @ post-review
     Review request #72 posted.
 
     http://reviews.mono-a11y.org/r/72
@@ -113,7 +113,7 @@ The Review Process
 
 ### Publishing Reviews
 
-Designated reviewers should receive a "Review Request" email when a review is published. In addition, morbo should announce the new review in \#mono-a11y.
+Designated reviewers should receive a "Review Request" email when a review is published. In addition, morbo should announce the new review in #mono-a11y.
 
 To comment on somebody's diff, follow the link and click the "View Diff" tab. You can add a comment on any line of the diff by clicking on the line number on the "New Change" side. A text box will appear, and you can enter a comment and click Save. You'll see a little bubble over the line number on the far left side, with a number in it representing how many comments that line has. Click to view those comments or edit your own.
 

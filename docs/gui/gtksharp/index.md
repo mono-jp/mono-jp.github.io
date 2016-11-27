@@ -5,13 +5,13 @@ redirect_from:
   - /Gtk/
 ---
 
-What is Gtk\#?
+What is Gtk#?
 --------------
 
-Gtk\# is a Graphical User Interface Toolkit for mono and .Net. The project binds the [gtk+](http://www.gtk.org/) toolkit and assorted [GNOME](http://www.gnome.org/) libraries, enabling fully native graphical Gnome application development using the Mono and .Net development frameworks.
+Gtk# is a Graphical User Interface Toolkit for mono and .Net. The project binds the [gtk+](http://www.gtk.org/) toolkit and assorted [GNOME](http://www.gnome.org/) libraries, enabling fully native graphical Gnome application development using the Mono and .Net development frameworks.
 
 -   [Frequently Asked Questions](/docs/faq/general/)
--   [Contacting the Mono/Gtk\# Team](http://www.go-mono.com/contact/)
+-   [Contacting the Mono/Gtk# Team](/community/)
 -   [Bug reporting](/community/bugs/)
 
 References
@@ -20,7 +20,7 @@ References
 -   [Online API Documentation](http://www.go-mono.com/docs/monodoc.ashx?link=root:/classlib-gnome)
 -   [What's New?](/docs/gui/gtksharp/new-in-version-2x/)
 -   [Release Plans](/docs/gui/gtksharp/plan/)
--   [Articles and Tutorials on Gtk\#](/docs/gui/gtksharp/tutorials/)
+-   [Articles and Tutorials on Gtk#](/docs/gui/gtksharp/tutorials/)
 -   [Component Descriptions](/docs/gui/gtksharp/details/#gtks-components)
 
 Features
@@ -30,20 +30,20 @@ Features
 -   Wide range of Widgets/Controls.
 -   Accessible via the ATK accessibility toolkit.
 -   Internationalization.
--   Available from C\#, Java, Python, VB.Net and [more](/docs/about-mono/languages/).
+-   Available from C#, Java, Python, VB.Net and [more](/docs/about-mono/languages/).
 -   UI Builder support.
 -   Open Source, Free Software.
 
-Gtk\# in the Real World
+Gtk# in the Real World
 -----------------------
 
 [![Md2.png](/archived/images/3/3d/Md2.png)](/archived/images/3/3d/Md2.png)
 
-Want to know how Gtk\# is being used in the real world?
+Want to know how Gtk# is being used in the real world?
 
-Check out [some screenshots](/docs/about-mono/showcase/screenshots/) of Gtk\# Applications. Some of our more prominent users include:
+Check out [some screenshots](/docs/about-mono/showcase/screenshots/) of Gtk# Applications. Some of our more prominent users include:
 
--   [Banshee](http://banshee-project.org/Main_Page)
+-   [Banshee](http://banshee.fm/)
 -   [Smuxi](https://www.smuxi.org/)
 -   [F-spot](http://f-spot.org/Main_Page)
 -   [MonoDevelop](http://www.monodevelop.com/Main_Page)
@@ -56,13 +56,16 @@ Our current stable release targets the GNOME 2.20 release.
 
 Current Source Releases:
 
--   [gtk-sharp](http://ftp.gnome.org/pub/gnome/sources/gtk-sharp/2.12/gtk-sharp-2.12.10.tar.gz)
--   [gnome-sharp](http://ftp.gnome.org/pub/gnome/sources/gnome-sharp/2.24/gnome-sharp-2.24.1.tar.gz)
--   [gnome-desktop-sharp](http://ftp.gnome.org/pub/gnome/sources/gnome-desktop-sharp/2.24/gnome-desktop-sharp-2.24.0.tar.gz)
+-   [gtk-sharp](https://download.mono-project.com/sources/gtk-sharp212/)
+-   [gnome-sharp](https://ftp.gnome.org/pub/gnome/sources/gnome-sharp/2.24/)
+-   [gnome-desktop-sharp](https://ftp.gnome.org/pub/gnome/sources/gnome-desktop-sharp/2.26/)
 
 [Packages and installers](/download/)
 
-Sources for older releases can be downloaded from [GNOME FTP](http://ftp.gnome.org/pub/gnome/sources/gtk-sharp).
+Sources for releases up to 2.12.10 are available from [GNOME FTP](https://ftp.gnome.org/pub/gnome/sources/gtk-sharp),
+while later 2.12.x releases are only available from [MONO DOWNLOAD](https://download.mono-project.com/sources/gtk-sharp212/).
+
+Source packages for GTK#3 beta releases (2.99.x) are only available from [GNOME FTP](https://ftp.gnome.org/pub/gnome/sources/gtk-sharp).
 
 ### GTK#3 porting guide
 

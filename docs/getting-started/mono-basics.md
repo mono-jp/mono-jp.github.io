@@ -20,53 +20,34 @@ public class HelloWorld
     {
         Console.WriteLine ("Hello Mono World");
     }
- 
 }
 ```
 
-To compile, use gmcs:
+To compile, use mcs:
 
     mcs hello.cs
 
-Either compiler will create "hello.exe", which you can run using:
+The compiler will create "hello.exe", which you can run using:
 
     mono hello.exe
 
 The program should run and output:
 
-    Hello Mono World
-
-Gtk\# Hello World
------------------
-
-The following program tests writing a Gtk\# application.
-
-``` csharp
-using Gtk;
-using System;
- 
-class Hello {
- 
-        static void Main()
-        {
-                Application.Init ();
- 
-                Window window = new Window ("helloworld");
-                window.Show();
- 
-                Application.Run ();
- 
-        }
-}
+``` bash
+Hello Mono World
 ```
 
-To compile, use gmcs with the -pkg option to tell the compiler to pull in the Gtk\# libraries:
+HTTPS connections
+-----------------
 
-    mcs hello.cs -pkg:gtk-sharp-2.0
+To make sure HTTPS connections work, download and run the [tlstest](https://raw.github.com/mono/mono/master/mcs/class/Mono.Security/Test/tools/tlstest/tlstest.cs) tool (needs Mono >= 3.4.0).
 
-The compiler will create "hello.exe", which you can run using:
+``` bash
+mcs tlstest.cs /r:System.dll /r:Mono.Security.dll
+mono tlstest.exe https://www.nuget.org
+```
 
-    mono hello.exe
+The program prints an error if something is wrong.
 
 Winforms Hello World
 --------------------
@@ -76,14 +57,14 @@ The following program tests writing a Winforms application.
 ``` csharp
 using System;
 using System.Windows.Forms;
- 
+
 public class HelloWorld : Form
 {
     static public void Main ()
     {
         Application.Run (new HelloWorld ());
     }
- 
+
     public HelloWorld ()
     {
         Text = "Hello Mono World";
@@ -91,18 +72,20 @@ public class HelloWorld : Form
 }
 ```
 
-To compile, use gmcs with the -pkg option to tell the compiler to pull in the Winforms libraries:
+To compile, use mcs with the -pkg option to tell the compiler to pull in the Winforms libraries:
 
     mcs hello.cs -pkg:dotnet
 
-Either compiler will create "hello.exe", which you can run using:
+The compiler will create "hello.exe", which you can run using:
 
     mono hello.exe
+
+NOTE: on Mac OS X you'll have to wait around a minute the very first time you run this command.
 
 ASP.Net Hello World
 -------------------
 
-Create a text file with the extension .aspx and put on it:
+Create a text file with the name hello.aspx and the content:
 
 ``` csharp
 <%@ Page Language="C#" %>
@@ -114,11 +97,41 @@ Create a text file with the extension .aspx and put on it:
 </asp:calendar>
 ```
 
-Then run the xsp2 command from that directory:
+Then run the xsp4 command from that directory:
 
 ``` bash
-$ xsp2
+xsp4 --port 9000
 ```
 
-Use a web browser to contact [http://localhost:8080/filename.aspx](http://localhost:8080/filename.aspx)
+Use a web browser to contact [http://localhost:9000/hello.aspx](http://localhost:9000/hello.aspx)
 
+Gtk# Hello World
+-----------------
+
+The following program tests writing a Gtk# application.
+
+``` csharp
+using Gtk;
+using System;
+
+class Hello
+{
+    static void Main ()
+    {
+        Application.Init ();
+
+        Window window = new Window ("Hello Mono World");
+        window.Show ();
+
+        Application.Run ();
+    }
+}
+```
+
+To compile, use mcs with the -pkg option to tell the compiler to pull in the Gtk# libraries (note that Gtk# must be installed on your system for this to work):
+
+    mcs hello.cs -pkg:gtk-sharp-2.0
+
+The compiler will create "hello.exe", which you can run using:
+
+    mono hello.exe

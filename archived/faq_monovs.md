@@ -2,7 +2,7 @@
 title: "FAQ: MonoVS"
 lastmodified: '2010-07-28'
 redirect_from:
-  - /FAQ:_MonoVS/
+  - /FAQ%3A_MonoVS/
 ---
 
 FAQ: MonoVS
@@ -15,12 +15,7 @@ FAQ: MonoVS
 <td align="left"><h2>Table of contents</h2>
 <ul>
 <li><a href="#general">1 General</a></li>
-<li><a href="#running-on-mono">2 Running on Mono</a>
-<ul>
-<li><a href="#--place-a-copy-of-the-dll-in-the-mono-gac">2.1 - Place a copy of the .dll in the Mono GAC:</a></li>
-<li><a href="#--add-a-project-reference-to-the-dll">2.2 - Add a project reference to the .dll:</a></li>
-<li><a href="#--place-a-copy-of-the-dll-in-your-websites-bin-folder">2.3 - Place a copy of the .dll in your website's Bin folder</a></li>
-</ul></li>
+<li><a href="#running-on-mono">2 Running on Mono</a></li>
 <li><a href="#packaging">3 Packaging</a></li>
 </ul></td>
 </tr>
@@ -84,7 +79,7 @@ Your application gets placed in: /tmp/monovs-{random-guid}
 
 However, it is only there until you stop running it. Once you close it via the tray icon on windows or the application finished running, it will delete this directory (or else it would fill up your hard drive).
 
-If you don't want it to get deleted on completion, you can change the "Delete\_Temp\_Directory" setting in the configuration files:
+If you don't want it to get deleted on completion, you can change the "Delete_Temp_Directory" setting in the configuration files:
 
 -   /usr/lib/monovs-gui-server.exe.config for the GUI version
 -   /usr/lib/monovs-server.exe.config for the command line version
@@ -93,7 +88,7 @@ If you don't want it to get deleted on completion, you can change the "Delete\_T
 
 There are a couple of options here.
 
-##### - Place a copy of the .dll in the Mono GAC:
+##### - Place a copy of the .dll in the Mono GAC
 
 On Windows:
 
@@ -107,7 +102,7 @@ On Linux:
 gacutil -i MyAssembly.dll
 ```
 
-##### - Add a project reference to the .dll:
+##### - Add a project reference to the .dll
 
 -   Right click on References.
 -   Add a reference to the .dll.

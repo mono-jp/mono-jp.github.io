@@ -1,5 +1,5 @@
 ---
-title: Firebird Interbase
+title: Firebird
 redirect_from:
   - /Firebird_Interbase/
 ---
@@ -11,9 +11,9 @@ Recent versions of Firebird bundle an up-to-date version of the database provide
 Info
 ----
 
--   Fully Managed ADO.NET Data Provider for Firebird and Interbase databases
+-   Fully Managed ADO.NET Data Provider for Firebird database
 
--   The [Firebird Relational Database](http://firebird.sourceforge.net/index.php) is is an independent project which uses source code based on the Interbase source code released by Borland under the Interbase Public License
+-   The [Firebird Relational Database](http://firebirdsql.org) is is an independent project which uses source code based on the Interbase source code released by Borland under the Interbase Public License
 
 -   Both the Firebird Relational Database and the Firebird .NET Data Provider can be downloaded from [here](http://sourceforge.net/projects/firebird/)
 
@@ -31,15 +31,17 @@ Using
 
 -   Need a working mono and mcs
 
--   Need access to a Firebird Relational Database or you can download it from [here](http://firebird.sourceforge.net)
+-   Need access to a Firebird Relational Database or you can download it from [here](http://firebirdsql.org/en/downloads/)
 
--   Get the Firebird .NET data provider from here as [firebird-net-provider](http://lists.sourceforge.net/lists/listinfo/firebird-net-provider). Make sure the Firebird .NET data provider binary assembly FirebirdSql.Data.Firebird.dll is installed in the same place as the mono class libraries.
+-   Get the Firebird .NET data provider from here as [firebird-net-provider](http://www.firebirdsql.org/en/additional-downloads/). Make sure the Firebird .NET data provider binary assembly FirebirdSql.Data.Firebird.dll is installed in the same place as the mono class libraries.
 
 -   Connection String format:
 
 <!-- -->
 
-    Database=databasefile.gdb;User=user;Password=pass;Dialect=3;Server=hostname
+``` text
+Database=databasefile.gdb;User=user;Password=pass;Dialect=3;Server=hostname
+```
 
 -   Connection String Parameters:
 
@@ -51,56 +53,60 @@ Using
 |Password|password for Firebird database user|Password=masterkey|
 |Dialect|Not sure. See Firebird net provider docs.|Dialect=3|
 
- **C\# Example**
+**C# Example**
 
 ``` csharp
-using System; 
-using System.Data; 
+using System;
+using System.Data;
 using FirebirdSql.Data.Firebird;
  
 public class Test {
     public static void Main(string[] args) {
-        string connectionString = 
-            "Database=C:\\PROGRAM FILES\\FIREBIRD\\EXAMPLES\\EMPLOYEE.GDB;" + 
-            "User=SYSDBA;" + "Password=masterkey;" + 
+        string connectionString =
+            "Database=C:\\PROGRAM FILES\\FIREBIRD\\EXAMPLES\\EMPLOYEE.GDB;" +
+            "User=SYSDBA;" + "Password=masterkey;" +
             "Dialect=3;" + "Server=localhost";
  
-        IDbConnection dbcon = new FbConnection(connectionString); 
-        dbcon.Open(); 
-        IDbCommand dbcmd = dbcon.CreateCommand(); 
-        string sql = "SELECT * FROM employee"; 
-        dbcmd.CommandText = sql; 
-        IDataReader reader = dbcmd.ExecuteReader(); 
+        IDbConnection dbcon = new FbConnection(connectionString);
+        dbcon.Open();
+        IDbCommand dbcmd = dbcon.CreateCommand();
+        string sql = "SELECT * FROM employee";
+        dbcmd.CommandText = sql;
+        IDataReader reader = dbcmd.ExecuteReader();
         while(reader.Read()) {
-            object dataValue = reader.GetValue(0); 
-            string sValue = dataValue.ToString(); 
+            object dataValue = reader.GetValue(0);
+            string sValue = dataValue.ToString();
             Console.WriteLine("Value: " + sValue);
-        } 
+        }
  
-        // clean up 
-        reader.Close(); 
-        reader = null; 
-        dbcmd.Dispose(); 
-        dbcmd = null; 
-        dbcon.Close(); 
+        // clean up
+        reader.Close();
+        reader = null;
+        dbcmd.Dispose();
+        dbcmd = null;
+        dbcon.Close();
         dbcon = null;
     }
 }
 ```
 
--   Building C\# Example:
+-   Building C# Example:
 
 -   Save the example to a file, such as, TestExample.cs
 
--   Build using Mono C\# compiler:
+-   Build using Mono C# compiler:
 
 <!-- -->
 
-     mcs TestExample.cs -r System.Data.dll -r FirebirdSql.Data.Firebird.dll
+``` bash
+mcs TestExample.cs -r System.Data.dll -r FirebirdSql.Data.Firebird.dll
+```
 
 -   Running the Example:
 
 <!-- -->
 
-     mono TestExample.exe 
+``` bash
+mono TestExample.exe
+```
 

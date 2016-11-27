@@ -2,8 +2,8 @@
 title: "Accessibility: Bug Specification"
 lastmodified: '2009-02-24'
 redirect_from:
-  - /Accessibility:_Bug_Specification/
-  - /Accessibility:_Bug_Template/
+  - /Accessibility%3A_Bug_Specification/
+  - /Accessibility%3A_Bug_Template/
 ---
 
 Accessibility: Bug Specification
@@ -29,7 +29,7 @@ Accessibility: Bug Specification
 <li><a href="#expected-results">3.3.4 EXPECTED RESULTS:</a></li>
 <li><a href="#comments">3.3.5 COMMENTS:</a></li>
 </ul></li>
-<li><a href="#definitions_2">3.4 Definitions</a>
+<li><a href="#bug-definitions">3.4 Definitions</a>
 <ul>
 <li><a href="#severity">3.4.1 SEVERITY</a></li>
 <li><a href="#priority">3.4.2 PRIORITY</a></li>
@@ -43,12 +43,12 @@ Accessibility: Bug Specification
 References
 ----------
 
-[Product Test Case Plan](/Accessibility:_Test_Plan "Accessibility: Test Plan")
- [Product Test Case Specification](/Accessibility:_Test_Case_Specification "Accessibility: Test Case Specification")
- [Product Test Log](/Accessibility:_Test_Log "Accessibility: Test Log")
- [Product Test Summary](/Accessibility:_Test_Summary "Accessibility: Test Summary")
- [Product Bug Specification](/Accessibility:_Bug_Specification) (current page)
- [Product Home](/Accessibility "Accessibility")
+[Product Test Case Plan](/Accessibility:_Test_Plan)<br/>
+ [Product Test Case Specification](/Accessibility:_Test_Case_Specification)<br/>
+ [Product Test Log](/Accessibility:_Test_Log)<br/>
+ [Product Test Summary](/Accessibility:_Test_Summary)<br/>
+ [Product Bug Specification](/Accessibility:_Bug_Specification) (current page)<br/>
+ [Product Home](/Accessibility)
 
 Definitions
 -----------
@@ -64,35 +64,31 @@ This is the template that should be used for all bugs when they are entered into
 
 ### Remember
 
-Whenever you log a bug, please remember to add a comment with a [bug reference](/Accessibility:_Testing_Howto#bug-references "Accessibility: Testing Howto") (e.g., BUG459153) where the bug occurs in your test. You must use the syntax BUG[0-9][0-9][0-9][0-9][0-9][0-9] so it can be easily found when regressing bugs.
+Whenever you log a bug, please remember to add a comment with a [bug reference](/archived/accessibility_testing_howto/#bug-references) (e.g., BUG459153) where the bug occurs in your test. You must use the syntax BUG[0-9][0-9][0-9][0-9][0-9][0-9] so it can be easily found when regressing bugs.
 
 ### Bug Template
 
-* * * * *
-
-#### PROBLEM STATEMENT:
+#### PROBLEM STATEMENT
 
 *More detailed expansion of summary. (The summary is a very abstract description of the problem required by Bugzilla to create a bug.)*
 
-#### REPRO:
+#### REPRO
 
 *Detailed step-by-step instructions that instruct the reader how to reproduce the bug. The instructions should be detailed and clear enough that anyone (developer, community member, new employee) can reproduce the bug. Remember to include any special setup steps.*
 
-#### RESULTS:
+#### RESULTS
 
 *What happens what the REPRO steps are followed*
 
-#### EXPECTED RESULTS:
+#### EXPECTED RESULTS
 
 *What \*should\* happen when the REPRO steps are followed*
 
-#### COMMENTS:
+#### COMMENTS
 
 *Any additional information*
 
-* * * * *
-
-### Definitions
+### Bug Definitions
 
 Here are some definitions to keep in mind when submitting a bug in Bugzilla:
 

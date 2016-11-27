@@ -4,7 +4,7 @@ redirect_from:
   - /Gendarme.Rules.Design.Generic/
 ---
 
-[Gendarme](/docs/tools+libraries/tools/gendarme/)'s rules about generic-related design issues are located in the **Gendarme.Rules.Design.Generic.dll** assembly. Latest sources are available from [anonymous SVN](http://anonsvn.mono-project.com/viewcvs/trunk/mono-tools/gendarme/rules/Gendarme.Rules.Design.Generic/).
+[Gendarme](/docs/tools+libraries/tools/gendarme/)'s rules about generic-related design issues are located in the **Gendarme.Rules.Design.Generic.dll** assembly. Latest sources are available from [git](https://github.com/mono/mono-tools/tree/master/gendarme/rules/Gendarme.Rules.Design.Generic/).
 
 <table>
 <col width="100%" />
@@ -72,7 +72,7 @@ public class Good {
 
 ### DoNotExposeNestedGenericSignaturesRule
 
-This rule will fire if an externally visible method has a parameter or return type whose type is a generic type which contains a generic type. For example, **List\<List\<int\>\>**. Such types are hard to construct and should be avoided because simpler alternatives generally exist. Since some language, like C\#, have direct support for nullable types, i.e. **Nullable\<T\>** this specific case is ignored by the rule.
+This rule will fire if an externally visible method has a parameter or return type whose type is a generic type which contains a generic type. For example, **List\<List\<int\>\>**. Such types are hard to construct and should be avoided because simpler alternatives generally exist. Since some language, like C#, have direct support for nullable types, i.e. **Nullable\<T\>** this specific case is ignored by the rule.
 
 **Bad** example:
 
@@ -132,7 +132,7 @@ public class IntEnumerable : IEnumerable<int> {
 
 ### PreferGenericsOverRefObjectRule
 
-This rule fires if a method has a reference argument (**ref** or **out** in C\#) to System.Object. These methods can generally be rewritten in .NET 2.0 using generics which provides type safety, eliminates casts, and makes the API easier to consume.
+This rule fires if a method has a reference argument (**ref** or **out** in C#) to System.Object. These methods can generally be rewritten in .NET 2.0 using generics which provides type safety, eliminates casts, and makes the API easier to consume.
 
 **Bad** example:
 

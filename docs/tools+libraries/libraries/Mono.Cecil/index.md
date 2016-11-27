@@ -8,7 +8,7 @@ Cecil is a library written by [Jb Evain](http://evain.net/blog/) to generate and
 
 In simple English, with Cecil, you can load existing managed assemblies, browse all the contained types, modify them on the fly and save back to the disk the modified assembly.
 
-Today it is used by the Mono [Debugger](/docs/debug+profile/debug/debugger/), the bug-finding and compliance checking tool [Gendarme](/docs/tools+libraries/tools/gendarme/), [MoMA](/docs/tools+libraries/tools/moma/), [DB4O](/archived/db4o "DB4O"), as well as [many other tools](http://groups.google.com/group/mono-cecil/web/projects-using-cecil).
+Today it is used by the Mono [Debugger](/docs/debug+profile/debug/debugger/), the bug-finding and compliance checking tool [Gendarme](/docs/tools+libraries/tools/gendarme/), [MoMA](/docs/tools+libraries/tools/moma/) and [many other tools](https://github.com/jbevain/cecil/wiki/Users).
 
 Mailing List
 ============
@@ -20,7 +20,7 @@ Versions
 
 Recently, Cecil undergone a large refactoring, to be able to fix some issues the previous version had. In its previous form, the code was compilable on a .net 1.0 profile, and you need to use Cecil from the 0.6 family if you still want to use it.
 
-For every other usage, you're urged to switch to the new version 0.9. Its development has been moved to the [Cecil github page](http://github.com/jbevain/cecil) until all the code in Mono is updated to this version.
+For every other usage, you're urged to switch to the new version 0.9. Its development has been moved to the [Cecil github page](https://github.com/jbevain/cecil) until all the code in Mono is updated to this version.
 
 Using Cecil
 ===========
@@ -34,14 +34,14 @@ The pattern used for using libraries whose API is not frozen is described in the
 To summarize it, it is necessary for you to copy and bundle a version of Cecil with your project before using it. To do this, you use the following pattern:
 
 ``` bash
-$ cp `pkg-config --variable=Libraries cecil` .
-$ gmcs program.cs -r:Mono.Cecil.dll
+cp `pkg-config --variable=Libraries cecil` .
+gmcs program.cs -r:Mono.Cecil.dll
 ```
 
 In a Makefile you would achieve that by doing:
 
 ``` bash
-Mono.Cecil.dll: 
+Mono.Cecil.dll:
         cp `pkg-config --variable=Libraries cecil` .
 ```
 
@@ -50,7 +50,7 @@ And adding Mono.Cecil.dll as one of your dependencies.
 Download
 ========
 
-If you want the up to date version of Mono.Cecil, you need to get it from its [github page](http://github.com/jbevain/cecil).
+If you want the up to date version of Mono.Cecil, you need to get it from its [github page](https://github.com/jbevain/cecil).
 
 If you need a recent build of the 0.6 branch, the recommended way of quickly getting a binary of Mono.Cecil.dll, is to grab it from the last MonoCharge tarball which are part of our [daily builds](http://mono.ximian.com/daily/).
 

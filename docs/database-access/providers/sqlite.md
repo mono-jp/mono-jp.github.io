@@ -3,13 +3,12 @@ title: SQLite
 redirect_from:
   - /SQLite/
   - /SQL_Lite/
+  - /SQLit/
 ---
 
 The Mono.Data.SqliteClient assembly contains an ADO.NET data provider for the [SQLite](http://www.sqlite.org/) embeddable database engine (both version 2 and version 3).
 
 SQLite has a notable oddity: table cell data does not retain what kind of data it was. Everything is stored as either a long, double, string, or blob. And in SQLite version 2, everything is stored as a string. So you need to be careful about avoiding casting values returned by SQLite without checking the type of the value returned. See below for notes on storing DateTimes.
-
-(The last maintainer of Mono.Data.SqliteClient was [Josh Tauberer](http://razor.occams.info).)
 
 <table>
 <col width="100%" />
@@ -45,34 +44,42 @@ Connection String Format
 
 The format of the connection string is:
 
-    [1.1 profile and the old assembly]
-    URI=file:/path/to/file 
+``` text
+[1.1 profile and the old assembly]
+URI=file:/path/to/file
 
-    [2.0 profile in the new assembly]
-    Data Source=file:/path/to/file
-    Data Source=|DataDirectory|filename
+[2.0 profile in the new assembly]
+Data Source=file:/path/to/file
+Data Source=|DataDirectory|filename
+```
 
-The latter case for the 2.0 profile references the App\_Data directory (or any other directory that's configured to contain data files for an ASP.NET 2.0 application)
+The latter case for the 2.0 profile references the App_Data directory (or any other directory that's configured to contain data files for an ASP.NET 2.0 application)
 
 As an example:
 
-    [1.1 and the old assembly]
-    URI=file:SqliteTest.db 
+``` text
+[1.1 and the old assembly]
+URI=file:SqliteTest.db
 
-    [2.0 and the new assembly]
-    Data Source=file:SqliteTest.db
+[2.0 and the new assembly]
+Data Source=file:SqliteTest.db
+```
 
 That will use the database SqliteTest.db in the current directory. It will be created if it does not exist.
 
 Or you prefer to use SQLite as an in memory database
 
-    URI=file::memory:,version=3
+``` text
+URI=file::memory:,version=3
+```
 
 The `version=3` is supported, but not necessary with the new assembly.
 
 With the old assembly, the ADO.NET adapter will use SQLite version 2 by default, but if version 2 is not found and version 3 is available, it will fallback to version 3. You can force the adapter to use version 3 by adding "version=3" to the connection string:
 
-    URI=file:SqliteTest.db,version=3
+``` text
+URI=file:SqliteTest.db,version=3
+```
 
 The new assembly, as described above, uses only database format version 3.
 
@@ -84,9 +91,9 @@ The new assembly, as described above, uses only database format version 3.
 |:-------------------|:----------|:------|
 |URI|a file Universal Resource Identifier|URI=file:SqliteTest.db|
 |version|version of SQL Lite to use: version 2 or 3|version=3|
-|busy\_timeout|a timeout, in milliseconds, to wait when the database is locked before throwing a SqliteBusyException (since Mono 1.1.14)|busy\_timeout=3000|
+|busy_timeout|a timeout, in milliseconds, to wait when the database is locked before throwing a SqliteBusyException (since Mono 1.1.14)|busy_timeout=3000|
 
-The busy\_timeout parameter is implemented as a call to [sqlite(3)\_busy\_timeout](http://sqlite.org/capi3ref.html#sqlite3_busy_timeout). The default value is 0, which means to throw a SqliteBusyException immediately if the database is locked.
+The busy_timeout parameter is implemented as a call to [sqlite(3)_busy_timeout](http://sqlite.org/capi3ref.html#sqlite3_busy_timeout). The default value is 0, which means to throw a SqliteBusyException immediately if the database is locked.
 
 **For the 2.0 profile in the new assembly**
 
@@ -115,7 +122,7 @@ In Sqlite2, the client by default communicates with Sqlite using the UTF-8 encod
 
 When using Sqlite2, you can force Mono.Data.SqliteClient to use a different encoding instead of UTF-8 by adding ";encoding=ASCII" for instance to the connection string. It must be an encoding that ends with a single null terminator, however.
 
-C\# Example (1.1 profile of the new assembly and the old assembly)
+C# Example (1.1 profile of the new assembly and the old assembly)
 ------------------------------------------------------------------
 
 ``` csharp
@@ -123,39 +130,36 @@ C\# Example (1.1 profile of the new assembly and the old assembly)
  using System.Data;
  using Mono.Data.SqliteClient;
  
- public class Test
+ public class SQLiteTest
  {
-    public static void Main(string[] args)
+    public static void Main()
     {
-       string connectionString = "URI=file:SqliteTest.db";
-       IDbConnection dbcon;
-       dbcon = (IDbConnection) new SqliteConnection(connectionString);
+       const string connectionString = "URI=file:SqliteTest.db";
+       IDbConnection dbcon = new SqliteConnection(connectionString);
        dbcon.Open();
        IDbCommand dbcmd = dbcon.CreateCommand();
        // requires a table to be created named employee
        // with columns firstname and lastname
        // such as,
        //        CREATE TABLE employee (
-       //           firstname varchar(32),
-       //           lastname varchar(32));
-       string sql =
+       //           firstname nvarchar(32),
+       //           lastname nvarchar(32));
+       const string sql =
           "SELECT firstname, lastname " +
           "FROM employee";
        dbcmd.CommandText = sql;
        IDataReader reader = dbcmd.ExecuteReader();
-       while(reader.Read()) {
-            string FirstName = reader.GetString (0);
-            string LastName = reader.GetString (1);
-            Console.WriteLine("Name: " +
-                FirstName + " " + LastName);
+       while(reader.Read())
+       {
+            string firstName = reader.GetString(0);
+            string lastName = reader.GetString(1);
+            Console.WriteLine("Name: {0} {1}",
+                firstName, lastName);
        }
        // clean up
-       reader.Close();
-       reader = null;
+       reader.Dispose();
        dbcmd.Dispose();
-       dbcmd = null;
        dbcon.Close();
-       dbcon = null;
     }
  }
 ```
@@ -163,13 +167,16 @@ C\# Example (1.1 profile of the new assembly and the old assembly)
 To build the example:
 
 -   Save the example to a file, such as, TestExample.cs
--   Build using Mono C\# compiler:
+-   Build using Mono C# compiler:
 
 <!-- -->
 
-    mcs TestExample.cs -r:System.Data.dll -r:Mono.Data.SqliteClient.dll
+``` bash
+mcs TestExample.cs -r:System.Data.dll -r:Mono.Data.SqliteClient.dll
+```
 
 To run the example:
 
-    mono TestExample.exe
-
+``` bash
+mono TestExample.exe
+```

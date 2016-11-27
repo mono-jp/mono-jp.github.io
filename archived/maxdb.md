@@ -66,7 +66,7 @@ Description
 
 Example
 
-Data Source or Server or Address or
+Data Source or Server or Address or<br/>
 Addr or Network Address
 
 Hostname or IP Address of the MaxDB server
@@ -115,7 +115,7 @@ Max size of connection pool. Default: 20
 
 Max Pool Size=20
 
-Connection Lifetime or
+Connection Lifetime or<br/>
 Load Balance Timeout
 
 Connection lifetime in the connection pool (in seconds). Default: 0
@@ -136,7 +136,7 @@ hostname:port
 
 Server=localhost:7210
 
-### C\# Example
+### C# Example
 
 #### Source code
 
@@ -192,12 +192,12 @@ public class Test
 Save the example to the file TestExample.cs and compile it
 
 ``` bash
-$ mcs TestExample.cs -r:System.Data.dll -r:MaxDB.Data.dll
+mcs TestExample.cs -r:System.Data.dll -r:MaxDB.Data.dll
 ```
 
 #### Running the Example
 
 ``` bash
-$ mono TestExample.exe
+mono TestExample.exe
 ```
 

@@ -2,7 +2,7 @@
 title: "Accessibility: Test Plan"
 lastmodified: '2010-01-27'
 redirect_from:
-  - /Accessibility:_Test_Plan/
+  - /Accessibility%3A_Test_Plan/
 ---
 
 Accessibility: Test Plan
@@ -52,8 +52,8 @@ Accessibility: Test Plan
 <li><a href="#responsibilities">5.2.13 Responsibilities</a>
 <ul>
 <li><a href="#test-suit">5.2.13.1 Test Suit</a></li>
-<li><a href="#winforms_2">5.2.13.2 WinForms</a></li>
-<li><a href="#moonlight_2">5.2.13.3 MoonLight</a></li>
+<li><a href="#winforms-responsibilities">5.2.13.2 WinForms</a></li>
+<li><a href="#moonlight-responsibilities">5.2.13.3 MoonLight</a></li>
 <li><a href="#uiautomation-client-api">5.2.13.4 UIAutomation Client API</a></li>
 </ul></li>
 <li><a href="#staffing-and-training-needs">5.2.14 Staffing and training needs</a>
@@ -62,8 +62,8 @@ Accessibility: Test Plan
 </ul></li>
 <li><a href="#schedule">5.2.15 Schedule</a>
 <ul>
-<li><a href="#winforms_3">5.2.15.1 WinForms</a></li>
-<li><a href="#moonlight_3">5.2.15.2 MoonLight</a></li>
+<li><a href="#winforms-schedule">5.2.15.1 WinForms</a></li>
+<li><a href="#moonlight-schedule">5.2.15.2 MoonLight</a></li>
 <li><a href="#client-api">5.2.15.3 Client API</a></li>
 </ul></li>
 <li><a href="#risks-and-contingencies">5.2.16 Risks and contingencies</a></li>
@@ -83,45 +83,45 @@ A test plan for the Accessibility team's efforts in bringing accessibility to mo
 References
 ----------
 
-[Product Test Plan](/Accessibility:_Test_Plan "Accessibility: Test Plan") (current page)
- [Product Test Case Specification](/Accessibility:_Test_Case_Specification "Accessibility: Test Case Specification")
- [Product Test Log](/Accessibility:_Test_Log "Accessibility: Test Log")
- [Product Test Summary](/Accessibility:_Test_Summary "Accessibility: Test Summary")
- [Product Bug Specification](/Accessibility:_Bug_Specification "Accessibility: Bug Specification")
- [Product Test Coding Standard](/Accessibility:_Test_Coding_Standard "Accessibility: Test Coding Standard")
- [Product Home](/Accessibility "Accessibility")
+[Product Test Plan](/Accessibility:_Test_Plan) (current page)<br/>
+ [Product Test Case Specification](/Accessibility:_Test_Case_Specification)<br/>
+ [Product Test Log](/Accessibility:_Test_Log)<br/>
+ [Product Test Summary](/Accessibility:_Test_Summary)<br/>
+ [Product Bug Specification](/Accessibility:_Bug_Specification)<br/>
+ [Product Test Coding Standard](/Accessibility:_Test_Coding_Standard)<br/>
+ [Product Home](/Accessibility)
 
-The [Product roadmap](/Accessibility:_Roadmap)
- The [Architecture overview](/Accessibility#Architecture)
+The [Product roadmap](/Accessibility:_Roadmap)<br/>
+ The [Architecture overview](/archived/accessibility_architecture/)<br/>
  [The Novell & Microsoft announcement](http://www.novell.com/news/press/microsoft-and-novell-celebrate-year-of-interoperability-expand-collaboration-agreement) to create cross-platform accessibility framework
 
 QA Meetings
 -----------
 
-[June 5 2008](/Accessibility:_QA_Meetings_2008_Jun_5 "Accessibility: QA Meetings 2008 Jun 5")
- [August 13 2008](/Accessibility:_QA_Meetings_2008_Aug_13 "Accessibility: QA Meetings 2008 Aug 13")
- [Mar 25 2009](/Accessibility:_QA_Meetings_2009_Mar_25 "Accessibility: QA Meetings 2009 Mar 25")
- [May 20 2009](/Accessibility:_QA_Meetings_2009_May_20 "Accessibility: QA Meetings 2009 May 20")
+[June 5 2008](/Accessibility:_QA_Meetings_2008_Jun_5)<br/>
+ [August 13 2008](/Accessibility:_QA_Meetings_2008_Aug_13)<br/>
+ [Mar 25 2009](/Accessibility:_QA_Meetings_2009_Mar_25)<br/>
+ [May 20 2009](/Accessibility:_QA_Meetings_2009_May_20)
 
 No meetings scheduled
 
 Definitions
 -----------
 
-[UIA](http://msdn2.microsoft.com/en-us/accessibility/bb892133.aspx)---Microsoft UI Automation. A managed code application programming interface (API), exposing user interface controls for test automation and assistive technology. Part of the .NET framework starting at 3.0. Successor of MSAA (Microsoft Active Accessibility)
- UIA Clients---Applications such as screen readers and testing frameworks written in managed code (e.g., C\#/VB).
- UIA Providers---UI implementations or application controls such as checkboxes. Written in managed code or C/C++.
- AT---Assistive technology. A generic term that includes assistive, adaptive, and rehabilitative devices and the process used in selecting, locating, and using them.
- AT-SPI---A toolkit neutral way of providing accessibility facilities in applications. AT-SPI can also be used to automate testing of user interfaces. AT-SPI is currently supported by GTK+2, JAVA/Swing, Mozilla, and StarOffice/OpenOffice. For our product, AT-SPI will act as the equivalent of the UIA core.
- ATK---Accessibility toolkit. A developer toolkit that allows programmers to use common GNOME accessibility features in their applications.
- ATK/UIA Bridge---Mapping of ATK to the UIA provider APIs.
- UIA/at-spi Bridge---Mapping of AT-SPI to the UIA provider APIs.
- [WinForms](/WinForms "WinForms")---One of the many GUI Toolkits for use with Mono, working towards compatibility with Microsoft's System.Windows.Forms.
- [Moonlight](/Moonlight "Moonlight")---The Mono-based implementation of Silverlight.
- [Accerciser](http://live.gnome.org/Accerciser)---An interactive Python accessibility explorer for the GNOME desktop. It uses AT-SPI to inspect and control widgets, allowing you to check if an application is providing correct information to assistive technologies and automated test frameworks.
- [Orca](http://live.gnome.org/Orca)---Open source scriptable screen reader. Using various combinations of speech, braille, and magnification, Orca helps provide access to applications and toolkits that support the AT-SPI (e.g., the GNOME desktop).
- [IronPython](http://www.codeplex.com/Wiki/View.aspx?ProjectName=IronPython)---Implementation of the Python programming language, targeting .NET and Mono. It makes .NET libraries easily available to Python programmers, while maintaining full compatibility with the Python language.
- [CPython](http://www.python.org)---The default, most-widely used implementation of the Python programming language. It is written in C, hence the name CPython.
+[UIA](http://msdn2.microsoft.com/en-us/accessibility/bb892133.aspx)---Microsoft UI Automation. A managed code application programming interface (API), exposing user interface controls for test automation and assistive technology. Part of the .NET framework starting at 3.0. Successor of MSAA (Microsoft Active Accessibility)<br/>
+ UIA Clients---Applications such as screen readers and testing frameworks written in managed code (e.g., C#/VB).<br/>
+ UIA Providers---UI implementations or application controls such as checkboxes. Written in managed code or C/C++.<br/>
+ AT---Assistive technology. A generic term that includes assistive, adaptive, and rehabilitative devices and the process used in selecting, locating, and using them.<br/>
+ AT-SPI---A toolkit neutral way of providing accessibility facilities in applications. AT-SPI can also be used to automate testing of user interfaces. AT-SPI is currently supported by GTK+2, JAVA/Swing, Mozilla, and StarOffice/OpenOffice. For our product, AT-SPI will act as the equivalent of the UIA core.<br/>
+ ATK---Accessibility toolkit. A developer toolkit that allows programmers to use common GNOME accessibility features in their applications.<br/>
+ ATK/UIA Bridge---Mapping of ATK to the UIA provider APIs.<br/>
+ UIA/at-spi Bridge---Mapping of AT-SPI to the UIA provider APIs.<br/>
+ [WinForms](/WinForms)---One of the many GUI Toolkits for use with Mono, working towards compatibility with Microsoft's System.Windows.Forms.<br/>
+ [Moonlight](/Moonlight)---The Mono-based implementation of Silverlight.<br/>
+ [Accerciser](http://live.gnome.org/Accerciser)---An interactive Python accessibility explorer for the GNOME desktop. It uses AT-SPI to inspect and control widgets, allowing you to check if an application is providing correct information to assistive technologies and automated test frameworks.<br/>
+ [Orca](http://live.gnome.org/Orca)---Open source scriptable screen reader. Using various combinations of speech, braille, and magnification, Orca helps provide access to applications and toolkits that support the AT-SPI (e.g., the GNOME desktop).<br/>
+ [IronPython](http://www.codeplex.com/Wiki/View.aspx?ProjectName=IronPython)---Implementation of the Python programming language, targeting .NET and Mono. It makes .NET libraries easily available to Python programmers, while maintaining full compatibility with the Python language.<br/>
+ [CPython](http://www.python.org)---The default, most-widely used implementation of the Python programming language. It is written in C, hence the name CPython.<br/>
  [Strongwind](http://medsphere.org/projects/strongwind)---A GUI test automation framework inspired by dogtail. Strongwind is object-oriented and extensible. Strongwind is written in Python and uses the pyatspi library to manipulate and query the state of applications.
 
 Test plan
@@ -148,14 +148,14 @@ The purpose of this section is to identify the current and previous versions of 
 
 Testing efforts will be related to the project goals, which are:
 
--   Make mono [WinForms](/WinForms "WinForms") accessible. All WinForms currently supported by mono.
--   Make [Moonlight](/Moonlight "Moonlight") accessible
--   Allow [UI Automation](/UI_Automation "UI Automation") based Accessibility Technologies to run on Linux
+-   Make mono [WinForms](/WinForms) accessible. All WinForms currently supported by mono.
+-   Make [Moonlight](/Moonlight) accessible
+-   Allow [UI Automation](/UI_Automation) based Accessibility Technologies to run on Linux
 
 This plan includes integration, system, and acceptance testing. Unit testing is excluded, as it is being managed by individual developers.
 
-Integration testing to test WinForms accessibility via UIA provider and UIA/ATK bridge to AT-SPI is scheduled to be completed in 2008.
- System testing will be performed in 2009. Testing will be performed using an AT management tool to test the client and provider.
+Integration testing to test WinForms accessibility via UIA provider and UIA/ATK bridge to AT-SPI is scheduled to be completed in 2008.<br/>
+ System testing will be performed in 2009. Testing will be performed using an AT management tool to test the client and provider.<br/>
  Acceptance testing will be performed later in 2009 before the product is released. During system testing, the product should be tested in its entirety from the end user's point of view.
 
 #### Test items
@@ -181,7 +181,7 @@ Test Components:
 
 Developers are also tracking problems they encounter:
 
--   [UIA/ATK Bridge Problems](/Accessibility:_UiaAtkBridge#Problems_found)
+-   [UIA/ATK Bridge Problems](/archived/accessibility_uiaatkbridge/#problems-found)
 
 #### Features to be tested
 
@@ -189,12 +189,12 @@ Developers are also tracking problems they encounter:
 
 ##### WinForms
 
-We plan to test all Functionalities of WinForms controls those have been mentioned in [Provider\_Functional\_Specification](http://monouia.wik.is/Provider_Functional_Specification) and [Bridge\_Functional\_Specification](/Accessibility:_Bridge_Functional_Specification).
+We plan to test all Functionalities of WinForms controls those have been mentioned in [Provider_Functional_Specification](http://monouia.wik.is/Provider_Functional_Specification) and [Bridge_Functional_Specification](/Accessibility:_Bridge_Functional_Specification).
 
-According to Q2 2008 of the [Accessibility\#Roadmap roadmap](/Accessibility#roadmap-roadmap "Accessibility"), testing contents need relate with below info:
+According to Q2 2008 of the [Accessibility#Roadmap roadmap](/archived/accessibility_roadmap/), testing contents need relate with below info:
 
 -   The WinForms sheet in [WinForms Controls list](/Accessibility:_Test_Plan_WinForms_Controls) defines which WinForms controls will be implemented and therefore need to be tested.
--   Create WinForms application samples to test against. These application samples should be written in IronPython. Our sample applications can be found at [svn://anonsvn.mono-project.com/source/trunk/uia2atk](svn://anonsvn.mono-project.com/source/trunk/uia2atk) /test/samples. Some C\# samples (that can be translated) can be checked out via svn from [http://anonsvn.mono-project.com/viewvc/trunk/winforms](http://anonsvn.mono-project.com/viewvc/trunk/winforms).
+-   Create WinForms application samples to test against. These application samples should be written in IronPython. Our sample applications can be found at [svn://anonsvn.mono-project.com/source/trunk/uia2atk](svn://anonsvn.mono-project.com/source/trunk/uia2atk) /test/samples. Some C# samples (that can be translated) can be checked out via svn from [http://anonsvn.mono-project.com/viewvc/trunk/winforms](http://anonsvn.mono-project.com/viewvc/trunk/winforms).
 -   Test WinForms applications samples using Accerciser to ensure that the samples are accessible.
 -   Test WinForms applications samples using Orca to ensure that the samples are accessible.
 -   Write automated scripts using Strongwind to verify accessibility of all WinForms controls.
@@ -207,14 +207,14 @@ Stuffs for WinForms test:
 -   Test WinForms application samples with Accerciser to ensure accessibility
 -   Test WinForms application samples with Orca to ensure accessibility
 -   Create automated test suite in Python with StrongWind framework to ensure accessibility of all WinForms controls
--   Review automated test suites with each other by using [Review\_Board](http://reviews.mono-a11y.org/), Please read [UsersGuide](http://www.review-board.org/docs/manual/dev/users/#usersguide) before you use it.
+-   Review automated test suites with each other by using [Review_Board](http://reviews.mono-a11y.org/), Please read [UsersGuide](http://www.review-board.org/docs/manual/dev/users/#usersguide) before you use it.
 
 ##### Moonlight
 
 According to [Silverlight doc](http://msdn.microsoft.com/en-us/library/cc645072%28VS.95%29.aspx) that we have 32 Moonlight controls will be implemented, so we should test 32 controls whether they are accessible. (there might be some differences between silverlight and moonlight, it's not sure yet)
 
 -   The Moonlight sheet in [Moonlight Controls List](http://spreadsheets.google.com/ccc?key=0AkMHBvpvUyGOcHd5ZHk3UzNYUFRCVFJTOW5fb0JqSkE&hl=EN) defines what Moonlight controls should be tested.
--   Moonlight test sample will be written in C\# and xaml
+-   Moonlight test sample will be written in C# and xaml
 -   Moonlight test script will be written in Python with Strongwind framework
 
 Testing for Moonlight test:
@@ -228,12 +228,12 @@ Testing for Moonlight test:
 
 ##### UIA Provider
 
--   Define what functional should be test for each control according to [Provider\_Functional\_Specification](http://monouia.wik.is/Provider_Functional_Specification)
+-   Define what functional should be test for each control according to [Provider_Functional_Specification](http://monouia.wik.is/Provider_Functional_Specification)
 -   Test each controls to ensure provider interface is implemented
 
 ##### UIA/ATK Bridge
 
--   Define what functional should be test for each control according to [Bridge\_Functional\_Specification](/Accessibility:_Bridge_Functional_Specification)
+-   Define what functional should be test for each control according to [Bridge_Functional_Specification](/Accessibility:_Bridge_Functional_Specification)
 -   Test each controls to ensure ATK interface is showing correct information
 
 ##### UIA/AT-SPI Bridge
@@ -244,20 +244,20 @@ Testing for Moonlight test:
 
 UIA verify is an open source test tool like UISpy running on Windows, developer can use it to watch controls properties and patterns, it will be posted running on Linux, so we will need to make sure the behavior of UIA verify on Linux is match to Windows.
 
-White is a thin wrapper of UIAutomationClient that is like Strongwind wrap pyatspi, developer will post it running on Linux, so we will use White framework to write tests for Client API to against Winforms, Moonlight, Gtk+ applications. The work path of using White to test application is: C\# -\> White -\> UIAutomationClient -\> DBus -\> UIA -\> applications(Winforms/Moonlight/GTK+)
+White is a thin wrapper of UIAutomationClient that is like Strongwind wrap pyatspi, developer will post it running on Linux, so we will use White framework to write tests for Client API to against Winforms, Moonlight, Gtk+ applications. The work path of using White to test application is: C# -\> White -\> UIAutomationClient -\> DBus -\> UIA -\> applications(Winforms/Moonlight/GTK+)
 
 Testing for UIAutomation Client API test:
 
 -Winforms
 
 -   Design UserCases of the real application(We will use KeePass), analyze the coverage of each ControlPattern's properties and methods
--   Write tests using White in C\# for the real application
+-   Write tests using White in C# for the real application
 -   Run the tests on Linux to make sure they do the same behavior as on Windows
 
 -Moonlight
 
 -   Design UserCases of the real application, analyze the coverage of each ControlPattern's properties and methods
--   Write tests using White in C\# for Moonlight apps on Windows
+-   Write tests using White in C# for Moonlight apps on Windows
 -   Run the tests on Linux to make sure they do the same behavior as on Windows
 -   Test UIA verify on Linux to make sure the behavior is match with on Windows. UIA verify have provided automation tests, we can run all the applications on Linux and Windows, then to verify we get the same result of how many tests pass or fail
 
@@ -279,19 +279,19 @@ At this time we plan to test all features exhaustively.
 
 ##### WinForms Testing
 
-The accessibility of WinForms applications will be tested using Strongwind tests and WinForms sample applications. A test harness has also been developed to facilitate the execution and logging of a suite of tests. For more information see the [WinForms portion](/Accessibility:_Testing_Howto#winforms "Accessibility: Testing Howto") of the [Testing Howto](/Accessibility:_Testing_Howto "Accessibility: Testing Howto").
+The accessibility of WinForms applications will be tested using Strongwind tests and WinForms sample applications. A test harness has also been developed to facilitate the execution and logging of a suite of tests. For more information see the [WinForms portion](/archived/accessibility_testing_howto/#winforms) of the [Testing Howto](/Accessibility:_Testing_Howto).
 
 ##### Moonlight Testing
 
-The accessibility of Moonlight applications will be tested using Strongwind tests and Moonlight sample applications. Moonlight application will be writted in C\#. For more information see the [Moonlight portion](/Accessibility:_Testing_Howto#moonlight "Accessibility: Testing Howto") of the [Testing Howto](/Accessibility:_Testing_Howto "Accessibility: Testing Howto").
+The accessibility of Moonlight applications will be tested using Strongwind tests and Moonlight sample applications. Moonlight application will be writted in C#. For more information see the [Moonlight portion](/archived/accessibility_testing_howto/#moonlight) of the [Testing Howto](/Accessibility:_Testing_Howto).
 
 ##### UIAutomation Client API Testing
 
-WinForms, Moonlight and Gtk+ applications will be tested using White framework. For more information of how to create White test please see [ClientAPI portion](/Accessibility:_Testing_Howto#clientapi "Accessibility: Testing Howto") of the [Testing Howto](/Accessibility:_Testing_Howto "Accessibility: Testing Howto").
+WinForms, Moonlight and Gtk+ applications will be tested using White framework. For more information of how to create White test please see [ClientAPI portion](/archived/accessibility_testing_howto/#uiautomation-client-api) of the [Testing Howto](/Accessibility:_Testing_Howto).
 
 ##### General Guidelines
 
--   All testers shall be on the team IRC channel (\#mono-a11y on irc.gimp.org) during work hours.
+-   All testers shall be on the team IRC channel (#mono-a11y on irc.gimp.org) during work hours.
 -   Tests shall be automated whenever possible. Time constraint is not a good excuse not to automate.
 -   Test plan will be developed using the IEEE Std. 829-1998 Standard for Software Test Documentation.
 -   All bugs shall be logged in [Bugzilla](https://bugzilla.novell.com) at the time they are found.
@@ -300,7 +300,7 @@ WinForms, Moonlight and Gtk+ applications will be tested using White framework. 
 -   Types of system testing include function, performance, security, load, reliability, usability, documentation testing.
 -   Acceptance criteria for patch acceptance: Before a patch is accepted, a QA engineer must ensure that the patch submitted from developer passes QA testing. A build engineer must ensure the patch builds properly and meets packaging standards. QA and build engineers will then create a patch acceptance report, and the patch can be included in the product.
 -   Testers may perform system testing on the product only after development has verified that they have completed a development milestone and the build team has created a stable release.
--   WinForms samples will be created in C\#, Boo, or IronPython(here we chose IronPython). Automation scripts, that test the accessibility of the WinForms apps will be created in CPython. [Strongwind](/Accessibility:_Testing_Howto#strongwind "Accessibility: Testing Howto") and [Orca Regression Tests](/Accessibility:_Testing_Howto#orca "Accessibility: Testing Howto") will be used for the automation scripts.
+-   WinForms samples will be created in C#, Boo, or IronPython(here we chose IronPython). Automation scripts, that test the accessibility of the WinForms apps will be created in CPython. [Strongwind](/archived/accessibility_testing_howto/#strongwind) and [Orca Regression Tests](/archived/accessibility_testing_howto/#orca) will be used for the automation scripts.
 -   No regularly scheduled meetings at this time
 -   Minor editing (grammar and spelling corrections) of this test plan can be done at any time. Any change to the test plan that changes how the product will be tested shall be approved by the QA team who will determine if the changes are large enough to require a change to the test plan identifier.
 -   Black box and white box testing methods are both acceptable. However, it is anticipated that black box testing will be the norm.
@@ -310,7 +310,7 @@ WinForms, Moonlight and Gtk+ applications will be tested using White framework. 
 -   At this time, Orca and Accerciser are the standard tools to be used to test the accessibility of an application. The Orca test harness and Strongwind will be used to automate accessibility tests.
 -   Run sample with UISpy in Windows system as reference to ensure we implement the similar accessibility.
 -   Run Gtk sample with Accerciser in Linux system as reference to ensure we implemnet the similar accessibility.
--   Log bug into bugzilla, add bug reference like "\#BUGxxxx: xxxxxxxx" into automated test suite and comment out the test case if test case is failing. Delete bug reference and uncomment test case till bug is closed.
+-   Log bug into bugzilla, add bug reference like "#BUGxxxx: xxxxxxxx" into automated test suite and comment out the test case if test case is failing. Delete bug reference and uncomment test case till bug is closed.
 
 #### Item pass/fail criteria
 
@@ -327,7 +327,7 @@ Criteria for Test Components:
 |ATKBridge| ?||
 |ATSPIBridge| ?||
 
-Individual test case pass/fail criterion is defined by the automated script which performs the testing. Upon failure of a test case, the script should will log the failure. For exit criteria, see [Approach](/Accessibility:_Test_Plan#approach "Accessibility: Test Plan").
+Individual test case pass/fail criterion is defined by the automated script which performs the testing. Upon failure of a test case, the script should will log the failure. For exit criteria, see [Approach](#approach).
 
 #### Suspension criteria and resumption requirements
 
@@ -404,7 +404,7 @@ All tests must be performed on the most recent official release of the following
 
 \</br\>
 
-||x86|x86\_64|
+||x86|x86_64|
 |:--|:--|:------|
 |openSUSE|X|X|
 |SLED|X|X|
@@ -430,19 +430,19 @@ Software:
 
 ##### Test Suit
 
-Test Harness: Brian
+Test Harness: Brian<br/>
  DashBoard: Brian, Neville
 
-##### WinForms
+##### WinForms Responsibilities
 
-Strongwind Tests: Brian, Calen, Ray
- Orca Tests: Brian
- Smoke Tests: Brian
+Strongwind Tests: Brian, Calen, Ray<br/>
+ Orca Tests: Brian<br/>
+ Smoke Tests: Brian<br/>
  Sample Applications: Calen, Ray
 
-##### MoonLight
+##### MoonLight Responsibilities
 
-Sample Applications: Calen, Neville
+Sample Applications: Calen, Neville<br/>
  Strongwind Tests:: Calen, Neville
 
 ##### UIAutomation Client API
@@ -452,7 +452,7 @@ White Tests: Ray, Felicia
 #### Staffing and training needs
 
 -   QA Automation Engineer (4)
-    -   Solid programming experience (C\#, Python are a bonus)
+    -   Solid programming experience (C#, Python are a bonus)
     -   QA Engineer experience
     -   Bugzilla experience is a bonus
     -   Iterative testing experience is a bonus
@@ -461,17 +461,17 @@ White Tests: Ray, Felicia
 
 |Time|Contents|Author|
 |:---|:-------|:-----|
-|Oct 19|C\# Introduction|Matt|
-|Oct 23|C\# Introduction|Matt|
-|Oct 30|C\# Introduction|Matt|
+|Oct 19|C# Introduction|Matt|
+|Oct 23|C# Introduction|Matt|
+|Oct 30|C# Introduction|Matt|
 
 Everyone in the open source community is encouraged to join our QA team!
 
 #### Schedule
 
-*Built around the [roadmap](/Accessibility:_Roadmap "Accessibility: Roadmap") but specific to testing with testing milestones*
+*Built around the [roadmap](/Accessibility:_Roadmap) but specific to testing with testing milestones*
 
-##### WinForms
+##### WinForms schedule
 
 Based on Q2 in roadmap, our initial testing schedule is below:
 
@@ -489,7 +489,7 @@ Based on Q2 in roadmap, our initial testing schedule is below:
 |Build DashBoard|May|Jun|Brian & Neville|
 |Finish test report|||Brian & Calen|
 
-##### MoonLight
+##### MoonLight schedule
 
 |Task|Start Time|End Time|Owner|
 |:---|:---------|:-------|:----|
@@ -506,7 +506,7 @@ Based on Q2 in roadmap, our initial testing schedule is below:
 |:---|:---------|:-------|:----|
 |Design test plan|Aug. 6|Aug. 14|Calen & Ray|
 |Study how to use White to write tests|Aug. 6|Aug. 14|Ray & Felicia|
-|Study C\# and UIA ClientAPI(4 weeks)|Aug. 17|Sep. 11|Ray & Felicia|
+|Study C# and UIA ClientAPI(4 weeks)|Aug. 17|Sep. 11|Ray & Felicia|
 |Create UIA ClientAPI UserCases and Tests for WinForms real app(KeePass)|Sep. 14|Oct. 30(10.1-10.11 are national holiday)|Ray & Felicia|
 |Run UIA ClientAPI tests and log bugs for Winforms(KeePass)|Nov. 2|Nov. 9|Ray & Felicia|
 |Create UIA ClientAPI UserCases and Tests for Moonlight real apps|||Neville & Calen|
@@ -532,8 +532,8 @@ Based on Q2 in roadmap, our initial testing schedule is below:
 
 *Persons who declare that the software is ready to move to the next stage*
 
-Brian Merrell
- Calen Chen
+Brian Merrell<br/>
+ Calen Chen<br/>
  Brad Taylor
 
 

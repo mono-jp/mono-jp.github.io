@@ -17,7 +17,7 @@ The security manager is a collection of security features to implement every sec
 
 Sadly not every parts of the security manager cannot be tested using [NUnit](/community/contributing/test-suite/). In particular some security actions, like `LinkDemand` and `InheritanceDemand`, throws unhandled exceptions. While it is possible to promote `LinkDemand` into full `Demand` by using reflection, `InheritanceDemand` are still not testable using [NUnit](/community/contributing/test-suite/).
 
-Some tests for those hard-to-test features are present in directories under [/mono/mono/tests/cas/](http://anonsvn.mono-project.com/viewvc/trunk/mono/mono/tests/cas/) in [SVN](/community/contributing/source-code-repository/). They can be executed by doing a `make test` in each directory.
+Some tests for those hard-to-test features are present in directories under [/mono/mono/tests/cas/](https://github.com/mono/mono/tree/master/mono/tests/cas) in [git](/community/contributing/source-code-repository/). They can be executed by doing a `make test` in each directory.
 
 ### Status
 
@@ -25,7 +25,7 @@ Since version 1.1.4 Mono supports the --security option to enable it's security 
 
     mono --security sample.exe
 
-New features in [SVN](/community/contributing/source-code-repository/) (unreleased as of 1.1.10) includes:
+New features in [git](/community/contributing/source-code-repository/) (unreleased as of 1.1.10) includes:
 
 -   none;
 
@@ -36,7 +36,7 @@ Previously supported (released as of 1.1.10) features includes:
 -   IsolatedStorage now supports user quotas (when the security manager is enabled);
 -   PermissionRequestEvidence is now part of the evidences during policy resolution;
 -   Stack propagation for Threads, ThreadPool, Async operations, SWF's `Control.BeginInvoke` using `CompressedStack`;
--   Cross-AppDomain support enabling appdomain based sandboxes (limited by \#74411);
+-   Cross-AppDomain support enabling appdomain based sandboxes (limited by #74411);
 -   Unification (policies, permissions) between framework version numbers;
 -   more security permissions present in `mscorlib.dll` (still unaudited);
 -   `Demand` for unmanaged code for P/Invoke including support for [SuppressUnmanagedCodeSecurity](http://www.go-mono.com/docs/monodoc.ashx?link=T%3aSystem.Security.SuppressUnmanagedCodeSecurityAttribute) attribute;
@@ -68,7 +68,7 @@ The class librairies plays a dual role in **CAS**. First they supply the basic s
 
 Adding the required security protections to an existing class can be tricky as it will often requires some refactoring (e.g. to avoid looping over security checks). It's much easier to do when there are existing unit tests (i.e. refactoring can lead to mistakes). Be extra careful if no unit tests exists (or if their coverage is incomplete) and don't hesitate to add *normal* unit tests before protecting the resources. Also adding any code (resource protection or not) should be reviewed by the maintainer of the class/namespace/assembly.
 
-### Testing
+### ClassLib Testing
 
 Testing each class, security related or not, is done with *classic* [unit tests](/community/contributing/test-suite/). However testing the security of each class (again security related or not) is done differently (althrough very similar). The rules differences are:
 
@@ -109,9 +109,9 @@ Testing each class, security related or not, is done with *classic* [unit tests]
         }
 ```
 
-You can see a complete example in the [EnvironmentCas.cs](http://anonsvn.mono-project.com/viewvc/trunk/mcs/class/corlib/Test/System/EnvironmentCas.cs?view=markup) file.
+You can see a complete example in the [EnvironmentCas.cs](https://github.com/mono/mono/blob/master/mcs/class/corlib/Test/System/EnvironmentCas.cs) file.
 
-### Status
+### ClassLib Status
 
 -   Most of the security classes required by the runtime (e.g. evidences, policies) and to express security conditions (e.g. permissions) are complete and have their normal (e.g. not CAS) unit tests. This includes most classes under the namespaces:
     -   `System.Security`;
@@ -150,7 +150,7 @@ Permview is a tool that can extract the declarative security permission sets fro
 **Status**
 
 -   The current version (i.e. the one part of the Mono 1.1.x releases) is limited to show the assembly-level permissions (e.g. `RequestMinimum`, `RequestOptional` and `RequestRefuse`) and works only on the Mono runtime;
--   A new version, based on [Mono.Cecil](/docs/tools+libraries/libraries/Mono.Cecil/), is feature complete and runtime agnostic. This version also has an extra option to output the data in XML format (so it can easily be consumed by other tools). It will replace the current version when the Cecil code joins the **mcs** [SVN](/community/contributing/source-code-repository/) trunk. Until then the source code is available [here](http://anonsvn.mono-project.com/viewvc/trunk/cecil/permview/permview.cs?view=markup).
+-   A new version, based on [Mono.Cecil](/docs/tools+libraries/libraries/Mono.Cecil/), is feature complete and runtime agnostic. This version also has an extra option to output the data in XML format (so it can easily be consumed by other tools). It will replace the current version when the Cecil code joins the **mcs** [git](/community/contributing/source-code-repository/) trunk. Until then the source code is available [here](https://github.com/mono/mono/blob/master/mcs/tools/security/permview.cs).
 
 ### storeadm
 

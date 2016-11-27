@@ -19,19 +19,19 @@ Database Providers
 
 The following database providers are available for Mono applications:
 
--   [MySQL](/MySQL "MySQL")
--   [ODBC](/ODBC "ODBC")
--   [SQLClient](/SQLClient "SQLClient")
--   [Oracle](/Oracle "Oracle")
--   [PostgreSQL](/PostgreSQL "PostgreSQL")
--   [Firebird and Interbase](/Firebird_Interbase "Firebird Interbase")
--   [IBM DB2](/IBM_DB2 "IBM DB2")
--   [OLE DB](/OLE_DB "OLE DB")
--   [SQLite](/SQLite "SQLite")
--   [Sybase](/Sybase "Sybase")
--   [TDS Providers](/TDS_Providers "TDS Providers")
--   [TDS Generic](/TDS_Generic "TDS Generic")
--   [MaxDB](/MaxDB "MaxDB")
+-   [MySQL](/MySQL)
+-   [ODBC](/ODBC)
+-   [SQLClient](/SQLClient)
+-   [Oracle](/Oracle)
+-   [PostgreSQL](/PostgreSQL)
+-   [Firebird and Interbase](/Firebird_Interbase)
+-   [IBM DB2](/IBM_DB2)
+-   [OLE DB](/OLE_DB)
+-   [SQLite](/SQLite)
+-   [Sybase](/Sybase)
+-   [TDS Providers](/TDS_Providers)
+-   [TDS Generic](/TDS_Generic)
+-   [MaxDB](/MaxDB)
 -   [VistaDB](http://www.vistadb.com)
 
 Tools
@@ -39,7 +39,7 @@ Tools
 
 The following Mono tools are useful when working with ADO.NET:
 
--   sqlsharp.exe (SQL\#), a command line query tool included with Mono to enter and execute SQL statements.
+-   sqlsharp.exe (SQL#), a command line query tool included with Mono to enter and execute SQL statements.
 -   xsd.exe , XML Schema Definition tool
     -   **XDR to XSD**- used to generate an XML schema from an XDR (XML Data Reduced schema) file. XDR was used by Microsoft prior to XSD becoming a W3C recommendation, and it needs to be supported for legacy reasons.
     -   **XML to XSD**- used to generate an XML schema from an XML file.

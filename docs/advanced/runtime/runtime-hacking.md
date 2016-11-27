@@ -23,7 +23,7 @@ Take the following examples as a reference of how the code should look like:
 static MonoType*
 get_mono_type_from_name (char *name)
 {
-        /* 
+        /*
          * Always indent with TAB characters, never use spaces to indent code
          * Don't mix code and local declarations: older compilers don't support that.
          */
@@ -59,7 +59,7 @@ get_mono_type_from_name (char *name)
                 }
         }
  
-        /* 
+        /*
          * never use parenthesis with return unless strictly necessary to
          * force precedence rules in complex expressions.
          */
@@ -78,7 +78,7 @@ When you make a change to the runtime there are some basic tests that you should
 
 When doing more significant changes a full bootstrapping build must be completed (make clean;make in the toplevel mono directory) followed by a make check (which performs the above checks).
 
-If possible do this in at least 2 architectures, especially in the cases that involve changing architecture-specific code or check that the buildbot doesn't report regressions after your changes (see [Mono buildbot](http://wrench.mono-project.com/builds)).
+If possible do this in at least 2 architectures, especially in the cases that involve changing architecture-specific code or check that the buildbot doesn't report regressions after your changes (see [Mono Build Status](https://jenkins.mono-project.com/)).
 
 We should try to always add a test case for bugs we're fixing, either in the runtime tests or as a nunit test case.
 

@@ -4,7 +4,7 @@ redirect_from:
   - /Scripting_With_Mono/
 ---
 
-In this article we will discuss how you can use Mono to increase your productivity and make your software applications extensible without having to rewrite any of your existing C or C++ code into C\#.
+In this article we will discuss how you can use Mono to increase your productivity and make your software applications extensible without having to rewrite any of your existing C or C++ code into C#.
 
 This technique has many names: application scripting, runtime hosting, runtime embedding. They are all the same thing.
 
@@ -49,7 +49,7 @@ You can think of the speed of languages as a progression (and here am taking a f
 
 -   Assembler (fastest).
 -   Compiled Static, unsafe languages C/C++.
--   JITed Static, safe languages (C\#, Java).
+-   JITed Static, safe languages (C#, Java).
 -   ...
 -   A **large** performance gap goes here.
 -   ...
@@ -81,9 +81,9 @@ It also offers a wide variety of programming languages depending on the needs of
 Mono offers:
 
 -   A choice of languages for scripting your application, some examples:
-    -   Static languages: C\#, VisualBasic.NET, RemObject's Pascal.
+    -   Static languages: C#, VisualBasic.NET, RemObject's Pascal.
     -   Dynamic languages: [Boo](http://boo.codehaus.org), IronPython, IronRuby.
-    -   Functional languages: Nemerle, F\#
+    -   Functional languages: Nemerle, F#
     -   And of course, many more, see [Languages](/docs/about-mono/languages/) for more details.
 -   A native code generator to run your software as fast as possible.
 -   Easy support for calling your native code
@@ -111,42 +111,25 @@ Consider [SecondLife](http://www.secondlife.com), an online 3D virtual world tha
 
 The early results of switching showed that there was a 50 to 150 times performance increase in switching from LSL/interpreted to LSL/Mono.
 
-The [Unity3D](http://unity3d.com) game design engine uses Mono to provide scripting capabilities to the applications and games built with it by supporting Boo, C\# and UnityScript (a strongly-typed version of Javascript which helps make the code faster).
+The [Unity3D](http://unity3d.com) game design engine uses Mono to provide scripting capabilities to the applications and games built with it by supporting Boo, C# and UnityScript (a strongly-typed version of Javascript which helps make the code faster).
 
 Language Support
 ----------------
 
 By using Mono as a scripting engine, you get to pick the language that better suits your needs. Mono's extensive [language support](/docs/about-mono/languages/) allows developers to pick the best language or the best languages for their particular problem.
 
-Developers familiar with LUA can use the [LUA2IL](http://www.lua.inf.puc-rio.br/luanet/lua2il/) compiler to run their existing code, or apply existing skills to run the same LUA code under the Mono optimizing JIT compiler at increased speed.
+In addition, developers get to reuse their experience with C# and the .NET class libraries with their game, companies get access to a larger pool of developers that are experienced with a mainstream language and they can focus on creating the best possible game play instead of spending precious resources and time implementing yet another virtual machine, another set of debugging tools and a new ad-hoc language.
 
-In addition, developers get to reuse their experience with C\# and the .NET class libraries with their game, companies get access to a larger pool of developers that are experienced with a mainstream language and they can focus on creating the best possible game play instead of spending precious resources and time implementing yet another virtual machine, another set of debugging tools and a new ad-hoc language.
+Mono allows code to be written in multiple languages: components can be authored in C# that is a language with strong support for best engineering practices (your core libraries, and reusable components can be authored in it) and yet allow the flexibility of a scripting language like Python or Javascript for code that you must quickly prototype or alter.
 
-Mono allows code to be written in multiple languages: components can be authored in C\# that is a language with strong support for best engineering practices (your core libraries, and reusable components can be authored in it) and yet allow the flexibility of a scripting language like Python or Javascript for code that you must quickly prototype or alter.
-
-C\#'s support for yielding execution is also very convenient for writing clear code that must maintain state.
+C#'s support for yielding execution is also very convenient for writing clear code that must maintain state.
 
 The [Boo programming language](http://boo.codehaus.org/) is also a popular choice. This language is an extensible programming language which allows developers to create new language constructs that can be applied to the particular scenarios that are necessary for your game.
 
 Licensing
 ---------
 
-Mono is an open source technology that can be used freely under the terms of the GNU LGPL license. Novell alternatively offers commercial licenses of the Mono runtime if you require to use Mono in any of the following situations:
-
--   On Windows or Mac games, if:
-    -   Static linking Mono into your application.
-    -   Preventing Mono or its class libraries from being upgraded (for example, to prevent gamers from cheating).
-    -   You want to add proprietary extensions that you want to keep.
-
--   On Consoles where the end user is not allowed to upgrade the Mono runtime and repackage the game:
-    -   Wii, PS3 or Xbox360
-
--   Proprietary extensions:
-    -   If your game requires proprietary extensions that would be incompatible with the LGPL.
-
-[Mono Tools for Visual Studio Ultimate Edition](http://www.go-mono.com/store/#Mono_Tools_Ultimate) includes a commercial license to redistribute Mono under non-LGPL terms on Windows, Linux, and Mac OS X PCs for products with volumes under 100,000 and revenues under \$2M annually. If your organization intends to redistribute software which embeds or bundles Mono, but is unable to comply with the terms of GNU LGPL v2, the Ultimate Edition may be right for you.
-
-For other licensing options, [contact us](http://www.go-mono.com/contact/).
+Mono is an open source technology that can be used freely under the terms of the MIT license (as of March 31st 2016, prior versions were available under GNU LGPL license).
 
 Continued Performance Increase
 ==============================

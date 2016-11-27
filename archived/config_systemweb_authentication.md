@@ -9,14 +9,14 @@ redirect_from:
 Config system.web authentication
 ================================
 
-The \<authentication\> directive appears inside the [\<system.web\>](/Config_system.web "Config system.web") section of Web.config and has the following format:
+The \<authentication\> directive appears inside the [\<system.web\>](/Config_system.web) section of Web.config and has the following format:
 
 ``` xml
 <authentication mode="[None|Forms]">
-    <forms name="cookiename" 
-           path="path" 
-           loginUrl="url" 
-           protection="All|Encryption|Validation|None" 
+    <forms name="cookiename"
+           path="path"
+           loginUrl="url"
+           protection="All|Encryption|Validation|None"
            timeout="MM"
            requireSSL="[true|false]"
            slidingExpiration="[true|false]">
@@ -24,10 +24,10 @@ The \<authentication\> directive appears inside the [\<system.web\>](/Config_sys
             <user name="user1" password="password1"/>
             <user name="user2" password="password2"/>
             ...
-        </credentials> 
+        </credentials>
     </forms>
     <passport>
-       <!-- Although passport is allowed in the config file, it is 
+       <!-- Although passport is allowed in the config file, it is
        not supported in Mono and will be ignored -->
     </passport>
 </authentication>

@@ -2,7 +2,7 @@
 title: "Accessibility: Release Notes 1.0"
 lastmodified: '2009-03-31'
 redirect_from:
-  - /Accessibility:_Release_Notes_1.0/
+  - /Accessibility%3A_Release_Notes_1.0/
 ---
 
 Accessibility: Release Notes 1.0
@@ -35,7 +35,7 @@ The Mono Accessibility project enables Windows applications to be fully accessib
 
 This is our first stable release including UIA Provider and ATK support for all of the System.Windows.Forms controls.
 
-Our next phase, the 2.0 release, will encompass a UIA Client implementation that targets both System.Windows.Forms and ATK applications, and UIA Provider support for [Moonlight](/Moonlight "Moonlight").
+Our next phase, the 2.0 release, will encompass a UIA Client implementation that targets both System.Windows.Forms and ATK applications, and UIA Provider support for [Moonlight](/Moonlight).
 
 Codename: Leela
 
@@ -133,7 +133,7 @@ Mono Accessibility is available for a variety of Linux distributions, including:
 -   OpenSUSE 11.0 - [1-Click Install](http://download.opensuse.org/repositories/Mono:/UIA/MonoOpenSUSE_11.0/mono-uia.ymp)
 -   OpenSUSE 11.1 - [1-Click Install](http://download.opensuse.org/repositories/Mono:/UIA/MonoOpenSUSE_11.1/mono-uia.ymp)
 
-If packages aren't available for your distribution, you'll probably have to install Mono Accessibility from source. Step-by-step instructions are [available](/Accessibility:_Installing_From_Source "Accessibility: Installing From Source").
+If packages aren't available for your distribution, you'll probably have to install Mono Accessibility from source. Step-by-step instructions are [available](/Accessibility:_Installing_From_Source).
 
 If you just want to grab a source tarball, check out the [Novell FTP](ftp://ftp.novell.com/pub/mono/sources/) page. You will want [mono-uia](ftp://ftp.novell.com/pub/mono/sources/mono-uia), [uiautomationwinforms](ftp://ftp.novell.com/pub/mono/sources/uiautomationwinforms), and [uiaatkbridge](ftp://ftp.novell.com/pub/mono/sources/uiaatkbridge).
 
@@ -149,5 +149,5 @@ Reporting Bugs
 
 If you find any issues with this release, please don't hesitate to [file bugs](https://bugzilla.novell.com/enter_bug.cgi?product=UI%20Automation).
 
-If you want to contribute or need specific assistance, please join our [mailing list](http://forge.novell.com/mailman/listinfo/mono-a11y), or drop in [\#mono-a11y](irc://irc.gimp.org/mono-a11y) on irc.gimp.org.
+If you want to contribute or need specific assistance, please join our [mailing list](http://forge.novell.com/mailman/listinfo/mono-a11y), or drop in [#mono-a11y](irc://irc.gimp.org/mono-a11y) on irc.gimp.org.
 

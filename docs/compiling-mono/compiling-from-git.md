@@ -6,7 +6,7 @@ redirect_from:
   - /Compiling_Mono_From_GIT/
 ---
 
-For full details about checking out your source code, see the [Mono page on GitHub](http://github.com/mono) page.
+For full details about checking out your source code, see the [Mono page on GitHub](https://github.com/mono) page.
 
 ### Checking out for the first time
 
@@ -14,7 +14,7 @@ If you are checking out Mono from Git for the first time, you can use anonymous 
 
       $ git clone git://github.com/mono/mono.git
 
-If you are interested in contributing back submitting changes, create an account on github, add a public key (the content of your ~/.ssh/id\_rsa.pub with any title) and fork the relevant project, and clone it:
+If you are interested in contributing back submitting changes, create an account on github, add a public key (the content of your ~/.ssh/id_rsa.pub with any title) and fork the relevant project, and clone it:
 
      $ git clone git@github.com:username/mono.git
 
@@ -45,10 +45,10 @@ Then, go into the mono directory, and configure:
   $ make install
 ```
 
-In order to use mcs and mono binaries during the build process which do not reside in your PATH, you can set two make variables, EXTERNAL\_MCS and EXTERNAL\_RUNTIME:
+In order to use mcs and mono binaries during the build process which do not reside in your PATH, you can set two make variables, EXTERNAL_MCS and EXTERNAL_RUNTIME:
 
 ``` bash
-make EXTERNAL_MCS=/foo/bar/gmcs.exe EXTERNAL_RUNTIME=/somewhere/else/mono
+make EXTERNAL_MCS=/foo/bar/mcs EXTERNAL_RUNTIME=/somewhere/else/mono
 ```
 
 If you do not currently have mono installed, build and install mono from a recently released tarball or run:
@@ -56,10 +56,10 @@ If you do not currently have mono installed, build and install mono from a recen
 ``` bash
 # ./autogen.sh must be run prior to this
 make get-monolite-latest
-make EXTERNAL_MCS="${PWD}/mcs/class/lib/monolite/gmcs.exe"
+make
 ```
 
-The file [README](http://github.com/mono/mono/blob/master/README) contains more information about ways to compile Mono from the repository, consult it if you need more details.
+The file [README.md](https://github.com/mono/mono/blob/master/README.md) contains more information about ways to compile Mono from the repository, consult it if you need more details.
 
 Also to get the latest changes in System.Drawing.dll and System.Windows.Forms.dll you also need configure, build and install libgdiplus.
 
@@ -68,6 +68,6 @@ Also to get the latest changes in System.Drawing.dll and System.Windows.Forms.dl
       $ make
       $ make install
 
-If you use a different prefix then you may need to adjust your LD\_LIBRARY\_PATH environment variable to ensure libgdiplus.so can be loaded.
+If you use a different prefix then you may need to adjust your LD_LIBRARY_PATH environment variable to ensure libgdiplus.so can be loaded.
 
       export LD_LIBRARY_PATH=/your/own/prefix:$LD_LIBRARY_PATH

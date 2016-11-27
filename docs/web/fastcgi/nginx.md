@@ -22,9 +22,9 @@ Nginx configuration (as of version 0.7.63) is located in **/etc/nginx/nginx.conf
              listen   80;
              server_name  www.domain1.xyz;
              access_log   /var/log/nginx/your.domain1.xyz.access.log;
-     
+             root /var/www/www.domain1.xyz/;
+
              location / {
-                     root /var/www/www.domain1.xyz/;
                      index index.html index.htm default.aspx Default.aspx;
                      fastcgi_index Default.aspx;
                      fastcgi_pass 127.0.0.1:9000;
@@ -32,14 +32,19 @@ Nginx configuration (as of version 0.7.63) is located in **/etc/nginx/nginx.conf
              }
      }
 
-ASP.NET and ASP.NET MVC web applications runs on Nginx through [FastCGI](http://en.wikipedia.org/wiki/Fastcgi) protocol, therefore you need to add few lines into **/etc/nginx/fastcgi\_params**.
+ASP.NET and ASP.NET MVC web applications runs on Nginx through [FastCGI](http://en.wikipedia.org/wiki/Fastcgi) protocol, therefore you need to add few lines into **/etc/nginx/fastcgi_params**.
 
      fastcgi_param  PATH_INFO          "";
      fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
 
 Now the Nginx part is complete, but to finish the whole thing Mono FastCGI server needs to be started.
 
-     fastcgi-mono-server2 /applications=www.domain1.xyz:/:/var/www/www.domain1.xyz/ /socket=tcp:127.0.0.1:9000
+     fastcgi-mono-server4 /applications=www.domain1.xyz:/:/var/www/www.domain1.xyz/ /socket=tcp:127.0.0.1:9000
+
+This specifies `www.domain1.xyz` as the hostname, `/` as the virtual root/location and `/var/www/www.domain1.xyz` as the physical path (see [FastCGI page](/docs/web/fastcgi/#how-applications-are-handled-and-how-to-configure-them)).
+To listen on all hostnames, use the following:
+
+     fastcgi-mono-server4 /applications=/:/var/www/www.domain1.xyz/ /socket=tcp:127.0.0.1:9000
 
 Now when Mono FastCGI server is up and running, Nginx configuration is complete and your application is in place (located in /var/www/www.domain1.xyz/) you can run the web server.
 
@@ -47,8 +52,8 @@ Now when Mono FastCGI server is up and running, Nginx configuration is complete 
 
 ### Useful resources
 
-[http://wiki.nginx.org/NginxConfiguration](http://wiki.nginx.org/NginxConfiguration)
- [http://wiki.nginx.org/NginxVirtualHostExample](http://wiki.nginx.org/NginxVirtualHostExample)
- [Linux startup script for mono FastCGI server](http://tomi.developmententity.sk/Blog/Post/2)
-
+- [NGINX - Getting Started](https://www.nginx.com/resources/wiki/start/)
+- [NGINX - Server Block Examples](https://www.nginx.com/resources/wiki/start/topics/examples/server_blocks/)
+- [NGINX - Pitfalls and Common Mistakes](https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/)
+- [Linux startup script for mono FastCGI server](http://tomi.developmententity.sk/Blog/Post/2)
 

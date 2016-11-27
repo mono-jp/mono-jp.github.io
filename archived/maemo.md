@@ -48,12 +48,12 @@ The Mono scratchbox devkit includes a full Mono installation, gtk-sharp 2.4.3 an
 
 The Mono apt repository for Nokia includes the mono runtime, gtk-sharp, maemo-sharp and Paco's peditgtksharp sample application. Look [here](http://go-mono.com/maemo/packages.list) for a full list of packages available in the repository. If you need any Mono assembly that is not available in the repository please contact us on the Mono mailing lists.
 
-If you are interested in building Mono Scratchbox devkit from sources, please check our [Scratchbox](/Scratchbox "Scratchbox") page.
+If you are interested in building Mono Scratchbox devkit from sources, please check our [Scratchbox](/Scratchbox) page.
 
 Screenshots and Movies
 ======================
 
-[Gtk\# app movie on Nokia](http://www.go-mono.com/nokia/nokia-gtksharp.mov)
+[Gtk# app movie on Nokia](http://www.go-mono.com/nokia/nokia-gtksharp.mov)
 
 [Hello World!](http://www.go-mono.com/nokia/nokia-770-mono-small.jpeg)
 
@@ -91,8 +91,8 @@ We recommend that you use [Scratchbox](http://www.scratchbox.org/) to develop an
 After setting up Scratchbox you can easily install [mono-devkit](http://go-mono.com/maemo/scratchbox-devkit-mono-2.0.1-1-i386.tar.gz) by running these commands outside scratchbox:
 
 ``` bash
-$ wget http://go-mono.com/maemo/scratchbox-devkit-mono-2.0.1-1-i386.tar.gz
-$ tar xzf scratchbox-devkit-mono-2.0.1-1-i386.tar.gz -C /
+wget http://go-mono.com/maemo/scratchbox-devkit-mono-2.0.1-1-i386.tar.gz
+tar xzf scratchbox-devkit-mono-2.0.1-1-i386.tar.gz -C /
 ```
 
 If you want to enable devkit for your ARMEL and/or X86 targets just type:

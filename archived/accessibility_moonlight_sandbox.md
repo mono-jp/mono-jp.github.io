@@ -2,7 +2,7 @@
 title: "Accessibility: Moonlight Sandbox"
 lastmodified: '2009-04-08'
 redirect_from:
-  - /Accessibility:_Moonlight_Sandbox/
+  - /Accessibility%3A_Moonlight_Sandbox/
 ---
 
 Accessibility: Moonlight Sandbox
@@ -26,11 +26,11 @@ Accessibility: Moonlight Sandbox
 </ul></li>
 <li><a href="#bridge">1.1.2 Bridge</a>
 <ul>
-<li><a href="#deliverables_2">1.1.2.1 Deliverables</a></li>
+<li><a href="#deliverables-2">1.1.2.1 Deliverables</a></li>
 </ul></li>
 <li><a href="#plugin-integration">1.1.3 Plugin integration</a>
 <ul>
-<li><a href="#deliverables_3">1.1.3.1 Deliverables</a></li>
+<li><a href="#deliverables-3">1.1.3.1 Deliverables</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#requirements-for-moonlight-development">1.2 Requirements for Moonlight development</a></li>
@@ -132,7 +132,7 @@ Using SWAPeers.AutomationPeer.RaiseXXXXEvents methods
 -   Where should the bridge reside so that it can be used by moon?
 -   How do SL2 controls map to Atk.Roles? Will any additional bridge work be required to support the SL2 controls?
 
-#### Deliverables
+#### Deliverables 2
 
 -   Email report with a plan for loading and integrating the bridge with the providers.
 -   A list of SL2 controls and which Atk.Role they map to.
@@ -143,7 +143,7 @@ Using SWAPeers.AutomationPeer.RaiseXXXXEvents methods
 -   How can a FF plugin inject an Atk.Object into the DOM tree?
 -   How will the Bridge be distributed so that it can be used by the plugin?
 
-#### Deliverables
+#### Deliverables 3
 
 -   Email to the team containing an hour estimate for integration, and a proposal for how it should be integrated and distributed.
 

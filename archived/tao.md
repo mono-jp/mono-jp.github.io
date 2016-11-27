@@ -18,7 +18,7 @@ The Tao website is now located at : [http://sourceforge.net/projects/taoframewo
 <ul>
 <li><a href="#availability">1 Availability</a>
 <ul>
-<li><a href="#120-release-2-nov-2005">1.1 1.2.0 Release (2 Nov 2005)</a></li>
+<li><a href="#release-2-nov-2005">1.1 1.2.0 Release (2 Nov 2005)</a></li>
 <li><a href="#svn">1.2 SVN</a></li>
 <li><a href="#tao--autotools">1.3 Tao + autotools</a></li>
 </ul></li>
@@ -59,7 +59,7 @@ You can also get the latest code from SVN via [AnonSVN](/SourceCodeRepository) o
 Tao + autotools
 ---------------
 
-[Tao autotools](/Tao_autotools "Tao autotools") has been superceeded by the addition of autotools build system generation to [Prebuild](/Prebuild "Prebuild"). Autotools is one of the build system targets supported by Tao and other Prebuild-based packages.
+[Tao autotools](/Tao_autotools) has been superceeded by the addition of autotools build system generation to [Prebuild](/Prebuild). Autotools is one of the build system targets supported by Tao and other Prebuild-based packages.
 
 Building Tao
 ============
@@ -81,8 +81,8 @@ You can [subcribe](http://galactus.ximian.com/mailman/listinfo/tao-list) to the 
 
 [Search the mailing list archives](http://www.google.com/search?hl=en&q=site%3Agalactus.ximian.com+Tao)
 
-The Tao Framework for Mono and .NET.
-====================================
+The Tao Framework for Mono and .NET
+===================================
 
 The Tao Framework is a collection of bindings and libraries to facilitate cross-platform games-related development utilizing the Mono and .NET platforms.
 
@@ -102,11 +102,11 @@ Currently supported are:
 
  These libraries all run cross-platform and cross-runtime using Microsoft's .NET Runtime on Windows and Mono on Windows and non-Windows platforms.
 
-Other runtimes have not been tested, but will most likely work. The libraries are also CLS-compliant, they can be used by any .NET language, including both C\# and Visual Basic .NET, amongst others.
+Other runtimes have not been tested, but will most likely work. The libraries are also CLS-compliant, they can be used by any .NET language, including both C# and Visual Basic .NET, amongst others.
 
 Use our [Anonymous SVN repository](/SourceCodeRepository) to download it. The module name is \`tao'.
 
-You can browse the source at http://anonsvn.mono-project.com/viewcvs/trunk/tao/
+You can browse the source at <http://anonsvn.mono-project.com/viewcvs/trunk/tao/>
 
 Developers/Maintainers
 ======================
@@ -121,7 +121,7 @@ Developers/Maintainers
 Plans
 =====
 
--   [Future Plans](/Tao:FuturePlans "Tao:FuturePlans") -- notes about upcoming changes to Tao
+-   [Future Plans](/Tao:FuturePlans) -- notes about upcoming changes to Tao
 
 Future Plans
 ------------

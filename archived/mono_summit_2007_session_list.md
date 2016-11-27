@@ -52,16 +52,16 @@ C Sharp 3.0 and LINQ
 
 Presenter: **Marek Safar**
 
-C\# 3.0 introduces many new and powerful features which target developer productivity, and reduce the amount of code necessary to achieve the same work. This session will explore each new feature in the context of existing conventions as well as the implications of LINQ. If you want to start writing Mono enabled C\# 3.0 applications you should not miss this session.
+C# 3.0 introduces many new and powerful features which target developer productivity, and reduce the amount of code necessary to achieve the same work. This session will explore each new feature in the context of existing conventions as well as the implications of LINQ. If you want to start writing Mono enabled C# 3.0 applications you should not miss this session.
 
-Marek is the main developer for Mono's C\# 3.0 compiler at Novell. Prior to joining Novell he contributed extensively to the C\# compiler by providing new features and extensive bug fixing.
+Marek is the main developer for Mono's C# 3.0 compiler at Novell. Prior to joining Novell he contributed extensively to the C# compiler by providing new features and extensive bug fixing.
 
 Developing Applications with Monodevelop
 ----------------------------------------
 
 Presenter: **Lluis Sanchez**
 
-This session will show how to use the MonoDevelop IDE to develop applications with Mono: creating GTK\# applications with the integrated visual designer, using custom widget libraries, ASP.NET projects, working with Visual Studio projects, working with Version Control integration, generating tarballs and packages, internationalization, integration with Makefiles, and other interesting features.
+This session will show how to use the MonoDevelop IDE to develop applications with Mono: creating GTK# applications with the integrated visual designer, using custom widget libraries, ASP.NET projects, working with Visual Studio projects, working with Version Control integration, generating tarballs and packages, internationalization, integration with Makefiles, and other interesting features.
 
 Lluis Sánchez leads the MonoDevelop project and has turned a community-driven project into one of Mono's most important projects. Prior to leading this effort he was in charge of Remoting and ASP.NET WebServices in the Mono project.
 
@@ -84,7 +84,7 @@ NUnit
 
 Presenter: **Charlie Poole, NUnit Project**
 
-[NUnit](/NUnit "NUnit") is an open source test framework for all languages that run on Mono or .NET. It is one of the most widely used test frameworks for .NET and seems to be the only framework with the stated goal of supporting Mono on an equal footing with .NET. This session will a mix of information about currently available features and those things that are coming in the new NUnit 3.0 platform. Here are some of the highlights I plan to cover...
+[NUnit](/NUnit) is an open source test framework for all languages that run on Mono or .NET. It is one of the most widely used test frameworks for .NET and seems to be the only framework with the stated goal of supporting Mono on an equal footing with .NET. This session will a mix of information about currently available features and those things that are coming in the new NUnit 3.0 platform. Here are some of the highlights I plan to cover...
 
 For newbies (brief)
 
@@ -94,7 +94,7 @@ For newbies (brief)
 For those who already use NUnit
 
 -   Cool stuff in the latest release
--   [NUnitHowTo](/NUnitHowTo "NUnitHowTo") - You tell me what you want covered
+-   [NUnitHowTo](/NUnitHowTo) - You tell me what you want covered
 
 For the intrepid
 
@@ -108,16 +108,16 @@ Mono on the Mac
 
 Presenter: **Geoff Norton**
 
-A session covering the most common use cases of mono on the mac, including but not limited to discussion on the current state of System.Windows.Forms, Cocoa\#, ObjC\# and other Macintosh technologies.
+A session covering the most common use cases of mono on the mac, including but not limited to discussion on the current state of System.Windows.Forms, Cocoa#, ObjC# and other Macintosh technologies.
 
-Geoff Norton is the author of Cocoa\#, ObjC\# and the native Windows.Forms driver for the MacOS. Geoff joined Novell recently and has been in charge of improving Mono's OSX support.
+Geoff Norton is the author of Cocoa#, ObjC# and the native Windows.Forms driver for the MacOS. Geoff joined Novell recently and has been in charge of improving Mono's OSX support.
 
 Greengrass
 ----------
 
 Presenter: **Federico Di Gregorio**
 
-Greengrass is just another RDF library but with a twist or two. First it is entirely managed C\# code, developed entirely on Mono. Also, it has the ability to serialize and deserialize RDF resources (OWL instances) into CLR objects giving the programmer the ability to use high-level object-oriented programming patterns instead of the classical low-level triple access. This talk will explain Greengrass internals, how to map RDF concepts to an object-oriented programming language and will show how to use the library and the ggtool program to work with an OWL ontology.
+Greengrass is just another RDF library but with a twist or two. First it is entirely managed C# code, developed entirely on Mono. Also, it has the ability to serialize and deserialize RDF resources (OWL instances) into CLR objects giving the programmer the ability to use high-level object-oriented programming patterns instead of the classical low-level triple access. This talk will explain Greengrass internals, how to map RDF concepts to an object-oriented programming language and will show how to use the library and the ggtool program to work with an OWL ontology.
 
 db4o
 ----
@@ -163,7 +163,7 @@ Presenter: **Martin Baulig**
 
 Learn how to debug your Mono applications using our managed debugger.
 
-Martin Baulig works at Novell on the Mono debugger. He was the architect of our generics support (both in the C\# compiler and the runtime) and was previously the maintainer for the C\# compiler where he implemented many of its features. Prior to joining Novell, Martin worked on the GNOME project where he was instrumental to Gnome 1.x and was one of the Gnome 2.x leads.
+Martin Baulig works at Novell on the Mono debugger. He was the architect of our generics support (both in the C# compiler and the runtime) and was previously the maintainer for the C# compiler where he implemented many of its features. Prior to joining Novell, Martin worked on the GNOME project where he was instrumental to Gnome 1.x and was one of the Gnome 2.x leads.
 
 Boo – A lean mean DSL Machine
 -----------------------------
@@ -179,7 +179,7 @@ Mono.Cecil
 
 Presenter: **[Jb Evain](http://evain.net/blog)**
 
-[Cecil](/Cecil "Cecil") is a library to generate and inspect programs and libraries in the ECMA CIL format. This talk will be the occasion to discover, or re-discover in details what's exactly [Cecil](/Cecil "Cecil"), what it can do, what it is used for, and its lively ecosystem.
+[Cecil](/Cecil) is a library to generate and inspect programs and libraries in the ECMA CIL format. This talk will be the occasion to discover, or re-discover in details what's exactly [Cecil](/Cecil), what it can do, what it is used for, and its lively ecosystem.
 
 JB Evain created the Cecil library which is now in wide use in many applications in .NET and Mono. He joined Novell to work on Moonlight and our core class libraries. Prior to joining Novell he worked for db4o.
 
@@ -188,7 +188,7 @@ Boxerp
 
 Presenter: **Carlos Ble**
 
-Boxerp is a framework for distributed enterprise applications for .Net and Mono. Boxerp proposes an MVC architecture for desktop applications that makes your code easier to maintain. Provides a cross-platform responsive engine that makes it easier to deal with threads and port your application from one GUI toolkit to another. The framework simplifies the data binding process using AOP and implements data binding support for Gtk\# through custom widgets and also custom widgets for Windows Forms and WPF providing validation and business rules. More info at [http://boxerp.org](http://boxerp.org)
+Boxerp is a framework for distributed enterprise applications for .Net and Mono. Boxerp proposes an MVC architecture for desktop applications that makes your code easier to maintain. Provides a cross-platform responsive engine that makes it easier to deal with threads and port your application from one GUI toolkit to another. The framework simplifies the data binding process using AOP and implements data binding support for Gtk# through custom widgets and also custom widgets for Windows Forms and WPF providing validation and business rules. More info at [http://boxerp.org](http://boxerp.org)
 
 openSUSE Build Service
 ----------------------

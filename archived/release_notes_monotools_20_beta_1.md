@@ -24,7 +24,7 @@ The soft debugger was originally released for MonoTouch, allowing developers to 
 
 [More Information about the Soft Debugger](/Soft_Debugger)
 
-#### Platform Support
+#### Platform Support Overview
 
 The biggest benefit of supporting the soft debugger in MonoTools is that users can now use Visual Studio to debug Mono running Linux, Windows, and Mac OS X.
 
@@ -121,7 +121,7 @@ The beta is public, so download it now and let us know how it goes!
 
 ### Other useful resources
 
--   [Submit a Bug](/Bugs#Mono_Tools)
+-   [Submit a Bug](/Bugs)
 -   [Discuss in Forums](http://forums.mono-tools.com/)
 
 

@@ -28,7 +28,7 @@ Best Practices
 <li><a href="#platform-invoke">3 Platform Invoke</a></li>
 <li><a href="#execution">4 Execution</a>
 <ul>
-<li><a href="#mono-path">4.1 MONO_PATH</a></li>
+<li><a href="#monopath">4.1 MONO_PATH</a></li>
 </ul></li>
 <li><a href="#cryptography">5 Cryptography</a>
 <ul>
@@ -43,12 +43,12 @@ Best Practices
 </tbody>
 </table>
 
-C\# 2.0
+C# 2.0
 =======
 
-Some features of C\# 2.0 are available on our C\# 1.0 compiler that will generate code that still runs on the 1.x profile or .NET 1.1.
+Some features of C# 2.0 are available on our C# 1.0 compiler that will generate code that still runs on the 1.x profile or .NET 1.1.
 
-Essentially all features of C\# 2.0 except generics and nullable types are supported by our C\# 1.0 compiler.
+Essentially all features of C# 2.0 except generics and nullable types are supported by our C# 1.0 compiler.
 
 -   You can actually use anonymous methods without using the gmcs compiler, so what are you waiting for? Just be smart about it.
 
@@ -57,20 +57,20 @@ Essentially all features of C\# 2.0 except generics and nullable types are suppo
 Threading
 =========
 
-Gtk\# and Threading
+Gtk# and Threading
 -------------------
 
-Gtk\# is not a thread-safe toolkit, which means that only one thread at a time can safely invoke methods on Gtk\#. This thread is typically the thread executing the main loop (which is when control has been explicitly transfered to Gtk).
+Gtk# is not a thread-safe toolkit, which means that only one thread at a time can safely invoke methods on Gtk#. This thread is typically the thread executing the main loop (which is when control has been explicitly transfered to Gtk).
 
-When application developers need to have threads update some element of the graphical user interface they have to either acquire a lock that allows them to issue Gtk\# toolkit invocations or they can make their code execute on the same thread as the one thread that executes the main loop.
+When application developers need to have threads update some element of the graphical user interface they have to either acquire a lock that allows them to issue Gtk# toolkit invocations or they can make their code execute on the same thread as the one thread that executes the main loop.
 
 The first method, obtaining the GTK thread context is often error-prone. It is strongly recommended that application developers stay away from locking and instead they use a mechanism that makes their code run on the main loop thread.
 
-Sometimes people use threads because they want to write [responsive applications](/Responsive_Applications "Responsive Applications"). There are many other ways to write these applications, see our page [Responsive Applications](/Responsive_Applications "Responsive Applications") for more details.
+Sometimes people use threads because they want to write [responsive applications](/Responsive_Applications). There are many other ways to write these applications, see our page [Responsive Applications](/Responsive_Applications) for more details.
 
 ### Running code on the Gtk main loop thread
 
-To invoke a method on the GTK+ main loop thread and avoid any threading problems with GTK, you can use the Gtk.Application.Invoke() method (if you are targetting Gtk\# 1.0 you can use Gtk.ThreadNotify).
+To invoke a method on the GTK+ main loop thread and avoid any threading problems with GTK, you can use the Gtk.Application.Invoke() method (if you are targetting Gtk# 1.0 you can use Gtk.ThreadNotify).
 
 > ``` csharp
 > public void ThreadedMethod()
@@ -124,24 +124,24 @@ void BetterDisplay ()
 
 We still recommend against using this technique as it is easy to make the above code fail or fail to catch a return path or close Gdk.Thread.Leave too early.
 
-It is always best to explicitly run any Gtk\# code on the main thread by using the ThreadNotify pattern or using Application.Invoke()
+It is always best to explicitly run any Gtk# code on the main thread by using the ThreadNotify pattern or using Application.Invoke()
 
 Platform Invoke
 ===============
 
--   If you want to debug a particular problem with DllImport see our [DllNotFoundException](/DllNotFoundException "DllNotFoundException") page.
+-   If you want to debug a particular problem with DllImport see our [DllNotFoundException](/DllNotFoundException) page.
 
 -   Describe dllmap issues/solutions/etc... don't map to unversioned/symlinked libraries... maybe talk about building internal shared libraries with -module -avoid-version
     -   See also the `mono-shlib-cop` program.
 
--   The P/Invoke guide, [Interop with Native Libraries](/Interop_with_Native_Libraries "Interop with Native Libraries").
+-   The P/Invoke guide, [Interop with Native Libraries](/Interop_with_Native_Libraries).
 
 Execution
 =========
 
 -   Avoid using the --config mono option in wrapper scripts, instead use properly-named config files for assemblies
 
--   Don't touch MONO\_PATH or MONO\_GAC\_PATH.
+-   Don't touch MONO_PATH or MONO_GAC_PATH.
 
 -   Don't pass --debug to mono in production scripts, it increases memory usage.
 
@@ -149,14 +149,14 @@ Execution
 
 -   Do not use the System.Threading Mutex/\*Event methods. You want the Monitor methods. The runtime is free to do better optimizations on them.
 
-MONO\_PATH
+MONO_PATH
 ----------
 
-The MONO\_PATH environment variable was added to assist developers debug applications but it tends to be used in production deployments which break the semantics of assembly loading in subtle ways. In ways that might break your application.
+The MONO_PATH environment variable was added to assist developers debug applications but it tends to be used in production deployments which break the semantics of assembly loading in subtle ways. In ways that might break your application.
 
-MONO\_PATH overwrites the assembly loading process and will ignore assemblies that should be pulled from the [Global Assembly Cache](/Assemblies_and_the_GAC "Assemblies and the GAC"), it is merely a debugging tool and you should avoid its use.
+MONO_PATH overwrites the assembly loading process and will ignore assemblies that should be pulled from the [Global Assembly Cache](/Assemblies_and_the_GAC), it is merely a debugging tool and you should avoid its use.
 
-If you are using MONO\_PATH to point to a directory where your program should load libraries from, we recommend that instead you make your application follow the [Application Deployment Guidelines](/Guidelines:Application_Deployment "Guidelines:Application Deployment") which will solve most of those issues.
+If you are using MONO_PATH to point to a directory where your program should load libraries from, we recommend that instead you make your application follow the [Application Deployment Guidelines](/Guidelines:Application_Deployment) which will solve most of those issues.
 
 Cryptography
 ============
@@ -215,5 +215,5 @@ This application would work with every hash algorithm supported by the framework
 Development Tools
 -----------------
 
-You can use [Gendarme](/Gendarme "Gendarme") and [bugfinder](http://forge.novell.com/modules/xfmod/project/?bugfinder) to look into your assemblies for common programming mistakes.
+You can use [Gendarme](/Gendarme) and [bugfinder](http://forge.novell.com/modules/xfmod/project/?bugfinder) to look into your assemblies for common programming mistakes.
 

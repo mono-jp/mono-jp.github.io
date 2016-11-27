@@ -9,24 +9,23 @@ OldPage
 =======
 
 **Mono Status**
-**32 bits:** [x86](/Mono:X86 "Mono:X86"), [PPC](/Mono:PowerPC "Mono:PowerPC"), [SPARC](/Mono:SPARC "Mono:SPARC"), [S390](/Mono:S390 "Mono:S390"), [ARM](/Mono:ARM "Mono:ARM")
-**64 bits:** [x86-64](/Mono:AMD64 "Mono:AMD64"), [SPARC](/Mono:SPARC "Mono:SPARC"), [IA64](/Mono:IA64 "Mono:IA64")
-**OS:** [Linux](/Mono:Linux "Mono:Linux"), [Windows](/Using_Mono_on_Windows), [OSX](/Mono:OSX "Mono:OSX"), [BSD](/Mono:BSD "Mono:BSD"), [Solaris](/Mono:SPARC "Mono:SPARC")
- **Class status:**[API completion](/Resources#api-completion-status-pages "Resources")
+**32 bits:** [x86](/Mono:X86), [PPC](/Mono:PowerPC), [SPARC](/Mono:SPARC), [S390](/Mono:S390), [ARM](/Mono:ARM)
+**64 bits:** [x86-64](/Mono:AMD64), [SPARC](/Mono:SPARC), [IA64](/Mono:IA64)
+**OS:** [Linux](/Mono:Linux), [Windows](/Using_Mono_on_Windows), [OSX](/Mono:OSX), [BSD](/Mono:BSD), [Solaris](/Mono:SPARC)
 
-Mono is a platform for running and developing modern applications, based on the ECMA/ISO Standards. Mono can run existing programs targeting the .NET or Java frameworks.
-Mono is an open source effort led by Novell and is the foundation for many new applications. [more...](/About_Mono "About Mono")
+Mono is a platform for running and developing modern applications, based on the ECMA/ISO Standards. Mono can run existing programs targeting the .NET or Java frameworks.<br/>
+Mono is an open source effort led by Novell and is the foundation for many new applications. [more...](/About_Mono)
 
-Users: [Downloads](/Downloads "Downloads") | [Bug Reporting](/Bugs "Bugs") | [Software](/Software "Software") | [Support](/Support "Support")
- Developers: [Source Code](/SourceCodeRepository) | [Books](/Books "Books") | [Languages](/Languages "Languages") | [Forge](/Novell_Forge "Novell Forge") | [API Docs](http://www.go-mono.com/docs/)
- Contributors: [Resources](/Resources "Resources") | [Development Plans](/Plans "Plans") | [Tasks](/Todo "Todo") | [Bug Tracking](/Bugs "Bugs")
- Community: [Mailing Lists](/Mailing_Lists "Mailing Lists") | [IRC](/IRC "IRC") | [Related Sites](/Related_Mono_Sites "Related Mono Sites") | [User Groups](/User_Groups "User Groups") | [Blogs](http://www.go-mono.com/monologue/)
- FAQ: [General](/FAQ:_General "FAQ: General") | [Technical](/FAQ:_Technical "FAQ: Technical") | [Licensing](/FAQ:_Licensing "FAQ: Licensing") | [Asp.net](/FAQ:_ASP.NET "FAQ: ASP.NET") | [Security](/FAQ:_Security "FAQ: Security")
+Users: [Downloads](/Downloads) | [Bug Reporting](/Bugs) | [Software](/Software) | [Support](/Support)
+ Developers: [Source Code](/SourceCodeRepository) | [Books](/Books) | [Languages](/Languages) | [Forge](/Novell_Forge) | [API Docs](http://www.go-mono.com/docs/)
+ Contributors: [Resources](/Resources) | [Development Plans](/Plans) | [Tasks](/Todo) | [Bug Tracking](/Bugs)
+ Community: [Mailing Lists](/Mailing_Lists) | [IRC](/IRC) | [Related Sites](/Related_Mono_Sites) | [User Groups](/User_Groups) | [Blogs](http://www.go-mono.com/monologue/)
+ FAQ: [General](/FAQ:_General) | [Technical](/FAQ:_Technical) | [Licensing](/FAQ:_Licensing) | [Asp.net](/FAQ:_ASP.NET) | [Security](/FAQ:_Security)
 
-Server: [Asp.net](/ASP.NET "ASP.NET") | [Database Access](/Database_Access "Database Access")
- Client: [Gtk\#](/GtkSharp "GtkSharp") | [WinForms](/WinForms "WinForms") | [CocoaSharp](/MonoMac)
- Core: [C\#](/CSharp_Compiler "CSharp Compiler") | [Runtime](/Mono:Runtime "Mono:Runtime") | [Cryptography](/Cryptography "Cryptography") | [CAS](/CAS "CAS") | [XML](/XML "XML")
- In Action: [Screenshots](/Screenshots "Screenshots") | [Videos](/Videos "Videos")
+Server: [Asp.net](/ASP.NET) | [Database Access](/Database_Access)
+ Client: [Gtk#](/GtkSharp) | [WinForms](/WinForms) | [CocoaSharp](/MonoMac)
+ Core: [C#](/CSharp_Compiler) | [Runtime](/Mono:Runtime) | [Cryptography](/Cryptography) | [CAS](/CAS) | [XML](/XML)
+ In Action: [Screenshots](/Screenshots) | [Videos](/Videos)
 
 <table>
 <col width="50%" />
@@ -42,12 +41,7 @@ Server: [Asp.net](/ASP.NET "ASP.NET") | [Database Access](/Database_Access "Data
 <h3>Jun 28th, 2005: Summer of Code Begins</h3>
 <p><a href="http://www.google.com">Google's</a> sponsored <a href="http://code.google.com/summerofcode.html">Open Source Summer of Code</a> has started. Thanks a lot to Chris DiBona and Greg Stein at Google for driving the whole process forward and to Google for funding this effort.</p>
 <p>The Mono project will be mentoring sixteen students during the summer, for more information see our <a href="/Summer2005" title="Summer2005">Summer 2005</a> page.</p>
-<p>If you were not selected as part of the Summer of Code, you can still join the project and contribute. Let <script type="text/javascript">
-<!--
-h='&#110;&#x6f;&#118;&#x65;&#108;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x6d;&#x69;&#x67;&#x75;&#x65;&#108;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'us know'+'<\/'+'a'+'>');
-// -->
-</script><noscript>&#x75;&#x73;&#32;&#x6b;&#110;&#x6f;&#x77;&#32;&#40;&#x6d;&#x69;&#x67;&#x75;&#x65;&#108;&#32;&#x61;&#116;&#32;&#110;&#x6f;&#118;&#x65;&#108;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;&#x29;</noscript> if you are interested.</p>
+<p>If you were not selected as part of the Summer of Code, you can still join the project and contribute. Let us know if you are interested.</p>
 <h3>June 16th, 2005: Mono 1.1.8 has been released</h3>
 <p>Mono 1.1.8 has been released, see the release notes <a href="http://www.go-mono.com/archive/1.1.8">here</a>, get it while its fresh from <a href="/Downloads" title="Downloads">Downloads</a>.</p>
 <h3>June 1st, 2005: Summer of Code</h3>

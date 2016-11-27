@@ -71,11 +71,11 @@ Full AOT is a fairly straightforward process except in the case of generic insta
 
 If you depend on the full AOT option because of OS limitations, you should make sure to test your software using the "--full-aot" option to ensure that no dynamic code is used by your application.
 
- This testing is required because some of Mono's class libraries generate code dynamically (for example LINQ's Expression.Compile() method for expression ASTs) or load code at runtime (for example the default operation mode for the XML serializer, see MONO\_XML\_SERIALIZER\_THS on the manual page to configure this).
+ This testing is required because some of Mono's class libraries generate code dynamically (for example LINQ's Expression.Compile() method for expression ASTs) or load code at runtime (for example the default operation mode for the XML serializer, see MONO_XML_SERIALIZER_THS on the manual page to configure this).
 
 #### Limitation: Platform
 
-Full AOT currently only works on AMD64/ARM and only with SVN HEAD, not 2.0/2.2/ 2.4.
+Full AOT currently only works on AMD64/ARM and only with git HEAD, not 2.0/2.2/ 2.4.
 
 #### Limitation: Generic Interface Instantiation
 
@@ -96,7 +96,7 @@ Since Mono has no way of determining from the static analysis what method will i
 
 Xamarin's version of AOT compilation extends the AOT compiler to support generic code generation for value types. This can be either an optimization (generate fewer versions of Foo\<X\> where X is a value type) to filling holes where previously you would get a runtime failure due to a Foo\<X\> where X is value type from not being implemented.
 
-This feature is currently only available to iOS users of Xamarin.
+This feature was previously only available to iOS users of Xamarin, but is now available to everyone.
 
 Supported Platforms
 -------------------
@@ -145,7 +145,7 @@ As of Mono 2.0, AOT compilation is only supported for non-generic methods. suppo
 
 If you want to disable the use of the AOT generated code for a particular program execution, use the -O=-aot command line flag to the runtime.
 
-See the discussion on [OptimizingAOT](/archived/optimizingaot "OptimizingAOT")
+See the discussion on [OptimizingAOT](/archived/optimizingaot)
 
 Discussion
 ----------
@@ -158,6 +158,6 @@ AOTing all the system libraries
 You can use the following commands to AOT all of the libraries on your system:
 
 ``` bash
-mono --aot /usr/lib/mono/1.0/mscorlib.dll
-for i in /usr/lib/mono/gac/*/*/*.dll; do mono --aot $i; done
+sudo mono --aot /usr/lib/mono/4.5/mscorlib.dll
+for i in /usr/lib/mono/gac/*/*/*.dll; do sudo mono --aot $i; done
 ```

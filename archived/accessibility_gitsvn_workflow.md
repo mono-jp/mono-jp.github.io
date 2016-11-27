@@ -2,7 +2,7 @@
 title: "Accessibility: GitSVN: Workflow"
 lastmodified: '2009-04-09'
 redirect_from:
-  - /Accessibility:_GitSVN:_Workflow/
+  - /Accessibility%3A_GitSVN%3A_Workflow/
 ---
 
 Accessibility: GitSVN: Workflow
@@ -66,7 +66,7 @@ Daily Workflow With git-svn
 Setup
 -----
 
-Before reading this guide, make sure you set up your git repository according to the [Getting Started instructions](/Accessibility:_GitSVN#getting-started "Accessibility: GitSVN").
+Before reading this guide, make sure you set up your git repository according to the [Getting Started instructions](/archived/accessibility_gitsvn/#getting-started).
 
 Your git "master" branch will be associated with the remote git-svn/trunk branch that maps to SVN trunk. If you need to you can create a local branch for each SVN remote branch like this:
 
@@ -167,9 +167,9 @@ TODO: Use git gui to visualize uncommitted changes. You can use this as a commit
 Get Feedback With Reviewboard
 -----------------------------
 
-Make sure you are familiar with our [code review policy](/Accessibility:_Reviews "Accessibility: Reviews").
+Make sure you are familiar with our [code review policy](/Accessibility:_Reviews).
 
-When you're ready for a review, make sure all of your changes are committed in the feature branch, then run \`[post-review](/Accessibility:_Reviews#submitting-review-requests "Accessibility: Reviews")\` from the feature branch. For git, only committed changes will be included in the Reviewboard diff.
+When you're ready for a review, make sure all of your changes are committed in the feature branch, then run \`post-review\` from the feature branch. For git, only committed changes will be included in the Reviewboard diff.
 
 If you experience any errors when running post-review, please send them to Brad or Sandy. It would be especially helpful if you could reproduce with the "-d" (debug) option.
 
@@ -224,7 +224,7 @@ If you do not like vim, you can replace all but the last step with just copying 
 
 ### Preparing a Commit Message
 
-When you have finished updating all of your ChangeLog files, you can run \`clm\` from the root of your git repo to see what your commit message will look like (the leading "\#" characters are there so you can quickly quit your editor to abort a commit; you will delete them when you actually commit). If anything seems to be missing, then you probably forgot to \`git add\` one of your ChangeLog modifications.
+When you have finished updating all of your ChangeLog files, you can run \`clm\` from the root of your git repo to see what your commit message will look like (the leading "#" characters are there so you can quickly quit your editor to abort a commit; you will delete them when you actually commit). If anything seems to be missing, then you probably forgot to \`git add\` one of your ChangeLog modifications.
 
 ### Committing Your Change to git
 
@@ -232,7 +232,7 @@ You will now use clm to help you make a SVN-style commit into your git repo, in 
 
 #### Using git gui
 
-If you would like a convenient way to view all your diffs before you hit the "commit" button, you should try \`git gui\`. Copy the output of clm and paste it into the Commit Message box in git gui. You can click on files in the Staged Changes list to see the diffs that are going to be committed. When you are ready to commit to git, delete the leading "\#" in each line of your commit message, and click the Commit button.
+If you would like a convenient way to view all your diffs before you hit the "commit" button, you should try \`git gui\`. Copy the output of clm and paste it into the Commit Message box in git gui. You can click on files in the Staged Changes list to see the diffs that are going to be committed. When you are ready to commit to git, delete the leading "#" in each line of your commit message, and click the Commit button.
 
 #### Using the command line
 
@@ -242,7 +242,7 @@ From the root of your git repo:
 
 -   Run \`git commit\`
 -   In the vim prompt, type escape then ":r!clm"
--   Uncomment lines that you want to appear in the commit message by deleting the leading "\#" (delete any extra blank lines, too)
+-   Uncomment lines that you want to appear in the commit message by deleting the leading "#" (delete any extra blank lines, too)
 -   Type escape then "ZZ" to save your message, exit vim, and complete the commit
 
 ### For those "oh crap" moments: undoing a git commit

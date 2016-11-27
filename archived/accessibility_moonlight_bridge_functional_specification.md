@@ -2,7 +2,7 @@
 title: "Accessibility: Moonlight Bridge Functional Specification"
 lastmodified: '2009-09-03'
 redirect_from:
-  - /Accessibility:_Moonlight_Bridge_Functional_Specification/
+  - /Accessibility%3A_Moonlight_Bridge_Functional_Specification/
 ---
 
 Accessibility: Moonlight Bridge Functional Specification
@@ -34,38 +34,38 @@ Unlike the approach that was taken for the System.Windows.Forms ATK Bridge (wher
 </ul></li>
 <li><a href="#expandcollapseinvoketoggle-pattern-implementor">3.2 ExpandCollapse/Invoke/Toggle Pattern Implementor</a>
 <ul>
-<li><a href="#methods-to-expect-gtkgail-like-behavior_2">3.2.1 Methods to expect GTK/GAIL like behavior</a></li>
-<li><a href="#methods-that-cannot-be-implemented">3.2.2 Methods that cannot be implemented</a></li>
-<li><a href="#events_2">3.2.3 Events</a></li>
+<li><a href="#methods-to-expect-gtkgail-like-behavior-1">3.2.1 Methods to expect GTK/GAIL like behavior</a></li>
+<li><a href="#methods-that-cannot-be-implemented-1">3.2.2 Methods that cannot be implemented</a></li>
+<li><a href="#events-1">3.2.3 Events</a></li>
 </ul></li>
 <li><a href="#gridtable-pattern-implementor">3.3 Grid/Table Pattern Implementor</a>
 <ul>
-<li><a href="#methods-to-expect-gtkgail-like-behavior_3">3.3.1 Methods to expect GTK/GAIL like behavior</a></li>
-<li><a href="#methods-to-expect-similar-gtkgail-like-behavior">3.3.2 Methods to expect similar GTK/GAIL like behavior</a></li>
-<li><a href="#methods-that-cannot-be-implemented_2">3.3.3 Methods that cannot be implemented</a></li>
-<li><a href="#events_3">3.3.4 Events</a></li>
+<li><a href="#methods-to-expect-gtkgail-like-behavior-2">3.3.1 Methods to expect GTK/GAIL like behavior</a></li>
+<li><a href="#methods-to-expect-similar-gtkgail-like-behavior-2">3.3.2 Methods to expect similar GTK/GAIL like behavior</a></li>
+<li><a href="#methods-that-cannot-be-implemented-2">3.3.3 Methods that cannot be implemented</a></li>
+<li><a href="#events-2">3.3.4 Events</a></li>
 </ul></li>
 <li><a href="#rangevalue-pattern-implementor">3.4 RangeValue Pattern Implementor</a>
 <ul>
-<li><a href="#methods-to-expect-gtkgail-like-behavior_4">3.4.1 Methods to expect GTK/GAIL like behavior</a></li>
-<li><a href="#methods-that-cannot-be-implemented_3">3.4.2 Methods that cannot be implemented</a></li>
-<li><a href="#events_4">3.4.3 Events</a></li>
+<li><a href="#methods-to-expect-gtkgail-like-behavior-3">3.4.1 Methods to expect GTK/GAIL like behavior</a></li>
+<li><a href="#methods-that-cannot-be-implemented-3">3.4.2 Methods that cannot be implemented</a></li>
+<li><a href="#events-3">3.4.3 Events</a></li>
 </ul></li>
 <li><a href="#selection-pattern-implementor">3.5 Selection Pattern Implementor</a>
 <ul>
-<li><a href="#methods-to-expect-gtkgail-like-behavior_5">3.5.1 Methods to expect GTK/GAIL like behavior</a></li>
-<li><a href="#methods-that-cannot-be-implemented_4">3.5.2 Methods that cannot be implemented</a></li>
-<li><a href="#events_5">3.5.3 Events</a></li>
+<li><a href="#methods-to-expect-gtkgail-like-behavior-4">3.5.1 Methods to expect GTK/GAIL like behavior</a></li>
+<li><a href="#methods-that-cannot-be-implemented-4">3.5.2 Methods that cannot be implemented</a></li>
+<li><a href="#events-4">3.5.3 Events</a></li>
 </ul></li>
 <li><a href="#selectionitem-pattern-implementor">3.6 SelectionItem Pattern Implementor</a>
 <ul>
-<li><a href="#events_6">3.6.1 Events</a></li>
+<li><a href="#events-6">3.6.1 Events</a></li>
 </ul></li>
 <li><a href="#value-pattern-implementor">3.7 Value Pattern Implementor</a>
 <ul>
-<li><a href="#methods-to-expect-gtkgail-like-behavior_6">3.7.1 Methods to expect GTK/GAIL like behavior</a></li>
-<li><a href="#methods-that-cannot-be-implemented_5">3.7.2 Methods that cannot be implemented</a></li>
-<li><a href="#events_7">3.7.3 Events</a></li>
+<li><a href="#methods-to-expect-gtkgail-like-behavior-5">3.7.1 Methods to expect GTK/GAIL like behavior</a></li>
+<li><a href="#methods-that-cannot-be-implemented-5">3.7.2 Methods that cannot be implemented</a></li>
+<li><a href="#events-5">3.7.3 Events</a></li>
 </ul></li>
 <li><a href="#exceptions">3.8 Exceptions</a></li>
 </ul></li>
@@ -79,7 +79,7 @@ Mapping between Controls and UIAutomation Patterns
 
 To understand how a control should look in ATK, you must first understand two things: what is the control's UIAutomation Control Type, and what patterns does it implement. The table below shows both for all the Silverlight 2 controls.
 
-[![](/archived/images/d/d2/Control-to-pattern.png)](/archived/images/d/d2/Control-to-pattern.png)
+[![Control-to-pattern.png](/archived/images/d/d2/Control-to-pattern.png)](/archived/images/d/d2/Control-to-pattern.png)
 
 Silverlight 2 Control to UIAutomation Control Pattern mapping; for the original OpenOffice Calc document, see [[1]](http://www.mono-a11y.org/documentation/control-to-pattern.ods).
 
@@ -240,7 +240,7 @@ The Pattern Implementor maps the three patterns as the individual actions listed
 
 If both Invoke and Toggle patterns are implemented, the Toggle pattern's actions will take precedence.
 
-### Methods to expect GTK/GAIL like behavior
+### Methods to expect GTK/GAIL like behavior 1
 
 -   nActions (NActions)
 -   doAction (DoAction)
@@ -250,11 +250,11 @@ If both Invoke and Toggle patterns are implemented, the Toggle pattern's actions
 -   getLocalizedName (GetLocalizedName)
 -   setDescription (SetDescription)
 
-### Methods that cannot be implemented
+### Methods that cannot be implemented 1
 
 None
 
-### Events
+### Events 1
 
 -   When control is expanded or collapsed:
     -   `visible_data_changed`
@@ -267,7 +267,7 @@ Grid/Table Pattern Implementor
 
 IGrid is a subset of ITable, so every ITable provider will implement IGrid (but not the other way around).
 
-### Methods to expect GTK/GAIL like behavior
+### Methods to expect GTK/GAIL like behavior 2
 
 -   refAt (RefAt)
 -   getColumnDescription (GetColumnDescription)
@@ -286,14 +286,14 @@ IGrid is a subset of ITable, so every ITable provider will implement IGrid (but 
 -   nColumns (NColumns)
 -   nRows (NRows)
 
-### Methods to expect similar GTK/GAIL like behavior
+### Methods to expect similar GTK/GAIL like behavior 2
 
 -   caption (Caption)
 -   summary (Summary)
 
 (Both will return the information that may be previously set.)
 
-### Methods that cannot be implemented
+### Methods that cannot be implemented 2
 
 -   setRowDescription (SetRowDescription)
 -   setRowHeader (SetRowHeader)
@@ -305,7 +305,7 @@ IGrid is a subset of ITable, so every ITable provider will implement IGrid (but 
 -   addColumnSelection (AddColumnSelection)
 -   removeColumnSelection (RemoveColumnSelection)
 
-### Events
+### Events 2
 
 -   When rows are inserted:
     -   `row_inserted(row, n_inserted)`
@@ -318,7 +318,7 @@ RangeValue Pattern Implementor
 -   Implements: Atk.Value
 -   Description: Maps RangeValuePattern[[7]](http://msdn.microsoft.com/en-us/library/system.windows.automation.provider.irangevalueprovider_members.aspx) to Atk.Value. Should be able to map API roughly 1:1.
 
-### Methods to expect GTK/GAIL like behavior
+### Methods to expect GTK/GAIL like behavior 3
 
 -   minimumValue (GetMinimumValue)
 -   maximumValue (GetMaximumValue)
@@ -326,11 +326,11 @@ RangeValue Pattern Implementor
 -   currentValue (GetCurrentValue)
 -   currentValue (SetCurrentValue)
 
-### Methods that cannot be implemented
+### Methods that cannot be implemented 3
 
 None
 
-### Events
+### Events 3
 
 -   When control's value changes:
     -   `object:accessible-value`
@@ -341,7 +341,7 @@ Selection Pattern Implementor
 -   Implements: Atk.Selection
 -   Description: Maps SelectionPattern[[8]](http://msdn.microsoft.com/en-us/library/system.windows.automation.provider.iselectionprovider_members.aspx) and SelectionItemPattern[[9]](http://msdn.microsoft.com/en-us/library/system.windows.automation.provider.iselectionitemprovider_members.aspx) to Atk.Selection. Unlike UIAutomation, selection in ATK is done in the parent container instead of the container's children. This Pattern Implementor maps the various selection methods from the children to the parent.
 
-### Methods to expect GTK/GAIL like behavior
+### Methods to expect GTK/GAIL like behavior 4
 
 -   nSelectedChildren (SelectionCount)
 -   selectChild (AddSelection)
@@ -351,22 +351,13 @@ Selection Pattern Implementor
 -   deselectChild (RemoveSelection)
 -   selectAll (SelectAllSelection)
 
-### Methods that cannot be implemented
+### Methods that cannot be implemented 4
 
 None
 
-### Events
+### Events 4
 
 -   None
-
-SelectionItem Pattern Implementor
----------------------------------
-
-### Events
-
--   When an object gains or loses selection:
-    -   `object:state-changed:selected`
-    -   `selection_changed`
 
 Value Pattern Implementor
 -------------------------
@@ -374,7 +365,7 @@ Value Pattern Implementor
 -   Implements: Atk.Text
 -   Description: Maps ValuePattern[[10]](http://msdn.microsoft.com/en-us/library/system.windows.automation.provider.ivalueprovider_members.aspx) to Atk.Text. Can only retrieve and set the value of the control, but cannot control or retrieve things like selection, caret and text attributes.
 
-### Methods to expect GTK/GAIL like behavior
+### Methods to expect GTK/GAIL like behavior 5
 
 -   getCharacterAtOffset (GetCharacterAtOffset)
 -   getCharacterExtents (GetCharacterExtents)
@@ -385,7 +376,7 @@ Value Pattern Implementor
 -   getTextBeforeOffset (GetTextBeforeOffset)
 -   characterCount (CharacterCount)
 
-### Methods that cannot be implemented
+### Methods that cannot be implemented 5
 
 -   addSelection (AddSelection)
 -   getBoundedRanges (GetBoundedRanges)
@@ -400,10 +391,19 @@ Value Pattern Implementor
 -   setCaretOffset (SetCaretOffset)
 -   caretOffset (CaretOffset)
 
-### Events
+### Events 5
 
 -   When the value changes:
     -   `visible_data_changed`
+
+SelectionItem Pattern Implementor
+---------------------------------
+
+### Events 6
+
+-   When an object gains or loses selection:
+    -   `object:state-changed:selected`
+    -   `selection_changed`
 
 Exceptions
 ----------

@@ -1,11 +1,11 @@
 ---
 title: The Mono Runtime
 redirect_from:
-  - /Mono:Runtime/
+  - /Mono%3ARuntime/
   - /Mono_Runtime/
 ---
 
-The Mono runtime implements the [ECMA Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLI). The Mono runtime implements this virtual machine.
+The Mono runtime implements the [ECMA Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLI). The Mono runtime implements this virtual machine.<br/>
 If you are interested in the technical aspects of the Mono runtime check the [Runtime Documentation](/docs/advanced/runtime/docs/).
 
 The runtime offers the following services:
@@ -26,7 +26,7 @@ The runtime offers the following services:
     -   [First-class SIMD datatypes (Mono.Simd)](http://go-mono.com/docs/index.aspx?link=N%3aMono.Simd)
 -   Exception Handling
     -   Software-triggered exceptions
-    -   Hardware-triggered exceptions like Floating point exceotions, null reference exceptions
+    -   Hardware-triggered exceptions like Floating point exceptions, null reference exceptions
 -   Operating system interface
     -   File system IO
     -   Networking IO
@@ -43,7 +43,7 @@ The runtime offers the following services:
 
 The Mono runtime can be used as a stand-alone process, or it can be [embedded into applications](/docs/advanced/embedding/)
 
-Embedding the Mono runtime allows applications to be extended in C\# while reusing all of the existing C and C++ code. For more details, see the [Embedding Mono](/docs/advanced/embedding/) page and the [Scripting With Mono](/docs/advanced/embedding/scripting/) page.
+Embedding the Mono runtime allows applications to be extended in C# while reusing all of the existing C and C++ code. For more details, see the [Embedding Mono](/docs/advanced/embedding/) page and the [Scripting With Mono](/docs/advanced/embedding/scripting/) page.
 
 Supported Platforms
 -------------------
@@ -54,32 +54,33 @@ Mono has support for both 32 and 64 bit systems on a number of architectures as 
 
 **Operating Systems**
 
--   [Linux](/docs/about-mono/supported-platforms/linux/)
--   [Mac OS X](/docs/about-mono/supported-platforms/osx/), [iPhone OS](/docs/about-mono/supported-platforms/iphone/)
--   [Sun Solaris](/docs/about-mono/supported-platforms/solaris/)
+-   [Android](https://developer.xamarin.com/guides/android/)
+-   [Apple iOS](https://developer.xamarin.com/guides/ios), [iOS](/docs/about-mono/supported-platforms/iphone/)
+-   [Apple macOS](/docs/about-mono/supported-platforms/osx/),
+-   [Apple tvOS](https://developer.xamarin.com/guides/ios/tvos/)
+-   [Apple watchOS](https://developer.xamarin.com/guides/ios/watch/)
 -   [BSD](/docs/about-mono/supported-platforms/bsd/) - OpenBSD, FreeBSD, NetBSD
+-   [Linux](/docs/about-mono/supported-platforms/linux/)
 -   [Microsoft Windows](/docs/getting-started/install/windows/)
 -   [Nintendo Wii](/docs/about-mono/supported-platforms/wii/)
 -   [Sony PlayStation 3](/docs/about-mono/supported-platforms/playstation3/)
+-   [Sony PlayStation 4](/docs/about-mono/supported-platforms/playstation4/)
+-   [Sun Solaris](/docs/about-mono/supported-platforms/solaris/)
 
 ### Supported Architectures
 
-Mono has both an optimizing just-in-time (JIT) runtime and a interpreter runtime. The interpreter runtime is far less complex and is primarily used in the early stages before a JIT version for that architecture is constructed. The interpreter is not supported on architectures where the JIT has been ported.
-
-|Supported Architectures|Runtime|Operating system|
-|:----------------------|:------|:---------------|
-|[s390, s390x (32 and 64 bits)](/docs/about-mono/supported-platforms/s390/)|JIT|Linux|
-|[SPARC (32)](/docs/about-mono/supported-platforms/sparc/)|JIT|Solaris, Linux|
-|[PowerPC](/docs/about-mono/supported-platforms/powerpc/)|JIT|Linux, Mac OSX, Wii, PlayStation 3|
-|[x86](/docs/about-mono/supported-platforms/x86/)|JIT|Linux, FreeBSD, OpenBSD, NetBSD, 
- Microsoft Windows, Solaris, OS X, Android|
-|[x86-64](/docs/about-mono/supported-platforms/amd64/): AMD64 and EM64T (64 bit)|JIT|Linux, FreeBSD, OpenBSD, 
-Solaris, OS X|
-|[IA64](/docs/about-mono/supported-platforms/ia64/) Itanium2 (64 bit)|JIT|Linux|
-|[ARM](/docs/about-mono/supported-platforms/arm/): little and big endian|JIT|Linux (both old and new ABI), iPhone, Android|
-|Alpha|JIT|**not maintained**. Linux|
-|[MIPS](/docs/about-mono/supported-platforms/mips/)|JIT|Linux|
-|HPPA|JIT|**not maintained** Linux|
+|Supported Architectures|Operating system|
+|:----------------------|:---------------|
+|[s390, s390x (32 and 64 bits)](/docs/about-mono/supported-platforms/s390/)|Linux|
+|[SPARC (32)](/docs/about-mono/supported-platforms/sparc/)|Solaris, Linux|
+|[PowerPC](/docs/about-mono/supported-platforms/powerpc/)|Linux, Mac OSX, Wii, PlayStation 3|
+|[x86](/docs/about-mono/supported-platforms/x86/)|Linux, FreeBSD, OpenBSD, NetBSD, Microsoft Windows, Solaris, OS X, Android|
+|[x86-64](/docs/about-mono/supported-platforms/amd64/): AMD64 and EM64T (64 bit)|Linux, FreeBSD, OpenBSD, Solaris, OS X|
+|[IA64](/docs/about-mono/supported-platforms/ia64/) Itanium2 (64 bit)|Linux|
+|[ARM](/docs/about-mono/supported-platforms/arm/): little and big endian|Linux (both old and new ABI), iPhone, Android|
+|Alpha|**not maintained**. Linux|
+|[MIPS](/docs/about-mono/supported-platforms/mips/)|Linux|
+|HPPA|**not maintained** Linux|
 
 Note that the Alpha, MIPS, ARM big-endian and HPPA architectures are community-supported and may not be as complete as the other architectures.
 
@@ -126,7 +127,7 @@ Some features like Reflection.Emit and other forms of dynamic code generation ar
 
 Notice that for Mono 2.0 generics are not supported when doing full-AOT.
 
-Some optimizations are being planned: [OptimizingAOT](/archived/optimizingaot "OptimizingAOT")
+Some optimizations are being planned: [OptimizingAOT](/archived/optimizingaot)
 
 ### Bundles
 
@@ -138,24 +139,42 @@ For example, to create a fully static and bundled version of Mono for "hello wor
 
 ``` bash
 bash$ mcs hello.cs
-bash$ mkbundle --static hello.exe -o hello
- OS is: Linux
- Note that statically linking the LGPL Mono runtime has more licensing restrictions than dynamically linking.
- See [Licensing](/docs/faq/licensing/) for details on licensing.
- Sources: 1 Auto-dependencies: False
-   embedding: /tmp/hello.exe
- Compiling:
- as -o temp.o temp.s
- cc -o helol -Wall `pkg-config --cflags mono` temp.c  `pkg-config --libs-only-L mono` -Wl,-Bstatic -lmono -Wl,-Bdynamic `pkg-config --libs-only-l mono | sed -e "s/\-lmono //"` temp.o
- Done
+bash$ mkbundle --simple hello.exe -o hello
+Done
+bash$ ./hello
+Hello, world.
 bash$
 ```
 
 Of course, you can also just embed the libraries, without the actual Mono runtime, by removing the --static flag.
 
-A downside of the --static flag is that it will trigger the LGPL license requirement in the runtime. If you are planning on using this feature as an obfuscation technique you must obtain a commercial license of Mono; otherwise you should distribute all the components that are necessary to comply with the LGPL with bundles.
+### Linker
 
-[Mono Tools for Visual Studio Ultimate Edition](http://www.go-mono.com/store/#Mono_Tools_Ultimate) includes a commercial license to redistribute Mono under non-LGPL terms on Windows, Linux, and Mac OS X PCs for products with volumes under 100,000 and revenues under \$2M annually. For other licensing options, [contact us](http://www.go-mono.com/contact/).
+Mono ships with a customizable assembly-linker.   This is a technology that can be used to
+create a custom deployment of the Mono runtime that only contains the code that your application
+uses.   This is similar to what a native linker does, except that we retain the same assemblies.
+
+For example:
+
+``` bash
+bash$ mcs hello.cs
+bash$ monolinker -c link -a hello.exe -out minimal
+bash$ ls -l minimal
+-rwxr-xr-x  1 miguel  wheel   683008 Jun  2 15:16 I18N.CJK.dll
+-rwxr-xr-x  1 miguel  wheel    32768 Jun  2 15:16 I18N.MidEast.dll
+-rwxr-xr-x  1 miguel  wheel    36352 Jun  2 15:16 I18N.Other.dll
+-rwxr-xr-x  1 miguel  wheel   182272 Jun  2 15:16 I18N.Rare.dll
+-rwxr-xr-x  1 miguel  wheel    71168 Jun  2 15:16 I18N.West.dll
+-rwxr-xr-x  1 miguel  wheel    39936 Jun  2 15:16 I18N.dll
+-rw-r--r--  1 miguel  wheel     3072 Jul 21 23:49 hello.exe
+-rw-r--r--  1 miguel  wheel  2223104 Jul 21 23:49 mscorlib.dll
+bash$ cd minimal
+bash$ mono hello.exe
+Hello, world.
+```
+
+You can combine the output of the linker with the bundler.   Allowing you to produce
+smaller versions of your self-contained executables.
 
 ### Platform for Code Optimizations
 
@@ -192,7 +211,7 @@ Versioning
 
 Mono supports a Global Assembly Cache or GAC. The GAC is used to share libraries between different applications, to keep multiple versions of the same library installed at once and to avoid conflicts over the names of the libraries and they also play an important role in trust and security.
 
-See the [Assemblies\_and\_the\_GAC](/docs/advanced/assemblies-and-the-gac/) document for more details.
+See the [Assemblies_and_the_GAC](/docs/advanced/assemblies-and-the-gac/) document for more details.
 
 Garbage Collection
 ------------------
@@ -250,7 +269,7 @@ To achieve this, the io-layer uses a shared file mapping across multiple Mono pr
 Useful links
 ------------
 
-See our [Papers](/archived/papers "Papers") section for various articles describing virtual machines and JIT compilers.
+See our [Papers](/archived/papers) section for various articles describing virtual machines and JIT compilers.
 
 Porting
 -------
@@ -266,11 +285,11 @@ There are a number of projects being developed in branches or on separate trees 
 -   [Runtime Requests](/docs/advanced/runtime/runtime-requests/): Ideas of things that we could use to improve Mono's runtime.
 -   [Compacting GC](/docs/advanced/garbage-collector/sgen/): A generational, compacting GC for Mono.
 -   JIT Regalloc: A new register allocation framework.
--   [Mono\_Runtime\_API\_Changes](/archived/mono_runtime_api_changes "Mono Runtime API Changes"): Changes that will be introduced in Mono 2.8.
+-   [Mono_Runtime_API_Changes](/archived/mono_runtime_api_changes): Changes that will be introduced in Mono 2.8.
 
 Completed projects:
 
--   [Continuations](/archived/continuations "Continuations"): Support for co-routines and continuations in Mono.
+-   [Continuations](/archived/continuations): Support for co-routines and continuations in Mono.
 -   [SafeHandles](/docs/advanced/safehandles/): Support for 2.0 SafeHandles.
 -   [Linear](/docs/advanced/runtime/docs/linear-ir/): An update to the JIT's internal representation (IR).
 

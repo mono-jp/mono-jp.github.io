@@ -25,17 +25,17 @@ SecurityValidation
 </ul></li>
 <li><a href="#internalsvisibleto-validation">3 [InternalsVisibleTo] Validation</a>
 <ul>
-<li><a href="#20">3.1 2.0</a>
+<li><a href="#net-20">3.1 2.0</a>
 <ul>
 <li><a href="#legend">3.1.1 Legend</a></li>
 <li><a href="#notes">3.1.2 Notes</a></li>
 </ul></li>
-<li><a href="#30">3.2 3.0</a>
+<li><a href="#net-30">3.2 3.0</a>
 <ul>
-<li><a href="#legend_2">3.2.1 Legend</a></li>
-<li><a href="#notes_2">3.2.2 Notes</a></li>
+<li><a href="#legend-2">3.2.1 Legend</a></li>
+<li><a href="#notes-2">3.2.2 Notes</a></li>
 </ul></li>
-<li><a href="#40-beta">3.3 4.0 (beta)</a></li>
+<li><a href="#net-40-beta">3.3 4.0 (beta)</a></li>
 </ul></li>
 </ul></td>
 </tr>
@@ -50,7 +50,7 @@ General
 [SecuritySafeCritical] Validation
 =================================
 
-The security model provided by [CoreCLR](/Moonlight2CoreCLR "Moonlight2CoreCLR") makes it easier to review the most critical parts of the managed class libraries bundled with Moonlight 2. Basically there's two types of code:
+The security model provided by [CoreCLR](/Moonlight2CoreCLR) makes it easier to review the most critical parts of the managed class libraries bundled with Moonlight 2. Basically there's two types of code:
 
 -   **Transparent**: this includes application code and a large part of the class libraries. Transparent code has some limitation (e.g. no unsafe code, no p/invokes...) that makes it secure to execute untrusted, *transparent*, code inside the sandbox provided by CoreCLR.
 
@@ -86,7 +86,7 @@ How
 
 Remember: From the platform (i.e. Moonlight) point of view `[SecuritySafeCritical]` is **not** safe (safety is *our* promise to application code) but is **critical** - it can do anything without being bothered by the CoreCLR restrictions.
 
-Questions about the code ? ping the author(s) on [IRC](/IRC "IRC")!
+Questions about the code ? ping the author(s) on [IRC](/IRC)!
 
 ### Alternative solutions
 
@@ -103,8 +103,8 @@ Moonlight use its [itv-check](http://anonsvn.mono-project.com/viewvc/trunk/moon/
 
 However for various reasons some exceptions are required (or exists). The next section discuss and compare them to Microsoft Silverlight usage of the `[InternalsVisibleTo]` attribute.
 
-2.0
----
+.NET 2.0
+--------
 
 **mscorlib.dll** - Trusted Platform Assembly
 
@@ -195,7 +195,7 @@ Silverlight SDK
 ### Legend
 
 -   **Silverlight SDK** - Silverlight SDK assembly (transparent, needs to be part of the application XAP file)
--   **Desktop Only** - Internal access is **refused** under Moonlight's [CoreCLR](/Moonlight2CoreCLR "Moonlight2CoreCLR") (i.e. plugin) but is **allowed** for desktop usage (e.g. while compiling with `smcs`)
+-   **Desktop Only** - Internal access is **refused** under Moonlight's [CoreCLR](/Moonlight2CoreCLR) (i.e. plugin) but is **allowed** for desktop usage (e.g. while compiling with `smcs`)
 -   **Separate Plugin** - Considered platform code. Shipped in a separate plugin (XPI).
 -   **Unknown Assembly** - Unknown origin (never seen the assembly in the *wild*)
 
@@ -204,8 +204,8 @@ Silverlight SDK
 -   Platform assemblies that are not listed are not allowing non-platform assemblies to access their internals.
 -   Moonlight results are subject to change. The above results for Moonlight match the December 17th 2.0 release.
 
-3.0
----
+.NET 3.0
+--------
 
 **mscorlib.dll** - Trusted Platform Assembly
 
@@ -293,19 +293,19 @@ Silverlight Only
 
 Silverlight SDK
 
-### Legend
+### Legend 2
 
 -   **Silverlight SDK** - Silverlight SDK assembly (transparent, needs to be part of the application XAP file)
 -   **Separate Plugin** - Considered platform code. Shipped in a separate plugin (XPI).
 -   **Unknown Assembly** - Unknown origin (never seen the assembly in the *wild*)
 
-### Notes
+### Notes 2
 
 -   Platform assemblies that are not listed are not allowing non-platform assemblies to access their internals.
 -   Moonlight results are subject to change. The above results for Moonlight match the mid-February 3.0 preview 2 (aka Olympics) release.
 
-4.0 (beta)
-----------
+.NET 4.0 (beta)
+---------------
 
 later
 

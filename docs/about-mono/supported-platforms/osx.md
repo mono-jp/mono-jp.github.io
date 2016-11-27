@@ -1,14 +1,14 @@
 ---
 title: OSX
 redirect_from:
-  - /Mono:OSX/
+  - /Mono%3AOSX/
   - /Mono_on_MacOS_X/
 ---
 
 Introduction to Mono on MacOS X
 -------------------------------
 
-Mono has supported MacOS X since version 10.3 (Panther) and supports both Intel and PowerPC based versions with both 32 bits and 64 bits configuration supported.
+Mono supports Mac OS X version 10.7 (Lion) and later.
 
 You can use Mono on OSX to build server, console and GUI applications. Read below for the options available for GUI application development.
 
@@ -26,28 +26,28 @@ If you plan on developing applications with Mono, we suggest that you also [inst
 The Mono package includes:
 
 -   The Mono Runtime
--   GUI Toolkits: Windows.Forms and Gtk\# for OSX.
+-   GUI Toolkits: Windows.Forms and Gtk# for OSX.
     -   Note: the [MonoMac](/docs/tools+libraries/libraries/monomac/) GUI toolkit for native OSX GUI development is currently a separate download.
--   SDK: C\#, Visual Basic compilers, assemblers and tools
+-   SDK: C#, Visual Basic compilers, assemblers and tools
 -   XSP ASP.NET server
 -   Manual pages.
 
-This package installs as a framework to /Library/Framework (the same way the Java packages are installed). Symlinks are created for the executables in /usr/bin. If you'd like to access the mono *manpages* you'll have to add /Library/Frameworks/Mono.framework/Versions/Current/man to your *manpath*. The MacOS X Mono package does not include [Gtk\#](/GtkSharp), XSP or mod\_mono. These will have to be compiled from source.
+This package installs as a framework to /Library/Framework (the same way the Java packages are installed). Symlinks are created for the executables in /usr/bin. If you'd like to access the mono *manpages* you'll have to add /Library/Frameworks/Mono.framework/Versions/Current/man to your *manpath*. The MacOS X Mono package does not include [Gtk#](/GtkSharp), XSP or mod_mono. These will have to be compiled from source.
 
-Our packages currently require Mono OSX 10.4 or better, for older versions, you will need to build from source code.
+Our packages currently require Mono OSX 10.7 or better, for older versions, you will need to build from source code.
 
 Using Mono on MacOS X
 ---------------------
 
 At this point, you must use Mono from the command line, the usual set of commands that are available on other ports of Mono are available.
 
-To build applications you can use ["gmcs"](/docs/about-mono/languages/csharp/), to run then you can use [mono](/docs/advanced/runtime/).
+To build applications you can use ["mcs"](/docs/about-mono/languages/csharp/), to run then you can use [mono](/docs/advanced/runtime/).
 
 From a Terminal shell, you can try it out:
 
 ``` bash
-$ vi hello.cs 
-$ gcs hello.cs
+$ vi hello.cs
+$ mcs hello.cs
 $ mono hello.exe
 Hello, World
 $
@@ -79,8 +79,8 @@ There are a few choices to build client applications on OSX, you should pick the
 
 ||
 |Toolkit|Runs on Linux|Runs on Windows|Runs on Mac|Binding Style|License|Status|
-|[MonoMac](/docs/tools+libraries/libraries/monomac/)|no|no|yes|Strongly typed C\# binding to Cocoa APIs|MIT X11|Actively developed, builds on the design lessons from [MonoTouch](http://monotouch.net) but still incomplete. This will be the new default binding for Mono on OSX. Separate download.|
-|Gtk\#|yes|yes|yes|Strongly typed C\# binding to the cross platform Gtk+ API. Applications look foreign on OSX.|LGPL v2|Actively developed, cross platform. Bundled with Mono.|
+|[MonoMac](/docs/tools+libraries/libraries/monomac/)|no|no|yes|Strongly typed C# binding to Cocoa APIs|MIT X11|Actively developed, builds on the design lessons from [MonoTouch](http://monotouch.net) but still incomplete. This will be the new default binding for Mono on OSX. Separate download.|
+|Gtk#|yes|yes|yes|Strongly typed C# binding to the cross platform Gtk+ API. Applications look foreign on OSX.|LGPL v2|Actively developed, cross platform. Bundled with Mono.|
 |Windows.Forms|yes|yes|yes|Cross platform implementation of Microsoft's Windows.Forms. Applications look foreign on OSX.|MIT X11|The Windows.Forms API was frozen in time by Microsoft. Bundled with Mono.|
 |[MonObjc](http://www.monobjc.net)|no|no|yes|Binding to the native Cocoa APIs, but requires manual use of Objective-C selectors to work with, relatively thin wrapper around the underlying APIs.|LGPL v3|Actively developed. Separate download.|
 |CocoaSharp|no|no|yes|Binding to the native Cocoa APIs, but requires manual use of Objective-C selectors to work with, relatively thin wrapper around the underlying APIs.|MIT X11|No longer developed, no longer maintained, deprecated. Bundled with Mono.|
@@ -92,7 +92,7 @@ Running applications on MacOS X is very similar to linux systems, from the termi
 
     mono myprogram.exe
 
-For GTK\# applications, it's easiest to run them the same way but using *xterm* from X11.app
+For GTK# applications, it's easiest to run them the same way but using *xterm* from X11.app
 
     A MacOS X specific Mono launcher was in development but its status is unclear today
 
@@ -104,25 +104,16 @@ Mono's implementation of the System.Windows.Forms API is built on top of Carbon 
 Third Party Libraries
 ---------------------
 
-[ObjC\#](/archived/objcsharp "ObjCSharp") is a transparent two way bridge that allows the CLR to access the rich underlying ObjectiveC frameworks as well as providing direct access to the CLR frameworks from the ObjectiveC language.
+[ObjC#](/archived/objcsharp) is a transparent two way bridge that allows the CLR to access the rich underlying ObjectiveC frameworks as well as providing direct access to the CLR frameworks from the ObjectiveC language.
 
 Uninstalling Mono on Mac OS X
 -----------------------------
 
 Run this script in a terminal:
 
-    #!/bin/sh -x
-
-    #This script removes Mono from an OS X System.  It must be run as root
-
-    rm -r /Library/Frameworks/Mono.framework
-
-    rm -r /Library/Receipts/MonoFramework-*
-
-    for dir in /usr/bin /usr/share/man/man1 /usr/share/man/man3 /usr/share/man/man5; do
-       (cd ${dir};
-        for i in `ls -al | grep /Library/Frameworks/Mono.framework/ | awk '{print $9}'`; do
-          rm ${i}
-        done);
-    done
+```bash
+sudo rm -rf /Library/Frameworks/Mono.framework
+sudo pkgutil --forget com.xamarin.mono-MDK.pkg
+sudo rm -rf /etc/paths.d/mono-commands
+```
 

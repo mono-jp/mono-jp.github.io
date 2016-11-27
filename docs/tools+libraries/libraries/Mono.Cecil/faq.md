@@ -1,7 +1,7 @@
 ---
 title: Mono.Cecil FAQ
 redirect_from:
-  - /Cecil:FAQ/
+  - /Cecil%3AFAQ/
 ---
 
 Now that I have the library, how do I use it?
@@ -11,7 +11,7 @@ Here is an example of an application browsing all the types contained in a manag
 
 ``` csharp
 //Creates an AssemblyDefinition from the "MyLibrary.dll" assembly
-AssemblyDefinition myLibrary = AssemblyFactory.GetAssembly ("MyLibrary.dll");
+AssemblyDefinition myLibrary = AssemblyDefinition.ReadAssembly ("MyLibrary.dll");
  
 //Gets all types which are declared in the Main Module of "MyLibrary.dll"
 foreach (TypeDefinition type in myLibrary.MainModule.Types) {
@@ -38,7 +38,7 @@ Here is a simplified class diagram of the main entities Cecil is dealing with an
 
 [![CecilMainCD.png](/archived/images/4/47/CecilMainCD.png)](/archived/images/4/47/CecilMainCD.png)
 
-An AssemblyDefinition is created by an AssemblyFactory which works with an assembly file. Each of them contains a ModuleDefinitions collection. In general, you have to work with a main ModuleDefinition (you can get it by using the MainModule property).
+An AssemblyDefinition is created by the static method ReadAssembly which works with an assembly file. Each of them contains a ModuleDefinitions collection. In general, you have to work with a main ModuleDefinition (you can get it by using the MainModule property).
 
 A ModuleDefinition contains TypeDefinitions. Each of them contains collections of:
 
@@ -67,7 +67,7 @@ The first thing to do is getting the System.Reflection.MethodInfo which correspo
 
 ``` csharp
 //Gets the MethodInfo of Console.WriteLine() method
-MethodInfo writeLineMethod = 
+MethodInfo writeLineMethod =
     typeof(Console).GetMethod("WriteLine", new Type[]{typeof(string)});
 ```
 
@@ -78,7 +78,7 @@ Next, you have to get all methods of each type of the MyLibrary assembly in orde
 string pathBin = "../../../MyLibrary/bin/debug/MyLibrary.dll";
  
 //Gets the AssemblyDefinition of "MyLibrary"
-AssemblyDefinition assembly = AssemblyFactory.GetAssembly(pathBin);
+AssemblyDefinition assembly = AssemblyDefinition.ReadAssembly(pathBin);
  
 //Gets all types of the MainModule of the assembly
 foreach(TypeDefinition type in assembly.MainModule.Types)
@@ -103,7 +103,7 @@ foreach(TypeDefinition type in assembly.MainModule.Types)
             Instruction insertSentence;
             insertSentence = worker.Create(OpCodes.Ldstr, sentence);
  
-            //Creates the CIL instruction for calling the 
+            //Creates the CIL instruction for calling the
             //Console.WriteLine(string value) method
             Instruction callWriteLine;
             callWriteLine = worker.Create(OpCodes.Call, writeLine);
@@ -118,7 +118,7 @@ foreach(TypeDefinition type in assembly.MainModule.Types)
             //Inserts the callWriteLineMethod after the //insertSentence instruction
             worker.InsertAfter(insertSentence, callWriteLine);
         }
-    } 
+    }
 }
 ```
 
@@ -126,7 +126,7 @@ The last thing to do is saving the assembly which contains the modifying types:
 
 ``` csharp
 //Save the modified "MyLibrary" assembly
-AssemblyFactory.SaveAssembly(assembly, pathBin);
+assembly.Write(pathBin);
 ```
 
 After executing this code, you can use the modifying assembly in a new Console project. You have to add a reference to this assembly.

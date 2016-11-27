@@ -8,7 +8,7 @@ redirect_from:
 MoonlightDesktop
 ================
 
-As of today, [Moonlight](/Moonlight "Moonlight")'s engine is used in two scenarios:
+As of today, [Moonlight](/Moonlight)'s engine is used in two scenarios:
 
 -   As part of the Moonlight Web Plugin, to render online Silverlight content.
 -   As a standalone library to create desktop applications that can use the Silverlight API.
@@ -58,16 +58,16 @@ and our Gtk integration library:
 Using Moonlight on the Desktop
 ==============================
 
-[![](/archived/images/7/77/Screenshot597.png)](/archived/images/7/77/Screenshot597.png)
+[![Screenshot597.png](/archived/images/7/77/Screenshot597.png)](/archived/images/7/77/Screenshot597.png)
 
 Sample Solution Layout
 
-To create desktop applications, create a Gtk\# project, and add to your project the following assemblies:
+To create desktop applications, create a Gtk# project, and add to your project the following assemblies:
 
 -   System.Windows.dll
 -   Moonlight.Gtk.dll
 
-The first assembly contains the Silverlight API, the second contains the glue that hosts your Silverlight content inside a Gtk\# application.
+The first assembly contains the Silverlight API, the second contains the glue that hosts your Silverlight content inside a Gtk# application.
 
 The solution should look like the image on the sidebar.
 
@@ -181,25 +181,25 @@ Building Moonlight for the Desktop
 Building Moonlight
 ------------------
 
-Please carefully read the [README](http://github.com/mono/moon/raw/master/README) file on github for the latest Moonlight build instructions.
+Please carefully read the [README](https://github.com/mono/moon/raw/master/README) file on github for the latest Moonlight build instructions.
 
 Make sure that you pass the flag: --enable-desktop-support to configure, to ensure that the Moonlight Desktop assemblies are compiled.
 
 For private installation use:
 
 ``` bash
-$ cd ../moon
-$ ./autogen.sh --prefix=$HOME/build --enable-desktop-support
-$ make && make install
+cd ../moon
+./autogen.sh --prefix=$HOME/build --enable-desktop-support
+make && make install
 ```
 
 For a system installation use:
 
 ``` bash
-$ cd ../moon
-$ ./autogen.sh --enable-desktop-support
-$ make 
-$ su
+cd ../moon
+./autogen.sh --enable-desktop-support
+make
+su
 Password: <enter-your-root-password>
 # make install
 ```
@@ -213,7 +213,7 @@ Moonlight configuration
   Silverlight Support:
     Silverlight 1.0: yes
     Silverlight 2.0: yes
-          Browser plugin assemblies: yes 
+          Browser plugin assemblies: yes
             Path to mcs tree: ./../mcs
             Path to mono-basic tree: ./../mono-basic
           Desktop application assemblies: yes
@@ -228,7 +228,7 @@ Use these settings in your shell:
 
 ``` bash
 export MONO_GAC_PREFIX=/usr:$HOME/build
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/build/lib/pkgconfig 
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/build/lib/pkgconfig
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/build/lib
 ```
 

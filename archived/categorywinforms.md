@@ -2,11 +2,11 @@
 title: "Category:WinForms"
 lastmodified: '2007-01-26'
 redirect_from:
-  - /Category:WinForms/
+  - /Category%3AWinForms/
 ---
 
 Category:WinForms
 =================
 
-This category contains articles about the Windows Forms GUI Toolkit. Please see [WinForms](/WinForms "WinForms") for a general overview.
+This category contains articles about the Windows Forms GUI Toolkit. Please see [WinForms](/WinForms) for a general overview.
 

@@ -20,33 +20,33 @@ During the Summer of 2005, the Mono project will be mentoring a group of student
 <li><a href="#the-objectives">2 The Objectives</a></li>
 <li><a href="#gcc-cil">3 GCC CIL</a>
 <ul>
-<li><a href="#objectives">3.1 Objectives</a></li>
+<li><a href="#gcc-cil-objectives">3.1 Objectives</a></li>
 <li><a href="#notes">3.2 Notes</a></li>
 </ul></li>
 <li><a href="#managed-c-extensions-to-gcc">4 Managed C++ extensions to GCC</a></li>
 <li><a href="#rubynet">5 Ruby.NET</a>
 <ul>
-<li><a href="#objectives_2">5.1 Objectives</a></li>
+<li><a href="#rubynet-objectives">5.1 Objectives</a></li>
 </ul></li>
 <li><a href="#msbuild-implementation">6 MSBuild implementation</a>
 <ul>
-<li><a href="#objectives_3">6.1 Objectives</a></li>
+<li><a href="#msbuild-objectives">6.1 Objectives</a></li>
 </ul></li>
 <li><a href="#diva">7 Diva</a>
 <ul>
-<li><a href="#objectives_4">7.1 Objectives</a></li>
+<li><a href="#diva-objectives">7.1 Objectives</a></li>
 </ul></li>
 <li><a href="#aspnet-gui-designer">8 ASP.NET GUI Designer</a>
 <ul>
-<li><a href="#objectives_5">8.1 Objectives</a></li>
+<li><a href="#aspnet-gui-designer-objectives">8.1 Objectives</a></li>
 </ul></li>
 <li><a href="#xaml-compiler">9 XAML Compiler</a>
 <ul>
-<li><a href="#objectives_6">9.1 Objectives</a></li>
+<li><a href="#xaml-compiler-objectives">9.1 Objectives</a></li>
 </ul></li>
 <li><a href="#monodoc">10 MonoDoc</a>
 <ul>
-<li><a href="#objectives_7">10.1 Objectives</a></li>
+<li><a href="#monodoc-objectives">10.1 Objectives</a></li>
 </ul></li>
 </ul></td>
 </tr>
@@ -56,10 +56,10 @@ During the Summer of 2005, the Mono project will be mentoring a group of student
 The Members
 ===========
 
--   Jaen Saul: [\#Ruby.NET](#rubynet) implementation
--   Jb Evain: [Cecil/Write](/Cecil "Cecil") support
+-   Jaen Saul: [#Ruby.NET](#rubynet) implementation
+-   Jb Evain: [Cecil/Write](/Cecil) support
 -   Jeyasankar Kottalam: [GCC CIL](#gcc-cil) backend
--   Marek Sieradzki: [MSBuild](#msbuild) implementation
+-   Marek Sieradzki: [MSBuild](#msbuild-implementation) implementation
 -   Michael Hutchinson: [ASP.NET GUI Designer](#aspnet-gui-designer)
 -   Aaron Tomb: Bug finder
 -   Blagovest Dachev: [ASP.NET GUI Designer](#aspnet-gui-designer)
@@ -93,7 +93,7 @@ Location: [Forge Project](http://forge.novell.com/modules/xfmod/project/?gcc-cil
 
 Blog: [http://gcc-cil.blogspot.com/](http://gcc-cil.blogspot.com/)
 
-### Objectives
+### GCC CIL Objectives
 
 The new version of GCC has a new internal representation called "GENERIC" (which is later transformed into "GIMPLE") which is suitable as a representation that we can use to generate ECMA CIL byte codes.
 
@@ -129,11 +129,11 @@ The specification is available here:
 Ruby.NET
 ========
 
-### Objectives
+### Ruby.NET Objectives
 
 A compiler for the Ruby language that would JIT-compile Ruby code into CIL code.
 
-The compiler should be written in C\#. Since Ruby is dynamic and will require the "eval" functionality to be available at runtime, we do not want to have two runtimes loaded at the same time. Alternatively, if you think you can pull this off, you can write Ruby.NET in Ruby.NET, but this probably will require more time than you have this summer to complete
+The compiler should be written in C#. Since Ruby is dynamic and will require the "eval" functionality to be available at runtime, we do not want to have two runtimes loaded at the same time. Alternatively, if you think you can pull this off, you can write Ruby.NET in Ruby.NET, but this probably will require more time than you have this summer to complete
 
 A complete compiler is probably very hard to do, so we are willing to trade off completeness for maintainability of the code (maintainability does not mean over-engineered).
 
@@ -146,11 +146,11 @@ Acceptance criteria: The resulting compiler should be able to run successfully t
 MSBuild implementation
 ======================
 
-### Objectives
+### MSBuild Objectives
 
 MSBuild is a new "make-like" program to compile applications.
 
-An MSBuild implementation in C\#.
+An MSBuild implementation in C#.
 
 Acceptance Criteria:
 
@@ -180,9 +180,9 @@ Diva
 
 [Blog](http://diva.mdk.org.pl/) / [Diva Novel Forge project](http://forge.novell.com/modules/xfmod/project/?diva)
 
-### Objectives
+### Diva Objectives
 
-Create a video editing GUI tool using Mono, Gtk\# and GStreamer
+Create a video editing GUI tool using Mono, Gtk# and GStreamer
 
 ASP.NET GUI Designer
 ====================
@@ -191,7 +191,7 @@ Blago is working on the Mozilla side.
 
 Michael is working on the MonoDevelop side.
 
-### Objectives
+### ASP.NET GUI Designer Objectives
 
 Use the Mozilla editing engine to become a GUI designer where ASP.NET controls can be dragged and dropped, properties examined, text inserted, etc.
 
@@ -207,16 +207,16 @@ Acceptance criteria:
 -   Support double-clicking on a control (simple or compound) to trigger an event.
 -   Write out the HTML with high-level descriptions (ie, if an asp.net input control is there, we need \<asp:input\> generated, not \<input\>).
 
-The GUI must be written using Gtk\#, as we plan to integrate this into MonoDevelop. But you do not need to do a stellar job there. What matters is that the previous items can be achieved.
+The GUI must be written using Gtk#, as we plan to integrate this into MonoDevelop. But you do not need to do a stellar job there. What matters is that the previous items can be achieved.
 
 XAML Compiler
 =============
 
 Location: Mono SVN repository.
 
-### Objectives
+### XAML Compiler Objectives
 
-1.  A compiler, xamlc, that takes a xaml file and emits a c\# file
+1.  A compiler, xamlc, that takes a xaml file and emits a c# file
 2.  The bits of System.Windows.Serialization needed to support the xaml compiler
 3.  The bits of System.Windows.Serialization that provide useful hooks, such as the Parser class that produces an instance of the class described by a xaml file.
 
@@ -227,7 +227,7 @@ Location: Mono SVN repository.
 
 Blog: [http://msopena.blogspot.com](http://msopena.blogspot.com)
 
-### Objectives
+### MonoDoc Objectives
 
 Monodoc improvements.
 

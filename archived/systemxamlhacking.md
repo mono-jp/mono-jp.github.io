@@ -44,7 +44,7 @@ Scope
 
 We have System.Xaml.dll which was introduced in the .NET 4.0 API.
 
-Note that there is another effort for managed XAML parser in [Moonlight](/Moonlight "Moonlight") land (in [Mono.Xaml namespace in System.Windows.dll](http://github.com/mono/moon/tree/master/class/System.Windows/Mono.Xaml/) in its own API.
+Note that there is another effort for managed XAML parser in [Moonlight](/Moonlight) land (in [Mono.Xaml namespace in System.Windows.dll](https://github.com/mono/moon/tree/master/class/System.Windows/Mono.Xaml/) in its own API.
 
 System.Xaml.dll in .NET 4 is used by WF4 and WPF, but we don't have them yet. Hence supporting WF4 or WPF XAML by this library is out of scope.
 
@@ -95,8 +95,8 @@ These XamlLanguage directives are supported:
 -   Arguments
 -   Base
 -   FactoryMethod
--   \_Initialization
--   \_Items
+-   _Initialization
+-   _Items
 -   Key
 -   Lang
 -   Name
@@ -117,7 +117,7 @@ These XamlLanguage directives are not, but not sure if they are really used in t
 -   Shared
 -   Space
 -   Uid
--   \_UnknownContent
+-   _UnknownContent
 
 Code
 ----
