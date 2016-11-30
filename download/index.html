@@ -2,17 +2,17 @@
 layout: base
 title: Download
 navgroup: download
-latestmono: 3.6.0
 redirect_from:
+  - /downloads/
   - /Downloads/
   - /Download/
 ---
 <div class="row">
   <div class="small-12 columns">
-    <h1>Download</h1>
+    <h1>ダウンロード</h1>
 
-    <h5>The latest Mono release is: <strong>{{page.latestmono}}</strong></h5>
-    <p>Please choose your operating system to view the available packages. Source code is available on <a href="https://github.com/mono/mono">GitHub</a> or as a <a href="http://download.mono-project.com/sources/mono/">Tarball</a>.</p>
+    <h5>Monoの最新リリースは <strong>{{ site.data.latestrelease.version }}</strong> です。</h5>
+    <p>OSを選択すると利用可能なパッケージが表示されます。ソースコードは <a href="https://github.com/mono/mono">GitHub</a> から入手するか、または <a href="https://download.mono-project.com/sources/mono/">Tarball</a> 形式で入手できます。</p>
 
     <dl id="mono-download" class="tabs vertical" data-tab data-options="deep_linking: true; scroll_to_content: false">
       <dd class="active"><a href="#download-mac"><i class="fa fa-apple"></i>&nbsp;Mac OS X</a></dd>
@@ -22,52 +22,104 @@ redirect_from:
 
     <div class="tabs-content vertical">
       <div class="panel content active" id="download-mac">
-        <h3>Mono for Mac OS X is available as a Mac Package (.pkg)</h3>
-        <p>Please refer to the <a href="/docs/getting-started/install/mac">installation guide</a> for more information about how to install and configure your Mono environment.</p>
-        <p><i>The MDK package is for developers.</i></p>
+        <h3>Mono for Mac OS X は Mac パッケージ (.pkg) 形式で入手できます。</h3>
+        <p>Mono環境のインストールと構成については、<a href="/docs/getting-started/install/mac">インストールガイド</a>に詳しい情報があります。</p>
         <div>
-          <a href="http://download.mono-project.com/archive/{{page.latestmono}}/macos-10-x86/MonoFramework-MRE-{{page.latestmono}}.macos10.xamarin.x86.pkg" class="button radius"><i class="fa fa-download"></i> Download Mono MRE</a>
-          <a href="http://download.mono-project.com/archive/{{page.latestmono}}/macos-10-x86/MonoFramework-MDK-{{page.latestmono}}.macos10.xamarin.x86.pkg" class="button radius"><i class="fa fa-download"></i> Download Mono MDK</a>
+          <a href="{{ site.data.latestrelease.mono_mac_url }}" class="button radius"><i class="fa fa-download"></i> Mono をダウンロード</a>
         </div>
       </div>
       <div class="panel content" id="download-lin">
-        <h3>Mono for Linux is available for various distributions</h3>
-        <p>Please refer to the <a href="/docs/getting-started/install/linux">installation guide</a> for more information about how to install and configure your Mono environment.</p>
-        <h4>Xamarin packages</h4>
+        <h3>Mono for Linux は各種ディストリビューション用のものが入手できます。</h3>
+        <p>Mono環境のインストールと構成については、<a href="/docs/getting-started/install/linux">インストールガイド</a>に詳しい情報があります。</p>
+        <h4>Xamarin パッケージ</h4>
         <div>
-          {% include note.html type="alert" message="We're still working on getting these packages released, in the meantime you can use the Mono version that is available from your distribution's package manager." %}
-          <p>These packages are built, tested and distributed by Xamarin. Use these if you want to use a stable, official version of Mono.</p>
+          <p>以下のパッケージはXamarinによってビルドされ、テストされて配布されています。Monoの安定版, 公式版, 最新版を使いたい場合はこれらをご利用ください。</p>
           <ul>
-            <li><a href="/docs/getting-started/install/linux/debian/"></a>Debian</li>
-            <li><a href="/docs/getting-started/install/linux/ubuntu/"></a>Ubuntu</li>
-            <li><a href="/docs/getting-started/install/linux/centos/"></a>CentOS</li>
-            <li><a href="/docs/getting-started/install/linux/opensuse/"></a>OpenSUSE</li>
+            <li><a href="/docs/getting-started/install/linux/#debian-ubuntu-and-derivatives">Debian, Ubuntu, および派生ディストリビューション</a></li>
+            <li><a href="/docs/getting-started/install/linux/#centos-7-fedora-19-and-later-and-derivatives">CentOS, Fedora, および派生ディストリビューション</a></li>
+            <li><a href="/docs/getting-started/install/linux/#opensuse-and-sles">openSUSE および SLES</a></li>
           </ul>
         </div>
-        <h4>Continuous Integration packages</h4>
+        <h4>Linux ディストリビューションパッケージ</h4>
+        <p>Monoはサードパーティーメンテナーによって、各種ディストリビューション向けにパッケージ化されています。ディストリビューションやメンテナーによっては、Monoの最新版を出荷していないパッケージもあります。</p>
         <div>
-          <p>Every commit to our repository automatically builds distribution packages. Use these if you want a bleeding edge Mono version and don't care about stability.</p>
-          <p><a href="/docs/getting-started/install/linux/ci-packages/"><i class="fa fa-book"></i> Learn more about CI packages</a></p>
-        </div>
-        <h4>Community packages</h4>
-        <div>
-          <p>These packages are provided by the community and linked here for your convenience. They are not tested by Xamarin, so use them at your own risk.</p>
           <ul>
-            <li><a href="http://software.opensuse.org/download/package?project=home:tpokorra:mono&package=mono-opt">Mono Packages installed to /opt for CentOS, Fedora, Debian and Ubuntu</a></li>
+            <li><a href="https://www.archlinux.org/packages/extra/i686/mono/">Arch Linux</a></li>
+            <li><a href="https://apps.fedoraproject.org/packages/mono">CentOS EPEL</a></li>
+            <li><a href="https://packages.debian.org/mono-complete">Debian</a></li>
+            <li><a href="https://apps.fedoraproject.org/packages/mono">Fedora</a></li>
+            <li><a href="https://packages.gentoo.org/package/dev-lang/mono">Gentoo</a></li>
+            <li><a href="https://software.opensuse.org/package/mono-complete">openSUSE</a></li>
+            <li><a href="http://packages.ubuntu.com/mono-complete">Ubuntu</a></li>
+          </ul>
+        </div>
+        <h4>継続的インテグレーション(CI)パッケージ</h4>
+        <div>
+          <p>わたしたちのリポジトリにコミットされるたびに自動的に配布パッケージをビルドします。最先端のMonoを利用し、安定性を求めない場合はこれらをご利用ください。</p>
+          <p><a href="/docs/getting-started/install/linux/ci-packages/"><i class="fa fa-book"></i> CIパッケージについて詳しく知る</a></p>
+        </div>
+        <h4>コミュニティパッケージ</h4>
+        <div>
+          <p>以下のパッケージはコミュニティが提供するもので、利便性のためにここからリンクしています。これらはXamarinによってテストされたものではありませんので、自己責任でご利用ください。</p>
+          <ul>
+            <li><a href="http://software.opensuse.org/download/package?project=home:tpokorra:mono&amp;package=mono-opt">Mono パッケージ（ Debian および Ubuntu の/opt にインストールされます）</a></li>
+            <li><a href="https://copr.fedoraproject.org/coprs/tpokorra/mono-opt/">Mono パッケージ（ CentOS の/opt にインストールされます）</a></li>
+            <li><a href="https://copr.fedoraproject.org/coprs/tpokorra/mono/">Fedora Rawhide および過去のFedora向け 最新のFedora mono パッケージ</a></li>
+            <li><a href="http://software.opensuse.org/download/package?project=Mono:Factory&amp;package=mono-complete">最新の SUSE mono パッケージ（公式の "Factory" リポジトリに含まれます）</a></li>
+            <li><a href="http://sotirov-bg.net/slackpack/search.cgi?q=mono">SlackPack リポジトリに含まれる最新の Slackware mono パッケージ</a></li>
           </ul>
         </div>
       </div>
       <div class="panel content" id="download-win">
-        <h3>Mono for Windows is available as a Windows Installer file</h3>
-        <p>Please refer to the <a href="/docs/getting-started/install/windows">installation guide</a> for more information about how to install and configure your Mono environment.</p>
-        {% include note.html type="alert" message="Currently the latest Mono for Windows version is **3.2.3**. We're working on getting a more recent version released." %}
+        <h3>Mono for WindowsはWindows インストーラーファイル形式で入手できます。</h3>
+        <p>Mono環境のインストールと構成については、<a href="/docs/getting-started/install/windows">インストールガイド</a>に詳しい情報があります。</p>
         <div>
-          <a href="http://download.mono-project.com/archive/3.2.3/windows-installer/mono-3.2.3-gtksharp-2.12.11-win32-0.exe" class="button radius"><i class="fa fa-download"></i> Download Mono</a>
+          <a href="{{ site.data.latestrelease.mono_windows_url }}" class="button radius"><i class="fa fa-download"></i> Mono 32bit をダウンロード</a>
+          <a href="{{ site.data.latestrelease.mono_windows64_url }}" class="button radius"><i class="fa fa-download"></i> Mono 64bit（プレビュー版、GTK#なし）をダウンロード</a>
+        </div>
+        <p>Windows Vista, 7, 8, 10 以降をサポートしています。</p>
+        <hr />
+        <h5>GTK# for .NET</h5>
+        <p>Microsoft .NET上でGtk#ベースのアプリケーションを動作させるためのインストーラーです。</p>
+        <div>
+          <a href="{{ site.data.latestrelease.gtksharp_windows_url }}" class="button radius small"><i class="fa fa-download"></i> Gtk# をダウンロード</a>
         </div>
       </div>
     </div>
 
-    <h2>Release Notes</h2>
-    <p>Check out the release notes of <a href="/docs/about-mono/releases/{{page.latestmono}}/">Mono {{page.latestmono}}</a>, or view the release notes of older Mono versions <a href="/docs/about-mono/releases/">here</a>.</p>
+    <h2>リリースノート</h2>
+    <p>Monoの全バージョンのリリースノートは<a href="/docs/about-mono/releases/">ここ</a>で読むことができます。</p>
+
+    <h2>MonoDevelop IDE</h2>
+    <p>わたしたちのクロスプラットフォームIDEの詳細については、<a href="http://www.monodevelop.com/">MonoDevelop の Web サイト</a>にあります。</p> 
+
+    <h2>過去のリリース</h2>
+    <p>OS XとWindows向けMonoの過去のリリースにアクセスするには、ダウンロードサーバーの<a href="https://download.mono-project.com/archive/">アーカイブ</a>をご覧ください。Linux向けは、<a href="/docs/getting-started/install/linux/#accessing-older-releases">インストールガイド</a>の「過去のリリースにアクセスする」の章をご覧ください。</p>
+
+    <h2>アルファ版およびベータ版</h2>
+    <p>プレリリース版を試したい方は、<a href="http://www.mono-project.com/download/alpha/">アルファ版</a>または<a href="http://www.mono-project.com/download/beta/">ベータ版</a>のダウンロードページをご覧ください。</p>
+
+    <h2>ウィークリーアップデート版</h2>
+    <p>予定されている最新の変更を試したい方は、<a href="/docs/getting-started/install/weekly-packages/">ウィークリーパッケージ</a>のダウンロードページをご覧ください。</p>
   </div>
 </div>
+
+<script>
+function runScripts() {
+  $(document).ready(function() {
+    function activate(os) {
+      $('dd.active').removeClass();
+      $('dd:has(a[href=#download-' + os + '])').addClass('active');
+      $('div.panel.active').removeClass('active');
+      $('#download-' + os).addClass('active');
+    }
+    if (!window.location.hash) {
+      if (window.navigator.appVersion.search('Linux') > 0 || window.navigator.platform.search('Linux') > 0) {
+        activate('lin');
+      } else if (window.navigator.appVersion.search('Windows') > 0 || window.navigator.platform.search('Windows') > 0) {
+        activate('win');
+      }
+    }
+  });
+}
+</script>
