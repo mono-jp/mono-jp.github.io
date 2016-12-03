@@ -1,0 +1,65 @@
+---
+layout: base
+title: Beta Download
+navgroup: download
+redirect_from:
+  - /beta/
+  - /Beta/
+---
+<div class="row">
+  <div class="small-12 columns">
+    <h1>ベータ版のダウンロード</h1>
+
+    <h5>ベータ版Monoの最新リリースは <strong>{{ site.data.betarelease.version }}</strong> です。</h5>
+    <p>OSを選択すると利用可能なパッケージが表示されます。ソースコードは <a href="https://github.com/mono/mono">GitHub</a> から入手するか、または <a href="https://download.mono-project.com/sources/mono/">Tarball</a> 形式で入手できます。</p>
+
+    <dl id="mono-download" class="tabs vertical" data-tab data-options="deep_linking: true; scroll_to_content: false">
+      <dd class="active"><a href="#download-mac"><i class="fa fa-apple"></i>&nbsp;Mac OS X</a></dd>
+      <dd><a href="#download-lin"><i class="fa fa-linux"></i>&nbsp;Linux</a></dd>
+      <dd><a href="#download-win"><i class="fa fa-windows"></i>&nbsp;Windows</a></dd>
+    </dl>
+
+    <div class="tabs-content vertical">
+      <div class="panel content active" id="download-mac">
+        <h3>Mono for Mac OS X は Mac パッケージ (.pkg) 形式で入手できます。</h3>
+        <p>Mono環境のインストールと構成については、<a href="/docs/getting-started/install/mac">インストールガイド</a>に詳しい情報があります。</p>
+        <div>
+          <a href="{{ site.data.betarelease.mono_mac_url }}" class="button radius"><i class="fa fa-download"></i> Mono をダウンロード</a>
+        </div>
+      </div>
+      <div class="panel content" id="download-lin">
+        <h3>Mono for Linux は各種ディストリビューション用のものが入手できます。</h3>
+        <p>Mono環境のインストールと構成については、<a href="/docs/getting-started/install/linux">インストールガイド</a>に詳しい情報があります。</p>
+        <h4>Xamarin パッケージ</h4>
+        <div>
+          <p>以下のパッケージはXamarinによってビルドされ、テストされて配布されています。Monoの安定版, 公式版, 最新版を使いたい場合はこれらをご利用ください。</p>
+          <ul>
+            <li><a href="/docs/getting-started/install/linux/#debian-ubuntu-and-derivatives-beta-channel">Debian, Ubuntu, および派生ディストリビューション</a></li>
+            <li><a href="/docs/getting-started/install/linux/#centos-fedora-and-derivatives-beta-channel">CentOS, Fedora, および派生ディストリビューション</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel content" id="download-win">
+        <h3>Mono for WindowsはWindows インストーラーファイル形式で入手できます。</h3>
+        <p>Mono環境のインストールと構成については、<a href="/docs/getting-started/install/windows">インストールガイド</a>に詳しい情報があります。</p>
+        <div>
+          <a href="{{ site.data.betarelease.mono_windows_url }}" class="button radius"><i class="fa fa-download"></i> Mono 32bit をダウンロード</a>
+          <a href="{{ site.data.betarelease.mono_windows64_url }}" class="button radius"><i class="fa fa-download"></i> Mono 64bit（プレビュー版、GTK#なし）をダウンロード</a>
+        </div>
+        <p>Windows Vista, 7, 8, 10 以降をサポートしています。</p>
+        <hr />
+        <h5>GTK# for .NET</h5>
+        <p>Microsoft .NET上でGtk#ベースのアプリケーションを動作させるためのインストーラーです。</p>
+        <div>
+          <a href="{{ site.data.betarelease.gtksharp_windows_url }}" class="button radius small"><i class="fa fa-download"></i> Gtk# をダウンロード</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>リリースノート</h2>
+    <p>Monoの全バージョンのリリースノートは<a href="/docs/about-mono/releases/">ここ</a>で読むことができます。</p>
+
+    <h2>MonoDevelop IDE</h2>
+    <p>わたしたちのクロスプラットフォームIDEの詳細については、<a href="http://www.monodevelop.com/">MonoDevelop の Web サイト</a>にあります。</p> 
+  </div>
+</div>
